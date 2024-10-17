@@ -1,0 +1,106 @@
+.sample-slider{
+    /*width: 40vw;*/
+    height: auto;
+    overflow: hidden;
+}
+.sample-slider .swiper-slide{
+    height: auto;
+    width: 287px !important;
+    margin-right: 14px;
+}
+.sample-slider img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.sertificate__title{
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2C2C3A;
+    margin-bottom: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sertificate__slide_name{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2C2C3A;
+    margin-bottom: 12px;
+
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    min-height: 76px;
+
+}
+.sertificate__slide_text{
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2C2C3A;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    min-height: 102px;
+
+}
+.wrapp__sertificate{
+    padding: 24px;
+    background: #ECF7FF;
+
+}
+.sertificate__slide_img{
+    height: 338px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+.sertificate__link_full{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+.border__2_blue{
+    margin-top: 42px;
+    border: 2px solid #1F40E5;
+    widht: 100%;
+}
+
+.sertificate__swiper-pagination{
+    display: none;
+}
+
+.sertificate__swiper-wrap-button{
+    display: flex;
+    align-items: center;
+}
+.sertificate__swiper-button-prev,
+.sertificate__swiper-button-next {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    border: 1px solid #A0ACE3;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.sertificate__swiper-button-prev{
+    margin-right: 20px;
+}

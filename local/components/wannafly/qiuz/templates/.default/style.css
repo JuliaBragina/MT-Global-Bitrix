@@ -1,0 +1,15 @@
+
+section.quiz .quiz-wrapper {
+    height: 520px;
+    background-color: var(--color-accent-blue);
+    border-radius: 30px;
+}
+
+section.quiz .text-wrapper {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+
+}
+

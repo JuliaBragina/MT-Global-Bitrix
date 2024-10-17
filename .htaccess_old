@@ -1,0 +1,171 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+
+</IfModule>
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+php_value auto_prepend_file "/home/m/mtglobal/mtglobal.ru/public_html/bitrix/modules/security/tools/start.php"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$
+    RewriteRule . %1/%2 [L,R=301]
+    RewriteCond %{THE_REQUEST} //
+    RewriteRule .* /$0 [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$
+  RewriteRule ^(.*)$ https://%1/$1 [L,R=301] 
+
+
+RewriteCond %{REQUEST_URI} /index.php
+RewriteCond %{QUERY_STRING} ^\z
+RewriteRule ^(.*)$ https://mtglobal.ru/? [R=301,L]
+
+RewriteRule ^industrial/biznes-tsentry-torgovye-tsentry-sportivnye-kompleksy/$  https://mtglobal.ru/industrial/it-infrastruktura-biznes-centrov-tc-sportkompleksov/ [R=301,L]
+
+RewriteRule ^industrial/gosudarstvennye-uchrezhdeniya/$  https://mtglobal.ru/industrial/it-infrastruktura-gosudarstvennyh-uchrezhdenij/ [R=301,L]
+
+RewriteRule ^industrial/magaziny/$  https://mtglobal.ru/industrial/it-infrastruktura-magazinov/ [R=301,L]
+
+RewriteRule ^industrial/ofisy/$  https://mtglobal.ru/industrial/it-infrastruktura-ofisov/ [R=301,L]
+
+RewriteRule ^industrial/oteli/$  https://mtglobal.ru/industrial/it-infrastruktura-otelej/ [R=301,L]
+
+RewriteRule ^industrial/promyshlennost-i-selskoe-khozyaystvo/$  https://mtglobal.ru/industrial/it-infrastruktura-promyshlinnosti-selskogo-hozyajstva/ [R=301,L]
+
+RewriteRule ^industrial/restorany-i-bary/$  https://mtglobal.ru/industrial/it-infrastruktura-restoranov-i-barov/ [R=301,L]
+
+RewriteRule ^industrial/skladskie-pomeshcheniya/$  https://mtglobal.ru/industrial/it-infrastruktura-skladskih-pomeshchenij/ [R=301,L]
+
+RewriteRule ^solution/magazin-pod-klyuch/$  https://mtglobal.ru/solution/it-infrastruktura-magazina-pod-klyuch/ [R=301,L]
+
+RewriteRule ^solution/ofis-pod-klyuch/$  https://mtglobal.ru/solution/it-infrastruktura-ofisa-pod-klyuch/ [R=301,L]
+
+RewriteRule ^solution/restoran-pod-klyuch/$  https://mtglobal.ru/solution/it-infrastruktura-restorana-pod-klyuch/ [R=301,L]
+
+
+
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Expires headers                                                    |
+# ----------------------------------------------------------------------
+
+# Serve resources with far-future expires headers.
+#
+# (!) If you don't control versioning with filename-based
+# cache busting, you should consider lowering the cache times
+# to something like one week.
+#
+# https://httpd.apache.org/docs/current/mod/mod_expires.html
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 3 months"
+
+  # CSS
+
+    ExpiresByType text/css                              "access plus 1 year"
+
+
+  # Data interchange
+
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+
+  # Favicon (cannot be renamed!) and cursor images
+
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+
+  # JavaScript
+
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+
+  # Manifest files
+
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Media files
+
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 6 months"
+    ExpiresByType image/png                             "access plus 6 months"
+    ExpiresByType image/svg+xml                         "access plus 1 year"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+
+  # Web fonts
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+
+
+  # Other
+
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>

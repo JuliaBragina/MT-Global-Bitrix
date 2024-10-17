@@ -1,0 +1,202 @@
+.ourApproach{
+    position: relative;
+}
+
+.ourApproach__container{
+    width: 64%;
+    margin: 100px auto;
+}
+
+.ourApproach__title{
+    padding-bottom: 55px;
+}
+
+.ourApproach__steps{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.ourApproach__step {
+    background-color: var(--color-white);
+    border-radius: 30px;
+    padding: 51px;
+}
+
+.ourApproach__description ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 36px;
+}
+
+.ourApproach__description li {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    list-style-type: none;
+    margin: 14px 0;
+    padding-left: 35px;
+    position: relative;
+}
+
+.ourApproach__description li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-accent-pink);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: center;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.33341L5.16667 7.50008L11 1.66675' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+
+.ourApproach__img {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 32px;
+    border: 1px solid var(--color-accent-blue);
+    padding: 10px;
+
+    margin-bottom: 38px;
+}
+
+.ourApproach__img_color_lightBlue{
+    border: 2px solid var(--color-accent-sky-blue);
+}
+
+.ourApproach__subTitleContainer {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.ourApproach__number, .ourApproach__divider {
+    color: var(--color-accent-blue);
+}
+
+.ourApproach__number {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ourApproach__list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 36px;
+}
+
+.ourApproach__listItem {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    list-style-type: none;
+    margin: 14px 0;
+    padding-left: 35px;
+    position: relative;
+}
+
+.ourApproach__listItem::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-accent-pink);
+    border-radius: 10px;
+
+    background-image: url('../../img/point-list-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: center;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width: 1700px) {
+    .ourApproach__container {
+        width: 84%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .ourApproach__container {
+        width: 94%;
+
+        margin: 47px auto;
+    }
+
+    .ourApproach__step {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ourApproach__steps {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .ourApproach__headerContainer {
+        display: flex;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+    
+    .ourApproach__title{
+        padding-bottom: 32px;
+    }
+
+    .ourApproach__step {
+        padding: 21px;
+    }
+
+    .ourApproach__img {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        padding: 15px;
+    }
+
+    .ourApproach__number, .ourApproach__subTitle {
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+
+    .ourApproach__subTitleContainer {
+        padding-top: 10px;
+        gap: 8px;
+        width: min-content;
+    }
+
+    .ourApproach__img {
+        margin-bottom: 18px;
+    }
+
+    .ourApproach li {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

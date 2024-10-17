@@ -1,0 +1,196 @@
+.popup-overlay, .popup-overlay-getCatalog, .popup-overlay-needProject {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.popup_callBack {
+    width: 737px;
+}
+
+.popup_getCatalog, .popup_needProject {
+    width: 581px;
+}
+
+.popup .f-button {
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+    color: black;
+}
+
+.f-button.is-close-btn {
+    top: -10px !important;
+    right: -35px !important;
+    color: white !important;
+}
+
+.popup__title_pink {
+    color: var(--color-accent-pink);
+}
+
+.popup__paragraph {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+}
+
+.popup__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.popup__inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup__inputs_getCatalog, .popup__inputs_needProject {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.popup__field {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.popup__field_getCatalog, .popup__field_needProject {
+    width: 100%;
+}
+
+.popup__input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--color-accent-blue);
+    opacity: .3;
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    outline: none;
+}
+
+.popup__label {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-accent-blue);
+    opacity: .3;
+}
+
+.popup__button {
+    width: 100%;
+}
+
+.popup__checkboxContainer {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.popup__checkbox {
+    flex-shrink: 0;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    background-color: var(--color-accent-light-blue);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.popup__checkbox:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 14px;
+    border-right: 3px solid var(--color-accent-blue);
+    border-bottom: 3px solid var(--color-accent-blue);
+    transform: translate(-50%, -60%) rotate(45deg);
+    box-sizing: border-box;
+}
+
+.popup__checkboxLabel {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+    color: var(--color-accent-blue);
+    opacity: .3;
+}
+
+@media screen and (max-width: 1024px) {
+    .popup {
+        padding: 30px 20px;
+    }
+
+    .f-button {
+        top: 15px !important;
+        right: 15px !important;
+    }
+
+    .f-button svg {
+        fill: #222128 !important;
+    }
+
+    .popup__inputs {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .popup__field {
+        width: 100%;
+    }
+
+    .f-button.is-close-btn {
+        top: 10px !important;
+        right: 10px !important;
+        color: #dbdbdb !important;
+    }
+}
+
+.f-button.is-next,
+.f-button.is-prev,
+.f-thumbs__viewport {
+    display: none !important;
+}

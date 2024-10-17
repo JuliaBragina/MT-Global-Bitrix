@@ -1,0 +1,5 @@
+@media (max-width: 1200px){
+.header-menu_point.open a:before {
+display:none;
+}
+}

@@ -1,0 +1,24 @@
+@import url(../css/normalize.css);
+@import url(../css/blocks/root.css);
+@import url(../vendor/fonts.css);
+
+@import url(../css/blocks/common.css);
+@import url(../css/blocks/header.css);
+@import url(../css/blocks/footer.css);
+
+@import url(../css/blocks/content.css);
+@import url(../css/blocks/title.css);
+
+
+@import url(../css/blocks/navButton.css);
+@import url(../css/blocks/getCalculation.css);
+
+@import url(../css/blocks/burgerMenu.css);
+
+@import url(../css/blocks/asideMenu.css);
+@import url(../css/blocks/slider.css);
+@import url(../css/blocks/cookies.css);
+@import url(../css/blocks/popup.css);
+
+@import url(../css/blocks/ourSolutions.css);
+@import url(../css/blocks/modernTecnologies.css);

@@ -1,0 +1,11 @@
+<li><img src="/img/icons/parthners/2/1.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/2.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/3.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/4.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/5.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/6.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/7.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/8.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/9.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/10.svg" alt="icon"></li>
+<li><img src="/img/icons/parthners/2/11.svg" alt="icon"></li>

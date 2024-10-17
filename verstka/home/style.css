@@ -1,0 +1,72 @@
+/* ++ homeCard ++ */
+
+.homeCard .h2 {
+    line-height: 31px;
+}
+.homeCard .textBox {
+    line-height: 19px;
+}
+.homeCard {
+    min-height: 304px;
+}
+.homeCard:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B8E1FF;
+    opacity: 0.3;
+}
+.homeCard .wrapText ,
+.homeCard .whiteRightTick {
+    z-index: 2;
+}
+
+.homeCard:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(258.89deg, #88EDF2 0%, #65B4EE 3.96%, #4076E9 23.42%, #284FE6 37.69%, #1F40E5 45.13%);
+    opacity: 0;
+    transition: 0.3s;
+}
+.homeCard:hover:after{
+    opacity: 1;
+}
+.homeCard .wrapText ,
+.homeCard .h2 {
+    transition: 0.3s;
+}
+.homeCard:hover .wrapText ,
+.homeCard:hover .h2 {
+    color: #fff;
+}
+.whiteRightTick {
+    width: 40px;
+    height: 40px;
+    background-image: url(./icon/whiteRightTick.svg);
+}
+.homeCard .whiteRightTick{
+    margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+    .homeCard .textBox:last-child {
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .homeCard .whiteRightTick{
+        margin-bottom: 12px;
+    }
+    .homeCard {
+        min-height: 268px;
+    }
+}
+
+/* -- homeCard -- */

@@ -1,0 +1,90 @@
+.bx-breadcrumb {
+	margin-bottom: 35px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	/* identical to box height */
+	color:#333333;
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.bx-breadcrumb i {
+	color: #333333;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.bx-breadcrumb i.cl-breadcrumb-right::before {
+	content: "/";
+
+}
+.bx-breadcrumb .bx-breadcrumb-item {
+	float: left;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.bx-breadcrumb .bx-breadcrumb-item span {
+	white-space: normal;
+}
+.bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
+.bx-breadcrumb .bx-breadcrumb-item a:hover {}
+.bx-breadcrumb a,.bx-breadcrumb a:hover{
+	color:#1F40E5;
+}
+
+.section-single.about .bx-breadcrumb{
+	margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+	.section-single.about .bx-breadcrumb {
+		padding-left: 15px;
+	}
+}
+
+.section.breadcrumb {
+	padding: 65px 0px 0px 0px;
+}
+
+.section.breadcrumb .bx-breadcrumb {
+}
+
+.section.provide{
+	padding-top: 0px;
+}
+
+/*other blocks*/
+section.section-indent.consulting,
+section.cl-after-breadcrumb{
+	padding-top: 0px;
+}
+
+
+@media (max-width: 375px) {
+	.bx-breadcrumb {
+		line-height: 22px;
+	}
+	.bx-breadcrumb .bx-breadcrumb-item {
+		margin-bottom: 0px;
+	}
+	.bx-breadcrumb {
+		margin-top: 17px;
+		margin-bottom: 20px;
+	}
+	.section.breadcrumb {
+		padding: 0px;
+	}
+}
+@media (max-width: 768px) {
+	.bx-breadcrumb {
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	.section.breadcrumb{
+		padding: 0px;
+	}
+}

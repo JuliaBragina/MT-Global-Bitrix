@@ -1,0 +1,7 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Calibri';
+    src: local('Calibri'),
+    url('Calibri-Light.ttf') format('truetype');
+    font-style: normal;
+}
