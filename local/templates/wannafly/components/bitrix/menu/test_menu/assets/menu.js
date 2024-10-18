@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const submenuTogglesLvl1 = document.querySelectorAll('.header__item_level_1.has-submenu > .header__link');
     const submenuTogglesLvl2 = document.querySelectorAll('.header__item_level_2.has-submenu > .header__link');
+    const subItems = item.querySelectorAll('.header__item_level_2');
     const overlay = document.querySelector('.burgerMenu__overlay');
 
     const isMobile = window.screen.width <= 900;
@@ -11,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             let parentLi = this.parentElement;
             parentLi.classList.toggle('submenu-open');
             this.classList.toggle('active');
-            
-            overlay.style.display = 'block';
         });
     });
 

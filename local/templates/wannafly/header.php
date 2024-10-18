@@ -62,7 +62,7 @@
             <div class="header__mobile-buttons-container">
                 <input type="checkbox" class="mobile-toggle" id="mobile-toggle">
                 <label for="mobile-toggle" class="header__burger-button menu-main__burger-button" aria-label="Кнопка бургерного меню">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="#ED7180" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0H6.22222V6.22222H0V0Z"/>
                         <path d="M0 10.8889H6.22222V17.1111H0V10.8889Z"/>
                         <path d="M0 21.7778H6.22222V28H0V21.7778Z"/>

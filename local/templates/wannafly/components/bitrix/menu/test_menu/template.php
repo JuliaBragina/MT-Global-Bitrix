@@ -22,7 +22,7 @@ Asset::getInstance()->addJs($templateFolder . '/assets/menu.js');
         <li class="header__item has-submenu header__item_level_<?= $arItem["DEPTH_LEVEL"] ?><?php if ($arItem["SELECTED"]): ?> header__item_active<?php endif; ?>">
             <a href="<?= $arItem["LINK"] ?>" class="header__link header__link_level_<?= $arItem["DEPTH_LEVEL"] ?>"><?= $arItem["TEXT"] ?></a>
             <div class="header__sublist">
-                <ul class="header__sublist">
+                <ul>
                     <?php else: ?>
                         <li class="header__item header__item_level_<?= $arItem["DEPTH_LEVEL"] ?><?php if ($arItem["SELECTED"]): ?> header__item_active<?php endif; ?>">
                             <a href="<?= $arItem["LINK"] ?>" class="header__link header__link_level_<?= $arItem["DEPTH_LEVEL"] ?>"><?= $arItem["TEXT"] ?></a>

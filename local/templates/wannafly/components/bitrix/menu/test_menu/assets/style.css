@@ -58,15 +58,23 @@
     grid-column-gap: 10px;
 }
 
+.header__item_level_1.has-submenu > a {
+    position: relative;
+}
+
 .header__item_level_1.has-submenu > a:after {
-    content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='%23222128' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H4V4H0V0Z'/%3E%3Cpath d='M0 7H4V11H0V7Z'/%3E%3Cpath d='M0 14H4V18H0V14Z'/%3E%3Cpath d='M7 0H11V4H7V0Z'/%3E%3Cpath d='M7 7H11V11H7V7Z'/%3E%3Cpath d='M7 14H11V18H7V14Z'/%3E%3Cpath d='M14 0H18V4H14V0Z'/%3E%3Cpath d='M14 7H18V11H14V7Z'/%3E%3Cpath d='M14 14H18V18H14V14Z'/%3E%3C/svg%3E");
-    box-sizing: border-box;
-    width: 16px;
-    height: 16px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='%23222128'%3E%3Cpath d='M0 0H4V4H0V0Z'/%3E%3Cpath d='M0 7H4V11H0V7Z'/%3E%3Cpath d='M0 14H4V18H0V14Z'/%3E%3Cpath d='M7 0H11V4H7V0Z'/%3E%3Cpath d='M7 7H11V11H7V7Z'/%3E%3Cpath d='M7 14H11V18H7V14Z'/%3E%3Cpath d='M14 0H18V4H14V0Z'/%3E%3Cpath d='M14 7H18V11H14V7Z'/%3E%3Cpath d='M14 14H18V18H14V14Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 18px;
+    height: 18px;
+    transition: background-image 0.2s ease, fill 0.2s ease;
 }
 
 .header__item_level_1:hover.has-submenu > a:after {
-    content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='%23ED7180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H4V4H0V0Z'/%3E%3Cpath d='M0 7H4V11H0V7Z'/%3E%3Cpath d='M0 14H4V18H0V14Z'/%3E%3Cpath d='M7 0H11V4H7V0Z'/%3E%3Cpath d='M7 7H11V11H7V7Z'/%3E%3Cpath d='M7 14H11V18H7V14Z'/%3E%3Cpath d='M14 0H18V4H14V0Z'/%3E%3Cpath d='M14 7H18V11H14V7Z'/%3E%3Cpath d='M14 14H18V18H14V14Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='%23ED7180'%3E%3Cpath d='M0 0H4V4H0V0Z'/%3E%3Cpath d='M0 7H4V11H0V7Z'/%3E%3Cpath d='M0 14H4V18H0V14Z'/%3E%3Cpath d='M7 0H11V4H7V0Z'/%3E%3Cpath d='M7 7H11V11H7V7Z'/%3E%3Cpath d='M7 14H11V18H7V14Z'/%3E%3Cpath d='M14 0H18V4H14V0Z'/%3E%3Cpath d='M14 7H18V11H14V7Z'/%3E%3Cpath d='M14 14H18V18H14V14Z'/%3E%3C/svg%3E");
 }
 
 .header__item_level_1.has-submenu > .header__sublist {
@@ -100,7 +108,6 @@
 }
 
 /* Меню 2-го уровня */
-
 .header__link_level_2 {
     display: flex;
     margin: auto;
@@ -209,6 +216,20 @@
 
     .header__mobile-buttons-container {
         display: flex;
+    }
+
+    .header__burger-button {
+        cursor: pointer;
+    }
+
+    .header__burger-button svg path {
+        fill: #222128;
+        transition: fill .2s ease;
+    }
+
+    .header__burger-button:hover svg path {
+        fill: #ED7180;
+        transition: fill .2s ease;
     }
 
     .header:has(.mobile-toggle:checked) .header__nav {
