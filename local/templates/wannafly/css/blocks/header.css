@@ -3,7 +3,6 @@
 }
 
 .header__container {
-    width: 64%;
     margin: 0 auto;
 }
 
@@ -78,10 +77,6 @@
 
 
 @media screen and (max-width: 1750px) {
-    .header__container, .header__list {
-        width: 84%;
-    }
-
     .header__phone-container {
         width: 36px;
         height: 36px;

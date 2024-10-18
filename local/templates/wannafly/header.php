@@ -13,7 +13,7 @@
 <body class="root">
 <?php $APPLICATION->ShowPanel(); ?>
     <header class="header">
-        <div class="header__container">
+        <div class="header__container container">
             <div class="header__details">
                 <div class="header__contact-block">
                     <a href="/" class="header__link"><img class="header__logo" src="<?=SITE_TEMPLATE_PATH?>/img/logo.svg" alt="Логотип МТ global"></a>
@@ -56,7 +56,8 @@
                         <button type="button" class="header__support-button">Тех.поддержка 24/7</button>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary header__callback-button" aria-label="Запросить обратный звонок">Обратный звонок</button>
+                <button type="button" class="btn btn-primary header__callback-button" aria-label="Запросить обратный звонок" data-fancybox="popup__callback"
+                data-src="#popup__callBack">Обратный звонок</button>
             </div>
             <div class="header__mobile-buttons-container">
                 <input type="checkbox" class="mobile-toggle" id="mobile-toggle">

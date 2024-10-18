@@ -71,7 +71,7 @@ $APPLICATION->SetTitle("Главная");
 		"STRICT_SECTION_CHECK" => "N",
 		"TITLE" => "Услуги"
 	)
-);?></main><main></main><main class="content"></main> <main class="content"> <?$APPLICATION->IncludeComponent(
+);?></main><main class="content"></main><main></main><main class="content"></main> <main class="content"> <?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"grid-cards",
 	Array(

@@ -27,7 +27,7 @@ $this->setFrameMode(true);
                     <h3 class="typicalSolutions__subTitle title__third"><?= $item['NAME']; ?></h3>
                     <?= $item['DETAIL_TEXT']; ?>
                     
-                    <button type="button" class="btn btn-primary btn-arrow doneProjects__button"
+                    <button type="button" class="btn btn-primary btn-arrow-white doneProjects__button"
                             data-fancybox="popup__needProject" data-src="#popup__needProject">Заказать решение</button>
                 </article>
 

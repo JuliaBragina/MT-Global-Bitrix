@@ -35,7 +35,7 @@ $this->setFrameMode(true);
                     </div>
 
                     <?php if ($item['PROPERTIES']['DISPLAY_BUTTON']['VALUE'][0] == 'Да'): ?>
-                        <button type="button" class="btn btn-primary btn-arrow popup__callBack"
+                        <button type="button" class="btn btn-primary btn-arrow-white popup__callBack"
                             data-fancybox="popup__callback" data-src="#popup__callBack">Подобрать решение
                         </button>
                     <?php endif; ?>

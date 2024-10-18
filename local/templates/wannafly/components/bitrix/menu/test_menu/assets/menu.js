@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const submenuTogglesLvl1 = document.querySelectorAll('.header__item_level_1.has-submenu > .header__link');
     const submenuTogglesLvl2 = document.querySelectorAll('.header__item_level_2.has-submenu > .header__link');
+    const overlay = document.querySelector('.burgerMenu__overlay');
+
     const isMobile = window.screen.width <= 900;
+
     submenuTogglesLvl1.forEach(function (toggle) {
         toggle.addEventListener('click', function (event) {
             event.preventDefault();
             let parentLi = this.parentElement;
             parentLi.classList.toggle('submenu-open');
             this.classList.toggle('active');
+            
+            overlay.style.display = 'block';
         });
     });
+
     if (isMobile) {
         submenuTogglesLvl2.forEach(function (toggle) {
             toggle.addEventListener('click', function (event) {
@@ -17,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     event.preventDefault();
                     this.classList.toggle('active');
                 }
-            })
-        })
+            });
+        });
     }
 });

@@ -61,7 +61,7 @@ $this->setFrameMode(true);
                                     <div class="doneProjects__gradient"></div>
                                 </div>
                                 <button type="button"
-                                    class="btn btn-arrow btn-primary doneProjects__button openGetSolutionsPopup"
+                                    class="btn btn-arrow-white btn-primary doneProjects__button openGetSolutionsPopup"
                                     data-fancybox="popup__getCatalog" data-src="#popup__getCatalog">Подробнее о проекте
                                 </button>
                             </div>
