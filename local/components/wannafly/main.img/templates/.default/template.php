@@ -13,7 +13,7 @@
             <?php if (count($arResult['SLOGANS']) > 1): ?>
                 <ul class="main__actionList">
                     <?php foreach ($arResult['SLOGANS'] as $slogan): ?>
-                        <li class="main__actionItem"><?= htmlspecialchars($slogan) ?></li>
+                        <li class="main__actionItem list-item"><?= htmlspecialchars($slogan) ?></li>
                     <?php endforeach; ?>
                 </ul>
             <?php elseif (count($arResult['SLOGANS']) == 1): ?>

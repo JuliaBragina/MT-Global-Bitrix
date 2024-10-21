@@ -87,27 +87,6 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 38px;
-    position: relative;
-    padding-left: 35px;
-}
-
-.main__actionItem::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-accent-pink);
-    border-radius: 10px;
-
-    background-image: url("data:image/svg+xml,%3Csvg width='12' fill='none' height='9' viewBox='0 0 12 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.33341L5.16667 7.50008L11 1.66675' stroke-width='2' stroke='white'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: center;
-    padding: 5px;
-    box-sizing: border-box;
 }
 
 .main__img {
