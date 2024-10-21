@@ -29,9 +29,13 @@ window.onscroll = function() {
       menu.style.left = "50%";
       menu.style.transform = "translateX(-50%)";
       menu.style.zIndex = "1000";
+      menu.style.padding = "5px 0";
+      menu.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
     } else {
       menu.style.position = "relative";
       menu.style.transform = "translateX(0)";
       menu.style.left = "0";
+      menu.style.padding = "23px 0";
+      menu.style.boxShadow = "none";
     }
 };
