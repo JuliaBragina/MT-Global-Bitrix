@@ -19,7 +19,7 @@ $this->setFrameMode(true);
                         false // Получаем путь к файлу и размеры
                     );
                     ?>
-                    <div class="equipment__itemList" id="<?= $this->GetEditAreaId($item['ID']); ?>">
+                    <div class="equipment__itemList" id="<?= $this->GetEditAreaId($item['ID']); ?>" data-fancybox="popup__showMoreInfo" data-src="#popup__showMoreInfo">
                         <img src="<?= $resizedImage['src'] ?>" class="equipment__img img-fluid" alt="<?= $item['NAME'] ?>">
                         <p class="equipment__caption"><?= $item['NAME'] ?></p>
                     </div>

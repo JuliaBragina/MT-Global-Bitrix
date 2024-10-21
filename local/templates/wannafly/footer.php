@@ -245,6 +245,26 @@
     </form>
 </section>
 
+<section class="popup popup__showMoreInfo" style="display: none;" id="popup__showMoreInfo">
+    <section class="popup__form">
+        <div class="popup__imgContainer">
+            <img src="../img/img-equipment.png" class="popup__img">
+        </div>
+        <div class="popup__containerDescription">
+            <h1 class="popup__title title__second">Системы бронирования</h1>
+            <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
+            <ul class="popup__list">
+                <li class="popup__item">Бронирование переговорной с самой панели; </li>
+                <li class="popup__item">Интеграция с основными календарями Exchange, Google, Yandex, Bitrix; </li>
+                <li class="popup__item">Сбор статистики использования переговорных для оптимизации затрат; </li>
+                <li class="popup__item">Интеграция панелей бронирования в мультимедийный комплекс и автоматическое включение/выключения оборудования в зависимости от статуса; </li>
+                <li class="popup__item">Авторизация при помощи NFC карт;</li>
+                <li class="popup__item">Автоматическая отмена бронирования в случае отсутствия участников.</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
 <script type="module" src="<?= SITE_TEMPLATE_PATH ?>/js/swiper.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/cookies.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
