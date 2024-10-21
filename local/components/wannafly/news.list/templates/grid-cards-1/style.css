@@ -17,6 +17,13 @@
     border-radius: 30px;
     background-color: var(--color-white);
     padding: 30px;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: filter 0.5s ease;
+}
+
+.equipment__itemList:hover {
+    filter: grayscale(0);
 }
 
 .equipment__item {
