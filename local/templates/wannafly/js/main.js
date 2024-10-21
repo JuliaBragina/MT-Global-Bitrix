@@ -20,3 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
         checkBlocksVisibility();
     });
 });
+
+window.onscroll = function() {
+    var menu = document.querySelector(".header__scrollContainer");
+    if (window.pageYOffset > 0) {
+      menu.style.position = "fixed";
+      menu.style.top = "0";
+      menu.style.left = "50%";
+      menu.style.transform = "translateX(-50%)";
+      menu.style.zIndex = "1000";
+    } else {
+      menu.style.position = "relative";
+      menu.style.transform = "translateX(0)";
+      menu.style.left = "0";
+    }
+};
