@@ -21,6 +21,7 @@
     font-weight: 500;
     line-height: 19.5px;
     color: var(--color-accent-blue);
+    transition: color 0.2s ease;
     margin: 0;
     opacity: .5;
 }
@@ -31,6 +32,7 @@
     font-weight: 700;
     line-height: 50.14px;
     color: var(--color-accent-blue);
+    transition: color 0.2s ease;
     margin: 0;
 }
 
@@ -57,6 +59,11 @@
 }
 
 .results__item:hover .results__number {
+    color: var(--color-accent-pink);
+    transition: color 0.2s ease;
+}
+
+.results__item:hover .results__text {
     color: var(--color-accent-pink);
     transition: color 0.2s ease;
 }
