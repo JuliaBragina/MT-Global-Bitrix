@@ -26,32 +26,37 @@ document.addEventListener("DOMContentLoaded", () => {
         if (uniqueClass === 'grid-cards-running-line__line' || uniqueClass === 'grid-cards-running-line__lineReverse') {
             swiperOptions = {
                 loop: true,
-                slidesPerView: 7.3,
+                breakpoints: {
+                    1300: {
+                        slidesPerView: 7.3,
+                    },
+                    1200: {
+                        slidesPerView: 5.3,
+                    },
+                    1100: {
+                        slidesPerView: 5.3,
+                    }
+                },
                 speed: 3000,
                 centeredSlides: true,
                 direction: 'horizontal',
                 autoplay: {
                     delay: 0,
+                    reverseDirection: false,
                     disableOnInteraction: false,
                 },
-            }
-            
+            };
+        
             if (uniqueClass === 'grid-cards-running-line__lineReverse') {
                 swiperOptions = {
-                    loop: true,
-                    slidesPerView: 7.3,
-                    speed: 3000,
-                    centeredSlides: true,
-                    direction: 'horizontal',
+                    ...swiperOptions,
                     autoplay: {
                         delay: 0,
+                        reverseDirection: true,
                         disableOnInteraction: false,
                     },
-                    reverseDirection: false,
                 }
             }
-
-            console.log(swiperOptions);
         } else {
             const nextButton = slider.querySelector('.swiper-button-next');
             const prevButton = slider.querySelector('.swiper-button-prev');

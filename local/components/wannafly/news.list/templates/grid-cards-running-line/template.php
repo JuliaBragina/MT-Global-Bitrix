@@ -8,7 +8,7 @@
 
         <div class="grid-cards-running-line__line swiper">
             <div class="swiper-container">
-                <div class="grid-cards-running-line__swiper grid-cards-running-line__grid grid-cards-running-line__grid_animation swiper-wrapper">
+                <div class="grid-cards-running-line__swiper grid-cards-running-line__grid swiper-wrapper">
                     <?php foreach ($arResult['ITEMS'] as $item): ?>
                         <?php if (!empty($item['DETAIL_PICTURE'])): ?>
                             <div class="swiper-slide grid-cards-running-line__item">
@@ -22,7 +22,7 @@
 
         <div class="grid-cards-running-line__lineReverse swiper">
             <div class="swiper-container">
-                <div class="grid-cards-running-line__swiper grid-cards-running-line__grid grid-cards-running-line__grid_animationReverse swiper-wrapper">
+                <div class="grid-cards-running-line__swiper grid-cards-running-line__grid swiper-wrapper">
                     <?php foreach ($arResult['ITEMS'] as $item): ?>
                         <?php if (!empty($item['DETAIL_PICTURE'])): ?>
                             <div class="swiper-slide grid-cards-running-line__item">
