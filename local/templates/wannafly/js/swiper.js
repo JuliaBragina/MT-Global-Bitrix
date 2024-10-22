@@ -11,20 +11,59 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.swiper').forEach(slider => {
         const uniqueClass = slider.classList[0];
 
-        const swiperContainer = slider.querySelector('.swiper-container');
-        const nextButton = slider.querySelector('.swiper-button-next');
-        const prevButton = slider.querySelector('.swiper-button-prev');
-        const scrollbarEl = slider.querySelector('.swiper-scrollbar');
+        const swiperWrapper = slider.querySelector('.swiper-container');
+        if (!swiperWrapper) {
+            console.error('Не удалось найти .swiper-container в слайдере', slider);
+            return;
+        }
 
-        if (swiperContainer && nextButton && prevButton) {
-            const swiper = new Swiper(swiperContainer, {
+        let swiperOptions = {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+        };
+
+        if (uniqueClass === 'grid-cards-running-line__line' || uniqueClass === 'grid-cards-running-line__lineReverse') {
+            swiperOptions = {
+                loop: true,
+                slidesPerView: 7.3,
+                speed: 3000,
+                centeredSlides: true,
+                direction: 'horizontal',
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+            }
+            
+            if (uniqueClass === 'grid-cards-running-line__lineReverse') {
+                swiperOptions = {
+                    loop: true,
+                    slidesPerView: 7.3,
+                    speed: 3000,
+                    centeredSlides: true,
+                    direction: 'horizontal',
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    reverseDirection: false,
+                }
+            }
+
+            console.log(swiperOptions);
+        } else {
+            const nextButton = slider.querySelector('.swiper-button-next');
+            const prevButton = slider.querySelector('.swiper-button-prev');
+            const scrollbarEl = slider.querySelector('.swiper-scrollbar');
+            swiperOptions = {
                 loop: true,
                 navigation: {
                     nextEl: nextButton,
                     prevEl: prevButton,
                 },
-                slidesPerView: slidesPerView[uniqueClass] || 4,
                 spaceBetween: 20,
+                slidesPerView: slidesPerView[uniqueClass] || 4,
                 breakpoints: {
                     1300: {
                         slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && 5) || 4,
@@ -50,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     draggable: true,
                     dragSize: dragSize
                 }
-            });
-        } else {
-            console.error('Не удалось найти элементы для инициализации Swiper', { swiperContainer, nextButton, prevButton });
+            };
         }
+
+        const swiper = new Swiper(swiperWrapper, swiperOptions);
     });
 });

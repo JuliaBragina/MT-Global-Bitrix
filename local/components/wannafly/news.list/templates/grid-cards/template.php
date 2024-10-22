@@ -5,10 +5,10 @@
 $this->setFrameMode(true);
 ?>
 
-<section class="trustUs">
-    <div class="trustUs__container">
-        <h2 class="trustUs__title title__second"><?php echo $arParams["TITLE"]?></h2>
-        <div class="trustUs__grid">
+<section class="grid-cards">
+    <div class="grid-cards__container">
+        <h2 class="grid-cards__title title__second"><?php echo $arParams["TITLE"]?></h2>
+        <div class="grid-cards__grid">
             <?php foreach ($arResult["ITEMS"] as $item): ?>
                 <?php
                 // Проверяем наличие изображения
@@ -21,8 +21,8 @@ $this->setFrameMode(true);
                         false // Получаем путь к файлу и размеры
                     );
                     ?>
-                    <div class="trustUs__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
-                        <img class="trustUs__img"
+                    <div class="grid-cards__item" id="<?=$this->GetEditAreaId($item['ID']);?>">
+                        <img class="grid-cards__img"
                              src="<?= htmlspecialchars($resizedImage['src']) ?>"
                              alt="<?= htmlspecialchars($item["NAME"]) ?>">
                     </div>
