@@ -1,5 +1,5 @@
 .modernTecnologies {
-    background-image: url(../../img/img-main.png);
+    background-image: url(../../../../components/wannafly/main.video/templates/.default/assets/img/img-main.png);
 }
 
 .modernTecnologies__container {
@@ -8,7 +8,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .modernTecnologies__titleContainer {
@@ -17,10 +16,10 @@
 
 .modernTecnologies__title {
     margin-bottom: 65px;
+    color: black;
 }
 
 .modernTecnologies__list {
-    min-width: 700px;
     list-style-position: inside;
     padding: 0;
     margin: 0;
@@ -30,13 +29,10 @@
 
 .modernTecnologies__item {
     padding: 35px;
-    padding-right: 120px;
-    box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: var(--color-white);
-    color: var(--color-accent-pink);
+    background-color: var(--color-accent-pink);
+    color: var(--color-white);
     border-radius: 30px;
-    font-family: 'Montserrat';
     font-size: 20px;
     font-weight: 700;
     line-height: 24.38px;
@@ -49,11 +45,10 @@
 
 .modernTecnologies__item::before {
     content: "0" counter(list-item);
-    color: var(--color-accent-pink);
-    font-family: 'Montserrat';
+    color: var(--color-white);
     font-size: 32px;
     font-weight: 700;
-    line-height: 39.01px;
+    line-height: 39px;
     margin-right: 10px;
 }
 
@@ -69,10 +64,6 @@
         padding: 49px 0;
         flex-direction: column;
         gap: 0;
-    }
-
-    .modernTecnologies__list {
-        min-width: 100%;
     }
 
     .modernTecnologies__item {

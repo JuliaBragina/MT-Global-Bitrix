@@ -1,6 +1,5 @@
 .modernTecnologies {
     background-image: url(../../../../components/wannafly/main.video/templates/.default/assets/img/img-main.png);
-
 }
 
 .modernTecnologies__container {
@@ -42,15 +41,27 @@
     align-items: center;
     counter-increment: list-item;
     gap: 15px;
+
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .modernTecnologies__item::before {
-    content: "0" counter(list-item);
+    content: "0"counter(list-item);
     color: var(--color-white);
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
     margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.modernTecnologies__item:hover {
+    color: var(--color-accent-blue);
+}
+
+.modernTecnologies__item:hover::before {
+    color: var(--color-accent-blue);
 }
 
 @media screen and (max-width: 1750px) {
