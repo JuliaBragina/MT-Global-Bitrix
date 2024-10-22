@@ -34,13 +34,10 @@ $this->setFrameMode(true);
                         <?= $item['PREVIEW_TEXT'] ?>
                     </div>
 
-                    <?php if ($item['PROPERTIES']['DISPLAY_BUTTON']['VALUE'][0] == 'Да'): ?>
-                        <button type="button" class="btn btn-primary btn-arrow-white popup__callBack"
-                            data-fancybox="popup__callback" data-src="#popup__callBack">Подобрать решение
-                        </button>
-                    <?php endif; ?>
                 </article>
             <?php endforeach; ?>
         </div>
+
+        <button type="button" class="btn btn-primary btn-arrow-white popup__callBack ourApproach__button" data-fancybox="popup__callback" data-src="#popup__callBack">Подобрать решение</button>
     </div>
 </section>
