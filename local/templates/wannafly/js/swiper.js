@@ -33,7 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 centeredSlides: true,
                 direction: 'horizontal',
-                slidesPerView: 4.5,
+                breakpoints: {
+                    1300: {
+                        slidesPerView: 4.5,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                    }
+                },
             };
         } else if (uniqueClass === 'grid-cards-running-line__line' || uniqueClass === 'grid-cards-running-line__lineReverse') {
             swiperOptions = {

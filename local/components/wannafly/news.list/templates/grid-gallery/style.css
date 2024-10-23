@@ -46,11 +46,6 @@
     .certificates__title {
         padding-bottom: 27px;
     }
-
-    .certificates__flex {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media screen and (max-width: 1300px) {
