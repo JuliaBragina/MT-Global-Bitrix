@@ -25,7 +25,11 @@
                             <span class="required"><?= $arResult["REQUIRED_SIGN"]; ?></span>
                         <?php endif; ?>
                     </label>
-                    <?= $arResult["QUESTIONS"]["name"]["HTML_CODE"] ?>
+                    <?php
+                        $nameHTML = $arResult["QUESTIONS"]["name"]["HTML_CODE"];
+                        $nameHTML = str_replace('>', ' required minlength="2" maxlength="50" title="Минимум 2 символа, максимум 50 символов.">', $nameHTML);
+                        echo $nameHTML;
+                    ?>
                 </div>
 
                 <div class="popup__field">
@@ -35,7 +39,11 @@
                             <span class="required"><?= $arResult["REQUIRED_SIGN"]; ?></span>
                         <?php endif; ?>
                     </label>
-                    <?= $arResult["QUESTIONS"]["phone"]["HTML_CODE"] ?>
+                    <?php
+                        $phoneHTML = $arResult["QUESTIONS"]["phone"]["HTML_CODE"];
+                        $phoneHTML = str_replace('>', ' required title="Формат: +7 (XXX) XXX-XX-XX">', $phoneHTML);
+                        echo $phoneHTML;
+                    ?>
                 </div>
             </div>
 
@@ -59,3 +67,4 @@
         }
     });
 </script>
+
