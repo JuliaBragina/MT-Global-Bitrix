@@ -7,8 +7,8 @@ $this->setFrameMode(true);
 ?>
 
 <section class="typicalSolutions">
-    <div class="typicalSolutions__container">
-        <h2 class="typicalSolutions__title title__second"><?= $arParams['TITLE'] ?></h2>
+    <div class="typicalSolutions__container container">
+        <h2 class="typicalSolutions__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <nav class="typicalSolutions__navigation">
             <ul class="typicalSolutions__list">
                 <?php foreach ($arResult['ITEMS'] as $item): ?>
@@ -43,17 +43,17 @@ $this->setFrameMode(true);
     const buttons = document.querySelectorAll('.typicalSolutions__button');
     const descriptions = document.querySelectorAll('.typicalSolutions__description');
 
-buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('typicalSolutions__button_active'));
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('typicalSolutions__button_active'));
 
-        button.classList.add('typicalSolutions__button_active');
+            button.classList.add('typicalSolutions__button_active');
 
-        descriptions.forEach(desc => desc.style.display = 'none');
-        descriptions[index].style.display = 'flex';
+            descriptions.forEach(desc => desc.style.display = 'none');
+            descriptions[index].style.display = 'flex';
+        });
     });
-});
 
-buttons[0].classList.add('typicalSolutions__button_active');
-descriptions[0].style.display = 'flex';
+    buttons[0].classList.add('typicalSolutions__button_active');
+    descriptions[0].style.display = 'flex';
 </script>

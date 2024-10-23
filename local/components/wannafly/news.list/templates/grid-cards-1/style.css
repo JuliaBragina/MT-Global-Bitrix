@@ -2,11 +2,6 @@
     position: relative;
 }
 
-
-.equipment__title {
-    padding-bottom: 45px;
-}
-
 .equipment__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -42,16 +37,6 @@
     line-height: 24px;
     padding-top: 20px;
     padding-right: 30px;
-}
-
-@media screen and (max-width: 1700px) {
-}
-
-@media screen and (max-width: 1300px) {
-
-    .equipment__title {
-        padding-bottom: 16px;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -96,9 +81,5 @@
 @media screen and (max-width: 425px) {
     .equipment__itemList {
         padding: 10px;
-    }
-
-    .equipment__img {
-
     }
 }

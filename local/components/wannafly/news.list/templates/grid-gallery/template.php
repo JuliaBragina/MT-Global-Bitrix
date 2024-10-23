@@ -2,8 +2,8 @@
 ?>
 
 <section id="certificates" class="certificates swiper">
-    <div class="certificates__container swiper-container">
-        <h2 class="certificates__title title__second"><?= $arParams['TITLE'] ?></h2>
+    <div class="certificates__container container swiper-container">
+        <h2 class="certificates__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
             <div class="certificates__flex swiper-wrapper">
                 <?php if (!empty($arResult['ITEMS'])): ?>
                     <?php foreach ($arResult['ITEMS'] as $item): ?>

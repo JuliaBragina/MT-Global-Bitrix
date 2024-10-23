@@ -3,7 +3,6 @@
 }
 
 .modernTecnologies__container {
-    width: 64%;
     padding: 109px 0 112px;
     margin: 0 auto;
     display: flex;
@@ -15,7 +14,6 @@
 }
 
 .modernTecnologies__title {
-    margin-bottom: 65px;
     color: black;
 }
 
@@ -52,15 +50,8 @@
     margin-right: 10px;
 }
 
-@media screen and (max-width: 1750px) {
-    .modernTecnologies__container {
-        width: 84%;
-    }
-}
-
 @media screen and (max-width: 1300px) {
     .modernTecnologies__container {
-        width: 94%;
         padding: 49px 0;
         flex-direction: column;
         gap: 0;
@@ -77,10 +68,6 @@
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 20px;
-    }
-
-    .modernTecnologies__title {
-        margin-bottom: 26px;
     }
 
     .modernTecnologies__img {

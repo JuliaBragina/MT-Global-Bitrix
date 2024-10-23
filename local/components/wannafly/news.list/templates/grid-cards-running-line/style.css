@@ -3,7 +3,6 @@
 }
 
 .grid-cards-running-line__container {
-    width: 64%;
     margin: 0 auto;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .grid-cards-running-line__containerTitle{
-    width: 64%;
     margin: 0 auto;
 }
 
@@ -23,7 +21,6 @@
     font-weight: 700;
     line-height: 48.76px;
 
-    padding-bottom: 60px;
     margin: 0;
     text-align: left;
 
@@ -77,10 +74,6 @@
         width: 84%;
     }
 
-    .grid-cards-running-line__container {
-        width: 84%;
-    }
-
     .grid-cards-running-line__container_runningLine {
         width: 100%;
     }
@@ -92,10 +85,6 @@
 
 @media (max-width: 1300px) {
     .grid-cards-running-line__containerTitle {
-        width: 94%;
-    }
-
-    .grid-cards-running-line__container {
         width: 94%;
     }
 
@@ -116,7 +105,6 @@
     .grid-cards-running-line__title {
         font-size: 24px;
         line-height: 29px;
-        padding-bottom: 20px;
         width: 100%;
     }
 

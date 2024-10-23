@@ -6,7 +6,7 @@ $this->setFrameMode(true);
 ?>
 
 <section class="readyProjects swiper">
-    <div class="readyProjects__container navButton">
+    <div class="readyProjects__container container navButton">
         <div class="navButton__container navButton__container_longMargin">
             <h2 class="readyProjects__title title__second"><?= $arParams['TITLE'] ?></h2>
             <nav class="navButton__containerButtons">
@@ -22,7 +22,7 @@ $this->setFrameMode(true);
         </div>
     </div>
 
-    <div class="readyProjects__container readyProjects__sliderContainer slider swiper-container">
+    <div class="readyProjects__container container readyProjects__sliderContainer slider swiper-container">
         <ul class="slider__items swiper-wrapper">
             <?php foreach ($arResult["ITEMS"] as $item): ?>
                 <?php
@@ -65,7 +65,7 @@ $this->setFrameMode(true);
         </ul>
     </div>
 
-    <div class="readyProjects__container">
+    <div class="readyProjects__container container">
         <div class="slider__line swiper-scrollbar"></div>
     </div>
 </section>

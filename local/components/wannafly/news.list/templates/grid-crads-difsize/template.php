@@ -7,8 +7,8 @@ $this->setFrameMode(true);
 
 <section id="solutions" class="solutions section">
 
-    <div class="solutions__container">
-        <h2 class="solutions_title title__second title__second_color_white"><?= $arParams['TITLE'] ?></h2>
+    <div class="solutions__container container">
+        <h2 class="solutions_title title__second title__second_color_white title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <div class="solutions__imgs">
             <figure class="solutions__item solutions__item_span_2" id="<?= $this->GetEditAreaId($arResult['ITEMS'][0]['ID']); ?>">
                 <img src="<?= $arResult['ITEMS'][0]['PREVIEW_PICTURE']["SRC"] ?>" alt="<?= $arResult['ITEMS'][0]['NAME'] ?>" class="solutions__img">

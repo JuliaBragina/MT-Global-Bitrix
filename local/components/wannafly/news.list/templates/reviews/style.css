@@ -3,7 +3,6 @@
 }
 
 .reviews__container {
-    width: 64%;
     margin: 0 auto 53px;
 
     display: flex;
@@ -130,10 +129,6 @@
 
 
 @media screen and (max-width: 1700px) {
-    .reviews__container {
-        width: 84%;
-    }
-
     .reviews__item {
         min-width: 100%;
         grid-template-columns: .7fr 1fr;
@@ -141,10 +136,6 @@
 }
 
 @media screen and (max-width: 1300px) {
-    .reviews__container {
-        width: 94%;
-    }
-
     .reviews__paragraph, .reviews__position {
         font-size: 14px;
         line-height: 21px;

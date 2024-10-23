@@ -2,9 +2,9 @@
 ?>
 
 <section class="modernTecnologies">
-    <div class="modernTecnologies__container">
+    <div class="modernTecnologies__container container">
         <div class="modernTecnologies__titleContainer">
-            <h2 class="modernTecnologies__title title__second title__second_color_white">
+            <h2 class="modernTecnologies__title title__second title__second_color_white title__bottom-margin">
                 <?= $arResult['TITLE'];?>
             </h2>
 

@@ -8,7 +8,7 @@
 <section class="main">
     <div class="main__container main__container_spacebetween container">
         <div class="main__description">
-            <h1 class="main__title title__first"><?= htmlspecialchars($arResult["TITLE"]) ?></h1>
+            <h1 class="main__title title__first title__bottom-margin"><?= htmlspecialchars($arResult["TITLE"]) ?></h1>
 
             <?php if (count($arResult['SLOGANS']) > 1): ?>
                 <ul class="main__actionList">

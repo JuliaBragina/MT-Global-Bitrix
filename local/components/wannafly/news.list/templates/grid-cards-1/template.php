@@ -6,7 +6,7 @@ $this->setFrameMode(true);
 
 <section id="equipments" class="equipment section">
     <div class="container">
-        <h2 class="equipment__title title__second"><?= $arParams['TITLE'] ?></h2>
+        <h2 class="equipment__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <div class="equipment__list">
             <?php if (!empty($arResult['ITEMS'])): ?>
                 <?php foreach ($arResult['ITEMS'] as $item): ?>

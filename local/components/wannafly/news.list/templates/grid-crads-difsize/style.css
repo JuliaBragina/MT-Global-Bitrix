@@ -4,13 +4,8 @@
 }
 
 .solutions__container{
-    width: 64%;
     margin: 0 auto;
     padding: 100px 0 160px;
-}
-
-.solutions_title{
-    padding-bottom: 54px;
 }
 
 .solutions__imgs{
@@ -75,20 +70,9 @@
     left: 25px;
 }
 
-@media screen and (max-width: 1700px) {
-    .solutions__container{
-        width: 84%;
-    }
-}
-
 @media screen and (max-width: 1300px) {
     .solutions__container {
-        width: 94%;
         padding: 50px 0 49px;
-    }
-
-    .solutions_title {
-        padding-bottom: 27px;
     }
     
     .solutions__img {

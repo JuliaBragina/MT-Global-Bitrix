@@ -6,8 +6,8 @@ $this->setFrameMode(true);
 ?>
 
 <section class="ourSolutions">
-    <div class="ourSolutions__container">
-        <h2 class="ourSolutions__title title__second"><?= $arParams['TITLE'] ?>й</h2>
+    <div class="ourSolutions__container container">
+        <h2 class="ourSolutions__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?>й</h2>
         <div class="ourSolutions__grid">
             <?php foreach ($arResult['ITEMS'] as $item):
                 $imgSrc = CFile::ResizeImageGet(

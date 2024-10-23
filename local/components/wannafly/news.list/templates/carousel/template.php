@@ -18,7 +18,7 @@ $this->setFrameMode(true);
         </nav>
     </aside>
 
-    <div class="doneProjects__container navButton">
+    <div class="doneProjects__container container navButton">
         <div class="navButton__container navButton__container_short_margin">
             <h2 class="doneProjects__title title__second"><?= $arParams['TITLE'] ?></h2>
             <nav class="navButton__containerButtons">
@@ -77,7 +77,7 @@ $this->setFrameMode(true);
             </ul>
         </div>
     </div>
-    <div class="doneProjects__container mobile-hidden">
+    <div class="doneProjects__container container mobile-hidden">
         <div class="slider__line swiper-scrollbar"></div>
     </div>
 </section>

@@ -11,7 +11,7 @@ Asset::getInstance()->addJs($templateFolder . '/assets/js/scripts.js');
 ?>
 
 <section class="services">
-    <div class="services__container">
+    <div class="services__container container">
         <nav class="services__nav">
             <h2 class="services__title title__second"><?= $arParams['TITLE'] ?></h2>
             <ul class="services__list">

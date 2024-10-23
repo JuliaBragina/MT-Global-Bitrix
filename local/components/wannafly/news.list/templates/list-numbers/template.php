@@ -1,8 +1,8 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <section class="results">
-    <div class="results__container">
-        <h2 class="results__title title__second"><?= $arParams['TITLE'] ?></h2>
+    <div class="results__container container">
+        <h2 class="results__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <ul class="results__list">
             <?php foreach ($arResult["ITEMS"] as $item): ?>
                 <li class="results__item" id="<?=$this->GetEditAreaId($item['ID']);?>">

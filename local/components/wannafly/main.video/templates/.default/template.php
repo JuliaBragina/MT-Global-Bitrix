@@ -31,9 +31,9 @@
         </svg>
     </div>
 
-    <div class="main__container">
+    <div class="main__container container">
         <div class="main__description">
-            <h1 class="main__title title__first"><?= htmlspecialchars($arResult['TITLE']) ?></h1>
+            <h1 class="main__title title__first title__bottom-margin"><?= htmlspecialchars($arResult['TITLE']) ?></h1>
             <p class="main__slogan"><?= htmlspecialchars($arResult['SLOGAN']) ?></p>
             <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox="popup__callback"
                 data-src="#popup__callBack">Запланировать встречу

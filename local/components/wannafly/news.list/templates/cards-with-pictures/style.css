@@ -3,7 +3,6 @@
 }
 
 .readyProjects__container {
-    width: 64%;
     margin: 0 auto;
 
     display: flex;
@@ -16,7 +15,6 @@
 }
 
 .readyProjects__title {
-    padding-bottom: 19px;
     width: 100%;
 }
 
@@ -37,18 +35,9 @@
     color: var(--color-accent-pink);
 }
 
-@media screen and (max-width: 1700px) {
-    .readyProjects__container{
-      width: 84%;
-    }
-}
 
 @media screen and (max-width: 1300px) {
     .readyProjects {
         margin-bottom: 20px;
-    }
-    
-    .readyProjects__container {
-      width: 94%;
     }
 }

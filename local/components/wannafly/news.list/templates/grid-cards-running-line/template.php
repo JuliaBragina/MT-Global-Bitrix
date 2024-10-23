@@ -1,9 +1,9 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <section class="grid-cards-running-line">
-    <div class="grid-cards-running-line__container grid-cards-running-line__container_animation grid-cards-running-line__container_runningLine">
+    <div class="grid-cards-running-line__container container grid-cards-running-line__container_animation grid-cards-running-line__container_runningLine">
         <div class="grid-cards-running-line__containerTitle">
-            <h2 class="grid-cards-running-line__title title__second"><?= $arParams['TITLE'] ?></h2>
+            <h2 class="grid-cards-running-line__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         </div>
 
         <div class="grid-cards-running-line__line swiper">

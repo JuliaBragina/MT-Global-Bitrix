@@ -3,12 +3,7 @@
 }
 
 .ourApproach__container{
-    width: 64%;
     margin: 100px auto;
-}
-
-.ourApproach__title{
-    padding-bottom: 55px;
 }
 
 .ourApproach__steps{
@@ -142,16 +137,8 @@
     align-items: flex-end;
 }
 
-@media screen and (max-width: 1700px) {
-    .ourApproach__container {
-        width: 84%;
-    }
-}
-
 @media screen and (max-width: 1300px) {
     .ourApproach__container {
-        width: 94%;
-
         margin: 47px auto;
     }
 
@@ -170,10 +157,6 @@
         display: flex;
         justify-content: flex-start;
         gap: 14px;
-    }
-    
-    .ourApproach__title{
-        padding-bottom: 32px;
     }
 
     .ourApproach__step {

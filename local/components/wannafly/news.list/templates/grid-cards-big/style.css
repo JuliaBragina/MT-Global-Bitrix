@@ -1,10 +1,8 @@
 .ourSolutions__container {
-    width: 64%;
     margin: 115px auto;
 }
 
 .ourSolutions__title {
-    margin-bottom: 61px;
     width: 600px;
 }
 
@@ -39,15 +37,8 @@
     width: 74%;
 }
 
-@media screen and (max-width: 1700px) {
-    .ourSolutions__container {
-        width: 84%;
-    }
-}
-
 @media screen and (max-width: 1300px) {
     .ourSolutions__container {
-        width: 94%;
         margin: 50px auto 25px;
     }
 }
@@ -65,7 +56,6 @@
 
     .ourSolutions__title {
         width: 100%;
-        margin-bottom: 28px;
     }
 
     .ourSolutions__paragraph {

@@ -6,7 +6,6 @@ section.main {
 }
 
 .main__container {
-    width: 65%;
     margin: auto;
     display: flex;
     justify-content: flex-start;
@@ -22,10 +21,6 @@ section.main {
     max-width: 688px;
     margin: 90px 0 192px;
     z-index: 1;
-}
-
-.main__title {
-    padding-bottom: 32px;
 }
 
 .main__slogan {
@@ -102,10 +97,6 @@ section.main {
 }
 
 @media screen and (max-width: 1750px) {
-    .main__container {
-        width: 84%;
-    }
-
     .main__slogan {
         font-size: 24px;
         line-height: 36px;
@@ -115,10 +106,6 @@ section.main {
 @media screen and (max-width: 1300px) {
     .main__description {
         min-width: auto;
-    }
-
-    .main__container {
-        width: 94%;
     }
 
     .main__mask {
@@ -164,10 +151,6 @@ section.main {
     .main__img {
         width: 236.48px;
         height: 242px;
-    }
-
-    .main__title {
-        padding-bottom: 22px;
     }
 
     .main__slogan {

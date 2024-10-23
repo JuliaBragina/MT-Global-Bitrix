@@ -15,8 +15,8 @@ $this->setFrameMode(true);
         </nav>
     </aside>
 
-    <div class="ourApproach__container">
-        <h2 class="ourApproach__title title__second"><?= $arParams['TITLE'] ?></h2>
+    <div class="ourApproach__container container">
+        <h2 class="ourApproach__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         
         <div class="ourApproach__steps">
             <?php foreach ($arResult['ITEMS'] as $index => $item): ?>
