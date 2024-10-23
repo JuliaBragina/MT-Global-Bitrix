@@ -6,8 +6,8 @@ Asset::getInstance()->addCss($templateFolder . '/assets/style.css');
 Asset::getInstance()->addJs($templateFolder . '/assets/menu.js');
 ?>
 
+<div class="overlay" id="overlay"></div>
 <nav class="header__nav">
-    <div class="header__overlay"></div>
     <ul class="header__list container">
         <?php
         $previousLevel = 0;
@@ -39,6 +39,3 @@ Asset::getInstance()->addJs($templateFolder . '/assets/menu.js');
                     ?>
     </ul>
 </nav>
-
-
-
