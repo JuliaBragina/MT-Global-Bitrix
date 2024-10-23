@@ -5,26 +5,29 @@
 .certificates__container {
     width: 64%;
     margin: 0 auto 45px;
+    overflow: hidden;
 }
 
 .certificates__title {
     padding-bottom: 57px;
 }
 
-.certificates__flex, .certificates__row {
+.certificates__flex {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .certificates__img {
     height: auto;
     filter: grayscale(1);
+    transition: filter .3s ease;
+    cursor: pointer;
 }
-.certificates__row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+.certificates__img:hover {
+    filter: grayscale(0);
 }
 
 @media screen and (max-width: 1700px) {
@@ -47,11 +50,6 @@
     .certificates__flex {
         flex-direction: column;
         align-items: center;
-    }
-
-    .certificates__row {
-        width: 100%;
-        justify-content: space-between;
     }
 }
 

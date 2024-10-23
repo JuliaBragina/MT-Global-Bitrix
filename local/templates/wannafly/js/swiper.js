@@ -23,7 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: 1,
         };
 
-        if (uniqueClass === 'grid-cards-running-line__line' || uniqueClass === 'grid-cards-running-line__lineReverse') {
+        if (uniqueClass === 'certificates') {
+            swiperOptions = {
+                loop: true,
+                speed: 3000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                centeredSlides: true,
+                direction: 'horizontal',
+                slidesPerView: 4.5,
+            };
+        } else if (uniqueClass === 'grid-cards-running-line__line' || uniqueClass === 'grid-cards-running-line__lineReverse') {
             swiperOptions = {
                 loop: true,
                 breakpoints: {
@@ -97,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
 
+        console.log(swiperOptions);
         const swiper = new Swiper(swiperWrapper, swiperOptions);
     });
 });
