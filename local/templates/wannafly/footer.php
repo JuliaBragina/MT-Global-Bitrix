@@ -164,62 +164,27 @@
     </div>
 </section>
 
-<section class="popup popup_needProject" style="display: none;" id="popup__needProject">
-    <h1 class="popup__title title__second">Нужен проект?</h1>
-    <p class="popup__paragraph">Заполните бриф или для оперативности позвоните по номеру 8 800 333-40-00</p>
-    <form class="popup__form">
-        <div class="popup__inputs popup__inputs_needProject">
-            <div class="popup__field popup__field_needProject">
-                <label class="popup__label" for="name">Имя</label>
-                <input class="popup__input" type="text" id="name" name="name" required>
-            </div>
-            <div class="popup__field popup__field_needProject">
-                <label class="popup__label" for="email">Email</label>
-                <input class="popup__input" type="email" id="email" name="email" required>
-            </div>
-            <div class="popup__field popup__field_needProject">
-                <label class="popup__label" for="phone">Телефон</label>
-                <input class="popup__input" type="phone" id="phone" name="phone" required>
-            </div>
-            <div class="popup__field popup__field_needProject">
-                <label class="popup__label" for="phone">Телефон</label>
-                <textarea class="popup__input" type="phone" id="phone" name="phone" required></textarea>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary popup__button">Оставить заявку</button>
+<?php $APPLICATION->IncludeComponent(
+    "wannafly:form.result.new",
+    "callback",
+    array(
+        "WEB_FORM_ID" => "4",
+        "IGNORE_CUSTOM_TEMPLATE" => "N",
+        "USE_EXTENDED_ERRORS" => "Y",
+        "SEF_MODE" => "N",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "LIST_URL" => "",
+        "EDIT_URL" => "",
+        "SUCCESS_URL" => "",
+        "CHAIN_ITEM_TEXT" => "",
+        "CHAIN_ITEM_LINK" => "",
+        "VARIABLE_ALIASES" => array(),
+        "AJAX_MODE" => "Y",
+    ),
+    false
+); ?>
 
-        <div class="popup__checkboxContainer">
-            <input type="checkbox" id="popup-checkbox" class="popup__checkbox">
-            <label for="popup-checkbox" class="popup__checkboxLabel">Оставляя заявку, я подтверждаю, что ознакомился и
-                принимаю Политику конфиденциальности</label>
-        </div>
-    </form>
-</section>
-
-
-<section class="popup popup_callBack" style="display: none;" id="popup__callBack">
-    <h1 class="popup__title title__second">Запланировать встречу</h1>
-    <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
-    <form class="popup__form">
-        <div class="popup__inputs">
-            <div class="popup__field">
-                <label class="popup__label" for="name">Имя</label>
-                <input class="popup__input" type="text" id="name" name="name" required>
-            </div>
-            <div class="popup__field">
-                <label class="popup__label" for="phone">Телефон</label>
-                <input class="popup__input" type="phone" id="phone" name="phone" required>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary popup__button">Запланировать встречу</button>
-
-        <div class="popup__checkboxContainer">
-            <input type="checkbox" id="popup-checkbox" class="popup__checkbox">
-            <label for="popup-checkbox" class="popup__checkboxLabel">Оставляя заявку, я подтверждаю, что ознакомился
-                и принимаю Политику конфиденциальности</label>
-        </div>
-    </form>
-</section>
 
 <section class="popup popup_getCatalog" style="display: none;" id="popup__getCatalog">
     <h1 class="popup__title title__second">Получите каталог готовых решений

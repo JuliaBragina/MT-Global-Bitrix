@@ -77,7 +77,7 @@
 
 .popup__paragraph {
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 24px;
     margin: 0;
@@ -96,7 +96,7 @@
 }
 
 .popup__field {
-    width: 40%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -107,7 +107,7 @@
     width: 100%;
 }
 
-.popup__input {
+.popup__input, .inputtext {
     width: 100%;
     border: 0;
     border-bottom: 1px solid var(--color-accent-blue);
@@ -141,7 +141,7 @@
     gap: 10px;
 }
 
-.popup__checkbox {
+.popup__checkbox, .popup__checkboxContainer input[type="checkbox"]  {
     flex-shrink: 0;
     position: relative;
     width: 28px;
@@ -154,7 +154,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.popup__checkbox:checked::before {
+.popup__checkbox:checked::before, .popup__checkboxContainer input[type="checkbox"]:checked::before {
     content: '';
     position: absolute;
     top: 50%;
