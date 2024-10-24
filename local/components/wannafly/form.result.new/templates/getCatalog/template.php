@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="popup popup_callBack" id="popup__callBack" style="display: none;">
+<section class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
     <h1 class="popup__title title__second">Получите каталог готовых решений
         <span class="popup__title_pink">для переговорных комнат</span> </h1>
 
@@ -17,8 +17,8 @@
             <?= bitrix_sessid_post(); ?>
             <?= $arResult["FORM_HEADER"] ?>
 
-            <div class="popup__inputs">
-                <div class="popup__field">
+            <div class="popup__inputs popup__inputs_getCatalog">
+                <div class="popup__field popup__field_getCatalog">
                     <label class="popup__label" for="name">
                         <?= $arResult["QUESTIONS"]["name"]["CAPTION"] ?>
                         <?php if ($arResult["QUESTIONS"]["name"]["REQUIRED"] == "Y"): ?>
@@ -32,7 +32,7 @@
                     ?>
                 </div>
 
-                <div class="popup__field">
+                <div class="popup__field popup__field_getCatalog">
                     <label class="popup__label" for="phone">
                         <?= $arResult["QUESTIONS"]["phone"]["CAPTION"] ?>
                         <?php if ($arResult["QUESTIONS"]["phone"]["REQUIRED"] == "Y"): ?>
