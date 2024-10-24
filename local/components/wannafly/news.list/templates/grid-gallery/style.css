@@ -16,11 +16,14 @@
 }
 
 .certificates__img {
-    height: auto;
     filter: grayscale(1);
     transition: filter .3s ease;
     cursor: pointer;
     transition: transform 0.2s ease-out;
+
+    width: 100%;
+    max-height: 208px;
+    object-fit: contain;
 }
 
 .certificates__img:hover {
@@ -39,6 +42,11 @@
     .certificates__flex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .certificates__img {
+        max-height: 300px;
     }
 }
 
