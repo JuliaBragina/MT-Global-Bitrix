@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (slideCount === 0) return;
 
         let slideWidth = slides[0].clientWidth;
+        if (slideWidth === 0) return;
+
         let position = isReverse ? -slideWidth * slideCount : 0;
         let isCloned = false;
         const speed = 0.6;
@@ -141,23 +143,36 @@ document.addEventListener('DOMContentLoaded', function () {
                     clonedSlides[i].remove();
                 }
             }
+            isCloned = false;
         }
 
         function updateSlider() {
-            if (window.innerWidth <= 1024 && isAnimating) {
-                stopSlider();
-                
-            } else if (!isAnimating) {
-                initSlider();
+            if (window.innerWidth <= 1024) {
+                if (isAnimating) {
+                    stopSlider();
+                }
+            } else {
+                if (!isAnimating) {
+                    initSlider();
+                }
             }
-            
         }
 
         updateSlider();
 
-        window.addEventListener('resize', updateSlider);
+        //window.addEventListener('load', updateSlider);
+        window.addEventListener('resize', debounce(updateSlider, 100));
     });
+
+    function debounce(func, delay) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
 });
+
 
 
 /*document.addEventListener('DOMContentLoaded', function () {
