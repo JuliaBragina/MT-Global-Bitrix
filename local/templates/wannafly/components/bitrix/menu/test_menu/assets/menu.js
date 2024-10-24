@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('active');
 
             if (!isMobile) {
-                overlay.classList.add('overlay_active');
+                if (parentLi.classList.contains('submenu-open')) {
+                    overlay.classList.add('overlay_active');
+                } else {
+                    overlay.classList.remove('overlay_active');
+                }
             }
         });
     });
@@ -54,12 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             overlay.classList.remove('overlay_active');
             document.body.classList.remove('mobile-menu-open');
+
+            document.querySelectorAll('.submenu-open').forEach(item => {
+                item.classList.remove('submenu-open');
+            });
+            document.querySelectorAll('.active').forEach(item => {
+                item.classList.remove('active');
+            });
         }
     });
 
     overlay.addEventListener('click', () => {
         mobileToggle.checked = false;
         overlay.classList.remove('overlay_active');
+        document.body.classList.remove('mobile-menu-open');
 
         document.querySelectorAll('.submenu-open').forEach(item => {
             item.classList.remove('submenu-open');
@@ -69,3 +81,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+

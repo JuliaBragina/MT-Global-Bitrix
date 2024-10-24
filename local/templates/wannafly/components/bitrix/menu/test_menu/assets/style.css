@@ -3,7 +3,7 @@
     border-top: 1px solid var(--color-black-opacity);
     border-bottom: 1px solid var(--color-black-opacity);
     background-color: var(--color-white);
-    z-index: 4;
+    z-index: 10;
     position: relative;
 }
 
@@ -105,6 +105,8 @@
     text-decoration: none;
     cursor: pointer;
     width: 64%;
+    color: var(--color-black);
+    transition: color 0.3s ease, background-color 0.3s ease;
 
     padding: 40px 0;
 }
@@ -135,6 +137,7 @@
 
 .header__item_level_2:hover {
     background-color: var(--color-accent-blue-opacity);
+    color: var(--color-accent-blue);
 }
 
 .header__item_level_2.has-submenu:hover > .header__sublist ul {

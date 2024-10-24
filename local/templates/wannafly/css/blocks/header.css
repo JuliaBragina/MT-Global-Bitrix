@@ -6,7 +6,7 @@
     width: 100%;
     background-color: white;
     padding: 23px 0;
-    z-index: 4;
+    z-index: 10;
     position: relative;
 
     transition: padding 0.3s;
