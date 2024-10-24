@@ -35,6 +35,13 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .certificates__flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .certificates__img {
         width: 46%;

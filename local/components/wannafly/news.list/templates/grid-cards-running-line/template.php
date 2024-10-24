@@ -6,7 +6,7 @@
             <h2 class="grid-cards-running-line__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         </div>
 
-        <div class="grid-cards-running-line__grid running-line-container running-line-container_grid">
+        <div class="grid-cards-running-line__grid running-line-container">
             <?php foreach ($arResult['ITEMS'] as $item): ?>
                 <?php if (!empty($item['DETAIL_PICTURE'])): ?>
                     <div class="grid-cards-running-line__item running-line-container__item">

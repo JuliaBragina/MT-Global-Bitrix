@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     sliderContainers.forEach(item => {
         const slides = Array.from(item.querySelectorAll('.running-line-container__item'));
         const isReverse = item.classList.contains('running-line-container_reverse');
-        const isGrid = item.classList.contains('running-line-container_grid');
         const slideCount = slides.length;
 
         if (slideCount === 0) return;
@@ -132,18 +131,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function stopSlider() {
-            let position = isReverse ? -slideWidth * slideCount : 0;
-            cancelAnimationFrame(animationFrameId);
-            item.style.transform = `translateX(${position}px)`;
-
+            item.style.transform = `translateX(0px)`;
             isAnimating = false;
+            cancelAnimationFrame(animationFrameId);
         }
 
         function updateSlider() {
-            if (window.innerWidth <= 1024 && isGrid && isAnimating) {
-                stopSlider();
-            } else if (!isAnimating) {
-                initSlider();
+            if (window.innerWidth <= 1024) {
+                if (isAnimating) {
+                    stopSlider();
+                }
+            } else {
+                if (!isAnimating) {
+                    initSlider();
+                }
             }
         }
 
@@ -152,3 +153,4 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', updateSlider);
     });
 });
+
