@@ -134,6 +134,91 @@ document.addEventListener('DOMContentLoaded', function () {
             item.style.transform = `translateX(0px)`;
             isAnimating = false;
             cancelAnimationFrame(animationFrameId);
+
+            const clonedSlides = item.querySelectorAll('.running-line-container__item');
+            if (clonedSlides.length > slideCount) {
+                for (let i = slideCount; i < clonedSlides.length; i++) {
+                    clonedSlides[i].remove();
+                }
+            }
+        }
+
+        function updateSlider() {
+            if (window.innerWidth <= 1024 && isAnimating) {
+                stopSlider();
+                
+            } else if (!isAnimating) {
+                initSlider();
+            }
+            
+        }
+
+        updateSlider();
+
+        window.addEventListener('resize', updateSlider);
+    });
+});
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    const sliderContainers = document.querySelectorAll('.running-line-container');
+
+    sliderContainers.forEach(item => {
+        const slides = Array.from(item.querySelectorAll('.running-line-container__item'));
+        const originalSlideCount = slides.length; // Исходное количество слайдов
+        const isReverse = item.classList.contains('running-line-container_reverse');
+        let slideWidth = slides[0].clientWidth;
+        let position = isReverse ? -slideWidth * originalSlideCount : 0;
+        const speed = 0.6;
+        let animationFrameId;
+        let isAnimating = false;
+
+        function cloneAndAppendSlides() {
+            const slidesToClone = isReverse ? [...slides].reverse() : slides;
+            slidesToClone.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                if (isReverse) {
+                    item.prepend(clone);
+                } else {
+                    item.appendChild(clone);
+                }
+            });
+        }
+
+        function animateSlides() {
+            position += isReverse ? speed : -speed;
+            item.style.transform = `translateX(${position}px)`;
+
+            // Проверка, если последний слайд полностью скрыт за экраном
+            if (!isReverse && position <= -slideWidth * originalSlideCount) {
+                resetSlides();
+            } else if (isReverse && position >= 0) {
+                resetSlides();
+            }
+
+            animationFrameId = requestAnimationFrame(animateSlides);
+        }
+
+        function resetSlides() {
+            // Удаляем оригинальные слайды, чтобы клоны стали новыми оригинальными
+            for (let i = 0; i < originalSlideCount; i++) {
+                item.removeChild(item.firstChild);
+            }
+
+            // Сброс позиции так, чтобы клоны стали на место оригинальных слайдов
+            position = isReverse ? -slideWidth * originalSlideCount : 0;
+            item.style.transform = `translateX(${position}px)`;
+        }
+
+        function initSlider() {
+            cloneAndAppendSlides(); // Клонируем и добавляем слайды
+            isAnimating = true;
+            animationFrameId = requestAnimationFrame(animateSlides); // Запуск анимации
+        }
+
+        function stopSlider() {
+            cancelAnimationFrame(animationFrameId);
+            isAnimating = false;
         }
 
         function updateSlider() {
@@ -148,9 +233,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        updateSlider();
-
+        updateSlider(); // Инициализация слайдера в зависимости от ширины экрана
         window.addEventListener('resize', updateSlider);
     });
 });
-
+*/
