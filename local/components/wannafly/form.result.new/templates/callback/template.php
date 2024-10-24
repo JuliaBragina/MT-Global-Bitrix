@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <?= $arResult['SUBMIT_BUTTON'] ?>
+            <button type="submit" class="btn btn-primary popup__button" name="web_form_submit">Оставить заявку на звонок</button> 
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -58,13 +58,4 @@
         </form>
     <?php endif; ?>
 </section>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const submitButton = document.querySelector('input[type="submit"]');
-        if (submitButton) {
-            submitButton.classList.add('btn', 'btn-primary', 'popup__button');
-        }
-    });
-</script>
 

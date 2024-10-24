@@ -79,7 +79,7 @@
                     </div>
                 </fieldset>
 
-                <?= $arResult['SUBMIT_BUTTON'] ?>
+                <button class="btn btn-primary contactForm__submit header__callback-button" name="web_form_submit" type="submit">Обратный звонок</button>
 
                 <label class="contactForm__checkboxContainer">
                     <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -92,12 +92,3 @@
         <?php endif; ?>
     </div>
 </section>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const submitButton = document.querySelector('input[type="submit"]');
-        if (submitButton) {
-            submitButton.classList.add('btn', 'btn-primary', 'contactForm__submit', 'header__callback-button');
-        }
-    });
-</script>

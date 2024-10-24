@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- Кнопка отправки формы -->
-                <?= $arResult['SUBMIT_BUTTON'] ?>
+                <button class="btn btn-secondary-grey getPresentationForm__button" name="web_form_submit" type="submit">Отправить</button>
 
                 <?= $arResult["FORM_FOOTER"] ?>
             </form>
@@ -59,12 +59,3 @@
         <img class="getPresentationSection__img" src="<?= SITE_TEMPLATE_PATH ?>/img/img-pdf.svg" alt="Презентация">
     </div>
 </section>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const submitButton = document.querySelector('input[type="submit"]');
-        if (submitButton) {
-            submitButton.classList.add('btn', 'btn-secondary-grey', 'getPresentationForm__button');
-        }
-    });
-</script>
