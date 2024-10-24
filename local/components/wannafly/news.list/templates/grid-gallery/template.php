@@ -1,10 +1,10 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
 
-<section id="certificates" class="certificates swiper">
-    <div class="certificates__container container swiper-container">
+<section id="certificates" class="certificates">
+    <div class="certificates__container container">
         <h2 class="certificates__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
-            <div class="certificates__flex swiper-wrapper">
+            <div class="certificates__flex running-line-container">
                 <?php if (!empty($arResult['ITEMS'])): ?>
                     <?php foreach ($arResult['ITEMS'] as $item): ?>
                         <?php if (!empty($item['PROPERTIES']['SERTIFICATES']['VALUE'])): ?>
@@ -16,7 +16,7 @@
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>
-                                    <img class="certificates__img swiper-slide" src="<?= $certificateImage['src']; ?>"
+                                    <img class="certificates__img running-line-container__item" src="<?= $certificateImage['src']; ?>"
                                             alt="Сертификат" id="<?= $this->GetEditAreaId($item['ID']); ?>">
                                 <?php endif; ?>
                             <?php endforeach; ?>

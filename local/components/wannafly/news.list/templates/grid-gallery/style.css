@@ -12,6 +12,7 @@
     align-items: center;
     gap: 15px;
     flex-wrap: nowrap;
+    will-change: transform;
 }
 
 .certificates__img {
@@ -19,6 +20,7 @@
     filter: grayscale(1);
     transition: filter .3s ease;
     cursor: pointer;
+    transition: transform 0.2s ease-out;
 }
 
 .certificates__img:hover {
