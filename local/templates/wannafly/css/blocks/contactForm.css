@@ -241,7 +241,6 @@
     }
 
     .contactForm__submission {
-        min-width: 100%;
         min-height: 602px;
         padding: 30px 10px;
     }
