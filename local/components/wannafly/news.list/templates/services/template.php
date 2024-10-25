@@ -13,7 +13,7 @@ Asset::getInstance()->addJs($templateFolder . '/assets/js/scripts.js');
 <section class="services">
     <div class="services__container container">
         <nav class="services__nav">
-            <h2 class="services__title title__second"><?= $arParams['TITLE'] ?></h2>
+            <h2 class="services__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
             <ul class="services__list">
                 <?php foreach ($arResult["ITEMS"] as $index => $service): ?>
                     <li class="services__item" id="<?=$this->GetEditAreaId($service['ID']);?>">

@@ -78,7 +78,7 @@
                 <h4 class="footer__title">Телефон</h4>
                 <li class="footer__item">
                     <div class="footer__contact-block">
-                        <div class="header__phone-container">
+                        <div class="footer__phone-container">
                             <img class="footer__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
                                  alt="Иконка телефона">
                             <img class="footer__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/phone-pink.svg"
@@ -125,18 +125,18 @@
                 <li class="footer__item">
                     <ul class="footer__subItem">
                         <li class="footer__subItem">
-                            <div class="header__phone-container">
-                                <img class="header__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
+                            <div class="footer__phone-container">
+                                <img class="footer__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
                                      alt="Иконка телефона">
-                                <img class="header__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social-vk.svg"
+                                <img class="footer__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social-vk.svg"
                                      alt="Иконка телефона">
                             </div>
                         </li>
                         <li class="footer__subItem">
-                            <div class="header__phone-container">
-                                <img class="header__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
+                            <div class="footer__phone-container">
+                                <img class="footer__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
                                      alt="Иконка телефона">
-                                <img class="header__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social.svg"
+                                <img class="footer__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social.svg"
                                      alt="Иконка телефона">
                             </div>
                         </li>
