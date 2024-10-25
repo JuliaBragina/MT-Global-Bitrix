@@ -1,5 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
+
 <section class="popup popup_callBack" id="popup__callBack" style="display: none;">
     <h1 class="popup__title title__second">Запланировать встречу</h1>
     <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
@@ -27,12 +28,12 @@
                     </label>
                     <?php
                         $nameHTML = $arResult["QUESTIONS"]["name"]["HTML_CODE"];
-                        $nameHTML = str_replace('>', ' required minlength="2" maxlength="50" title="Минимум 2 символа, максимум 50 символов.">', $nameHTML);
+                        $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
                         echo $nameHTML;
                     ?>
                 </div>
 
-                <div class="popup__field">
+                <div class="popup__field popup__field_phone">
                     <label class="popup__label" for="phone">
                         <?= $arResult["QUESTIONS"]["phone"]["CAPTION"] ?>
                         <?php if ($arResult["QUESTIONS"]["phone"]["REQUIRED"] == "Y"): ?>
@@ -41,13 +42,13 @@
                     </label>
                     <?php
                         $phoneHTML = $arResult["QUESTIONS"]["phone"]["HTML_CODE"];
-                        $phoneHTML = str_replace('>', ' required title="Формат: +7 (XXX) XXX-XX-XX">', $phoneHTML);
+                        $phoneHTML = str_replace('>', 'required id="popup__phone">', $phoneHTML);
                         echo $phoneHTML;
                     ?>
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary popup__button" name="web_form_submit">Оставить заявку на звонок</button> 
+            <button type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit">Оставить заявку на звонок</button> 
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -59,3 +60,7 @@
     <?php endif; ?>
 </section>
 
+<script>
+     const phoneInputs = document.querySelector('.popup__field_phone');
+     console.log(phoneInputs);
+</script>

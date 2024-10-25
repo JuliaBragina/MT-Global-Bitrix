@@ -231,6 +231,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/fancybox.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@latest/dist/addons/cleave-phone.ru.js" defer></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/inputValidation.js" defer></script>
 </body>
 </html>
 

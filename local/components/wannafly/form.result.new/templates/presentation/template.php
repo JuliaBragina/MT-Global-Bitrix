@@ -33,7 +33,11 @@
                             <span class="required"><?= $arResult["REQUIRED_SIGN"]; ?></span>
                         <?php endif; ?>
                     </label>
-                    <?= $arResult["QUESTIONS"]["name"]["HTML_CODE"] ?>
+                    <?php
+                        $nameHTML = $arResult["QUESTIONS"]["name"]["HTML_CODE"];
+                        $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
+                        echo $nameHTML;
+                    ?>
                 </div>
 
                 <!-- Поле "Почта" -->
@@ -44,11 +48,15 @@
                             <span class="required"><?= $arResult["REQUIRED_SIGN"]; ?></span>
                         <?php endif; ?>
                     </label>
-                    <?= $arResult["QUESTIONS"]["email"]["HTML_CODE"] ?>
+                    <?php
+                        $emailHTML = $arResult["QUESTIONS"]["email"]["HTML_CODE"];
+                        $emailHTML = str_replace('>', 'required id="popup__email">', $emailHTML);
+                        echo $emailHTML;
+                    ?>
                 </div>
 
                 <!-- Кнопка отправки формы -->
-                <button class="btn btn-secondary-grey getPresentationForm__button" name="web_form_submit" type="submit">Отправить</button>
+                <button class="btn btn-secondary-grey getPresentationForm__button" id="popup__btn-submit" name="web_form_submit" type="submit">Отправить</button>
 
                 <?= $arResult["FORM_FOOTER"] ?>
             </form>

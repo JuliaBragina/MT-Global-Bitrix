@@ -52,12 +52,20 @@
                 <!-- Поля формы -->
                 <fieldset class="contactForm__inputFieldset">
                     <div class="contactForm__inputWrapper contactForm__nameWrapper">
-                        <?= $arResult["QUESTIONS"]["name"]["HTML_CODE"] ?>
+                        <?php
+                            $nameHTML = $arResult["QUESTIONS"]["name"]["HTML_CODE"];
+                            $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
+                            echo $nameHTML;
+                        ?>
                         <label for="name"
                                class="contactForm__label"><?= $arResult["QUESTIONS"]["name"]["CAPTION"] ?></label>
                     </div>
-                    <div class="contactForm__inputWrapper">
-                        <?= $arResult["QUESTIONS"]["phone"]["HTML_CODE"] ?>
+                    <div class="contactForm__inputWrapper popup__field_phone">
+                        <?php
+                            $phoneHTML = $arResult["QUESTIONS"]["phone"]["HTML_CODE"];
+                            $phoneHTML = str_replace('>', 'required id="popup__phone">', $phoneHTML);
+                            echo $phoneHTML;
+                        ?>
                         <label for="phone"
                                class="contactForm__label"><?= $arResult["QUESTIONS"]["phone"]["CAPTION"] ?></label>
                     </div>
@@ -65,7 +73,11 @@
 
                 <fieldset class="contactForm__inputFieldset">
                     <div class="contactForm__inputWrapper">
-                        <?= $arResult["QUESTIONS"]["email"]["HTML_CODE"] ?>
+                        <?php
+                            $emailHTML = $arResult["QUESTIONS"]["email"]["HTML_CODE"];
+                            $emailHTML = str_replace('>', 'required id="popup__email">', $emailHTML);
+                            echo $emailHTML;
+                        ?>
                         <label for="email"
                                class="contactForm__label"><?= $arResult["QUESTIONS"]["email"]["CAPTION"] ?></label>
                     </div>
@@ -79,7 +91,7 @@
                     </div>
                 </fieldset>
 
-                <button class="btn btn-primary contactForm__submit header__callback-button" name="web_form_submit" type="submit">Обратный звонок</button>
+                <button class="btn btn-primary contactForm__submit header__callback-button" name="web_form_submit" id="popup__btn-submit" type="submit">Обратный звонок</button>
 
                 <label class="contactForm__checkboxContainer">
                     <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
