@@ -164,47 +164,43 @@
     </div>
 </section>
 
-<?php $APPLICATION->IncludeComponent(
-    "wannafly:form.result.new",
-    "callback",
-    array(
-        "WEB_FORM_ID" => "4",
-        "IGNORE_CUSTOM_TEMPLATE" => "N",
-        "USE_EXTENDED_ERRORS" => "Y",
-        "SEF_MODE" => "N",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "3600",
-        "LIST_URL" => "",
-        "EDIT_URL" => "",
-        "SUCCESS_URL" => "",
-        "CHAIN_ITEM_TEXT" => "",
-        "CHAIN_ITEM_LINK" => "",
-        "VARIABLE_ALIASES" => array(),
-        "AJAX_MODE" => "Y",
-    ),
-    false
-); ?>
+<?$APPLICATION->IncludeComponent(
+	"wannafly:form.result.new",
+	"callback",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "result_edit.php",
+		"IGNORE_CUSTOM_TEMPLATE" => "Y",
+		"LIST_URL" => "result_list.php",
+		"SEF_FOLDER" => "",
+		"SEF_MODE" => "Y",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "Y",
+		"WEB_FORM_ID" => "4"
+	)
+);?>
 
-<?php $APPLICATION->IncludeComponent(
-    "wannafly:form.result.new",
-    "getCatalog",
-    array(
-        "WEB_FORM_ID" => "5",
-        "IGNORE_CUSTOM_TEMPLATE" => "N",
-        "USE_EXTENDED_ERRORS" => "Y",
-        "SEF_MODE" => "N",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "3600",
-        "LIST_URL" => "",
-        "EDIT_URL" => "",
-        "SUCCESS_URL" => "",
-        "CHAIN_ITEM_TEXT" => "",
-        "CHAIN_ITEM_LINK" => "",
-        "VARIABLE_ALIASES" => array(),
-        "AJAX_MODE" => "Y",
-    ),
-    false
-); ?>
+<?$APPLICATION->IncludeComponent(
+	"wannafly:form.result.new",
+	"getCatalog",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "result_edit.php",
+		"IGNORE_CUSTOM_TEMPLATE" => "Y",
+		"LIST_URL" => "result_list.php",
+		"SEF_FOLDER" => "",
+		"SEF_MODE" => "Y",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "Y",
+		"WEB_FORM_ID" => "5"
+	)
+);?>
 
 <section class="popup popup__showMoreInfo" style="display: none;" id="popup__showMoreInfo">
     <section class="popup__form">

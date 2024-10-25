@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit">Скачать каталог</button>
+            <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -58,3 +58,11 @@
         </form>
     <?php endif; ?>
 </section>
+
+<?php if ($arResult["isFormNote"] == "Y"): ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           console.log('fbdfd');
+        });
+    </script>
+<?php endif; ?>

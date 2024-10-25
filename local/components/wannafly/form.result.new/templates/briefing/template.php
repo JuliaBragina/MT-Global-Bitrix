@@ -91,7 +91,7 @@
                     </div>
                 </fieldset>
 
-                <button class="btn btn-primary contactForm__submit header__callback-button" name="web_form_submit" id="popup__btn-submit" type="submit">Обратный звонок</button>
+                <input type="submit" class="btn btn-primary contactForm__submit header__callback-button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
                 <label class="contactForm__checkboxContainer">
                     <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -104,3 +104,11 @@
         <?php endif; ?>
     </div>
 </section>
+
+<?php if ($arResult["isFormNote"] == "Y"): ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           console.log('fbdfd');
+        });
+    </script>
+<?php endif; ?>

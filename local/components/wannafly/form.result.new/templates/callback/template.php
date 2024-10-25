@@ -48,7 +48,8 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit">Оставить заявку на звонок</button> 
+            <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
+            
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -56,11 +57,9 @@
             </div>
 
             <?= $arResult["FORM_FOOTER"] ?>
+
+            <pre> <?= print_r($arResult); ?> </pre>
+            <pre> <?= print_r($arResult["isFormNote"]); ?> </pre>
         </form>
     <?php endif; ?>
 </section>
-
-<script>
-     const phoneInputs = document.querySelector('.popup__field_phone');
-     console.log(phoneInputs);
-</script>

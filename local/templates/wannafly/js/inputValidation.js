@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const forms = document.querySelectorAll('form'); // Все формы на странице
+    const forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
         const nameInputs = form.querySelectorAll('input[type="text"].inputtext#popup__name');
         const phoneInputs = form.querySelectorAll('input[type="text"].inputtext#popup__phone');
         const emailInputs = form.querySelectorAll('input[type="text"].inputtext#popup__email');
-        const submitButtons = form.querySelectorAll('button[type="submit"].btn.btn-primary.popup__button');
+        const submitButtons = form.querySelectorAll('input[type="submit"].btn.btn-primary.popup__button');
 
         phoneInputs.forEach(input => {
             new Cleave(input, {

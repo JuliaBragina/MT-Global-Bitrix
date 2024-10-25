@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Кнопка отправки формы -->
-                <button class="btn btn-secondary-grey getPresentationForm__button" id="popup__btn-submit" name="web_form_submit" type="submit">Отправить</button>
+                <input type="submit" class="btn btn-secondary-grey getPresentationForm__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
                 <?= $arResult["FORM_FOOTER"] ?>
             </form>
@@ -67,3 +67,11 @@
         <img class="getPresentationSection__img" src="<?= SITE_TEMPLATE_PATH ?>/img/img-pdf.svg" alt="Презентация">
     </div>
 </section>
+
+<?php if ($arResult["isFormNote"] == "Y"): ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           console.log('fbdfd');
+        });
+    </script>
+<?php endif; ?>
