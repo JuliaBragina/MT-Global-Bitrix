@@ -147,7 +147,7 @@
     </div>
 
     <ul class="footer__container footer__container_small footer__listRow">
-        <li class="footer__item"><a class="footer__link">Политика конфиденциальности</a></li>
+        <li class="footer__item"><a href="<?= SITE_TEMPLATE_PATH ?>/docs/Privacy_policy_MTG.pdf" class="footer__link" target="_blank">Политика конфиденциальности</a></li>
         <li class="footer__item"><a href="https://wf-agency.ru" target="_blank" class="footer__link">Разработка сайта</a></li>
         <li class="footer__item">ООО "Медиа Технологии" © 2011–2024</a></li>
     </ul>
