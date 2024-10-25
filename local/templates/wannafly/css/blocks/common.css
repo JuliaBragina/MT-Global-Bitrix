@@ -195,3 +195,7 @@ section {
     opacity: 1;
     transition: opacity 0.3s ease;
 }
+
+.input-error {
+    border-bottom: 2px solid red !important;
+}
