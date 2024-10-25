@@ -264,7 +264,11 @@
 
     .header__item_level_2 a {
         font-size: 16px;
-        padding: 10px;
+        padding: 10px 0 10px 30px;
+    }
+
+    .header__link_level_2:before {
+        top: 28%;
     }
 
     .header__item_level_3 a {
