@@ -1,15 +1,16 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-
 <section class="popup popup_callBack" id="popup__callBack" style="display: none;">
     <h1 class="popup__title title__second">Запланировать встречу</h1>
     <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
 
     <?php if ($arResult["isFormNote"] == "Y"): ?>
         <p class="form-success-message">Спасибо! Ваша заявка отправлена.</p>
+        <script> alert("Спасибо! Ваша заявка отправлена."); </script>
     <?php else: ?>
         <?php if ($arResult["isFormErrors"] == "Y"): ?>
             <div class="form-error-message">
+                <script> alert("Спасибо! Ваша заявка не отправлена."); </script>
                 <?= $arResult["FORM_ERRORS_TEXT"]; ?>
             </div>
         <?php endif; ?>
@@ -58,8 +59,6 @@
 
             <?= $arResult["FORM_FOOTER"] ?>
 
-            <pre> <?= print_r($arResult); ?> </pre>
-            <pre> <?= print_r($arResult["isFormNote"]); ?> </pre>
         </form>
     <?php endif; ?>
 </section>

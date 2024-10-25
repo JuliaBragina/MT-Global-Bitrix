@@ -58,11 +58,3 @@
         </form>
     <?php endif; ?>
 </section>
-
-<?php if ($arResult["isFormNote"] == "Y"): ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-           console.log('fbdfd');
-        });
-    </script>
-<?php endif; ?>

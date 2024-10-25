@@ -38,7 +38,7 @@ $this->setFrameMode(true);
                             <?php if (!empty($item["PREVIEW_PICTURE"])) {
                                 $resizedImage = CFile::ResizeImageGet(
                                     $item["PREVIEW_PICTURE"]['ID'],
-                                    array("width" => 295, "height" => 350),
+                                    array("width" => 600, "height" => 600),
                                     BX_RESIZE_IMAGE_EXACT
                                 );
                             ?>

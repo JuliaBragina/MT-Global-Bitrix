@@ -172,7 +172,7 @@
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
 		"CHAIN_ITEM_TEXT" => "",
-		"EDIT_URL" => "result_edit.php",
+		"EDIT_URL" => "",
 		"IGNORE_CUSTOM_TEMPLATE" => "Y",
 		"LIST_URL" => "result_list.php",
 		"SEF_FOLDER" => "",

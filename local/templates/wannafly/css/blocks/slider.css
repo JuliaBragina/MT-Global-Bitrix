@@ -15,7 +15,7 @@
     transition: transform 0.3s ease;
 }
 
-.slider__item {;
+.slider__item {
     border-radius: 30px;
     box-sizing: border-box;
 }
