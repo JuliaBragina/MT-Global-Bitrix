@@ -165,7 +165,7 @@
 </section>
 
 <?$APPLICATION->IncludeComponent(
-	"wannafly:form.result.new",
+	"bitrix:form.result.new",
 	"callback",
 	Array(
 		"CACHE_TIME" => "3600",
@@ -184,7 +184,7 @@
 );?>
 
 <?$APPLICATION->IncludeComponent(
-	"wannafly:form.result.new",
+	"bitrix:form.result.new",
 	"getCatalog",
 	Array(
 		"CACHE_TIME" => "3600",

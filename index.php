@@ -254,7 +254,7 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Результаты, которых достигают наши клиенты"
 	)
 );?> <!--TODO: Доделать всплывающий попап при отправке--> <?$APPLICATION->IncludeComponent(
-	"wannafly:form.result.new",
+	"bitrix:form.result.new",
 	"presentation",
 	Array(
 		"CACHE_TIME" => "3600",
@@ -388,7 +388,7 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Отзывы"
 	)
 );?> <!--TODO: Доделать всплывающий попап при отправке--> <?$APPLICATION->IncludeComponent(
-	"wannafly:form.result.new",
+	"bitrix:form.result.new",
 	"briefing",
 	Array(
 		"CACHE_TIME" => "3600",
