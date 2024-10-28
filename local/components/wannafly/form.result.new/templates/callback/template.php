@@ -55,7 +55,8 @@
             </div>
 
             <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
-            <input type="hidden" name="WEB_FORM_ID" value="<?= htmlspecialchars($arResult['arForm']['ID']); ?>">
+            <input type="hidden" name="WEB_FORM_ID" value="<?=$arParams["WEB_FORM_ID"];?>" />
+            <input type="hidden" name="lang" value="ru" />
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>

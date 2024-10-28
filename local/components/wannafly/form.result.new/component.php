@@ -5,7 +5,7 @@ if (CModule::IncludeModule("form"))
 	$GLOBALS['strError'] = '';
 
 	$arDefaultComponentParameters = array(
-		"WEB_FORM_ID" => $_REQUEST["WEB_FORM_ID"] ?? '',
+		"WEB_FORM_ID" => $_REQUEST['WEB_FORM_ID'] ?? '',
 		"SEF_MODE" => "N",
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"USE_EXTENDED_ERRORS" => "N",
@@ -346,6 +346,7 @@ if (CModule::IncludeModule("form"))
 		$logData .= "_REQUEST - formresult: " . var_export($_REQUEST['formresult'], true) . "\n";
 		$logData .= "_REQUEST - WEB_FORM_ID: " . var_export($_REQUEST['WEB_FORM_ID'], true) . "\n";
 		$logData .= "WEB_FORM_ID arResult: " . var_export($arResult['arForm']['ID'], true) . "\n";
+		$logData .= "arParams: " . var_export($arParams, true) . "\n";
 		$logData .= "_REQUEST - formresult 2 : " .  mb_strtoupper($_REQUEST['formresult']) . "\n";
 		$logData .= "_REQUEST : " .  var_export($_REQUEST, true) . "\n";
 		$logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";

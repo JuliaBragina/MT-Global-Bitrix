@@ -60,7 +60,7 @@ $arUrlRewrite=array (
   array (
     'CONDITION' => '#^/#',
     'RULE' => '',
-    'ID' => 'wannafly:form.result.new',
+    'ID' => 'bitrix:form.result.new',
     'PATH' => '/index.php',
     'SORT' => 100,
   ),

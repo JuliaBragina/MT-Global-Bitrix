@@ -130,9 +130,9 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Нам доверяют"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"cards-with-pictures", 
-	array(
+	"wannafly:news.list",
+	"cards-with-pictures",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -153,10 +153,7 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "70",
@@ -175,10 +172,7 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -191,10 +185,9 @@ $APPLICATION->SetTitle("Главная");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"TITLE" => "О компании",
-		"TAGS_STYLE" => "style1"
-	),
-	false
+		"TAGS_STYLE" => "style1",
+		"TITLE" => "О компании"
+	)
 );?></main><main><?$APPLICATION->IncludeComponent(
 	"wannafly:compass",
 	"",
@@ -470,6 +463,24 @@ $APPLICATION->SetTitle("Главная");
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "База знаний MT GLOBAL"
 	)
-);?> </main><?php
+);?><?$APPLICATION->IncludeComponent("bitrix:form.result.new", "callback-test", Array(
+	"CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CHAIN_ITEM_LINK" => "",	// Ссылка на дополнительном пункте в навигационной цепочке
+		"CHAIN_ITEM_TEXT" => "",	// Название дополнительного пункта в навигационной цепочке
+		"EDIT_URL" => "result_edit.php",	// Страница редактирования результата
+		"IGNORE_CUSTOM_TEMPLATE" => "N",	// Игнорировать свой шаблон
+		"LIST_URL" => "result_list.php",	// Страница со списком результатов
+		"SEF_MODE" => "N",	// Включить поддержку ЧПУ
+		"SUCCESS_URL" => "",	// Страница с сообщением об успешной отправке
+		"USE_EXTENDED_ERRORS" => "N",	// Использовать расширенный вывод сообщений об ошибках
+		"VARIABLE_ALIASES" => array(
+			"RESULT_ID" => "RESULT_ID",
+			"WEB_FORM_ID" => "WEB_FORM_ID",
+		),
+		"WEB_FORM_ID" => "4",	// ID веб-формы
+	),
+	false
+);?></main><main></main><?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>
