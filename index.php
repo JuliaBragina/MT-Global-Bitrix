@@ -463,7 +463,7 @@ $APPLICATION->SetTitle("Главная");
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "База знаний MT GLOBAL"
 	)
-);?><?$APPLICATION->IncludeComponent("bitrix:form.result.new", "callback-test", Array(
+);?><?$APPLICATION->IncludeComponent("bitrix:form.result.new", "callback", Array(
 	"CACHE_TIME" => "3600",	// Время кеширования (сек.)
 		"CACHE_TYPE" => "A",	// Тип кеширования
 		"CHAIN_ITEM_LINK" => "",	// Ссылка на дополнительном пункте в навигационной цепочке
