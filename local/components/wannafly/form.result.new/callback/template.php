@@ -73,7 +73,7 @@
         </pre>
     </section>
 <?php else: ?>
-    <!--<script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>-->
+    <script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>
 
     <?php
         $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
