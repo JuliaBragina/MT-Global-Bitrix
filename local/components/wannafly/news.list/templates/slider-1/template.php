@@ -7,7 +7,7 @@ $this->setFrameMode(true);
 ?>
 
 <section class="about swiper">
-    <div class="about__container navButton">
+    <div class="about__container navButton navButton_bottom-margin_long">
         <div class="about__navContainer navButton__container">
             <h2 class="about__title title__second"><?= $arParams['TITLE'] ?></h2>
             <nav class="navButton__containerButtons">

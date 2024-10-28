@@ -19,7 +19,7 @@ $this->setFrameMode(true);
     </aside>
 
     <div class="doneProjects__container container navButton">
-        <div class="navButton__container navButton__container_short_margin">
+        <div class="navButton__container navButton_bottom-margin_short">
             <h2 class="doneProjects__title title__second"><?= $arParams['TITLE'] ?></h2>
             <nav class="navButton__containerButtons">
                 <button type="button"

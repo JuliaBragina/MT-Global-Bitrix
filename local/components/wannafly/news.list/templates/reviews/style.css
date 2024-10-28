@@ -4,10 +4,6 @@
 
 .reviews__container {
     margin: 0 auto 53px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .reviews__sliderContainer {

@@ -1,3 +1,13 @@
+.navButton_bottom-margin_long {
+    margin: 0 auto;
+    margin-bottom: 52px;
+}
+
+.navButton_bottom-margin_short {
+    margin: 0 auto;
+    margin-bottom: 33px;
+}
+
 .navButton__container{
     width: 100%;
     display: flex;
@@ -11,14 +21,6 @@
     justify-content: flex-end;
     align-items: center;
     gap: 5px;
-}
-
-.navButton__container_longMargin{
-    margin-bottom: 77px;
-}
-
-.navButton__container_short_margin{
-    margin-bottom: 33px;
 }
 
 .navButton__prev, .navButton__next {
@@ -36,7 +38,4 @@
 
 .navButton__prev_color_pink, .navButton__prev_color_pink{
     background-color: var(--color-accent-pink);
-}
-
-@media screen and (max-width: 1300px) {
 }
