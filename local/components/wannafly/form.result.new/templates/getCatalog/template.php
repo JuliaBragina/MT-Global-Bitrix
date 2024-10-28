@@ -1,17 +1,10 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
-    <h1 class="popup__title title__second">Получите каталог готовых решений
-        <span class="popup__title_pink">для переговорных комнат</span> </h1>
+<?php if ($arResult["isFormNote"] != "Y"): ?>
 
-    <?php if ($arResult["isFormNote"] == "Y"): ?>
-        <p class="form-success-message">Спасибо! Ваша заявка отправлена.</p>
-    <?php else: ?>
-        <?php if ($arResult["isFormErrors"] == "Y"): ?>
-            <div class="form-error-message">
-                <?= $arResult["FORM_ERRORS_TEXT"]; ?>
-            </div>
-        <?php endif; ?>
+    <section class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
+        <h1 class="popup__title title__second">Получите каталог готовых решений
+        <span class="popup__title_pink">для переговорных комнат</span> </h1>
 
         <form class="popup__form" action="<?= POST_FORM_ACTION_URI ?>" method="POST" enctype="multipart/form-data" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
             <?= bitrix_sessid_post(); ?>
@@ -56,5 +49,22 @@
 
             <?= $arResult["FORM_FOOTER"] ?>
         </form>
-    <?php endif; ?>
-</section>
+    </section>
+<?php else: ?>
+    <script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>
+
+    <?php
+        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
+
+        $logData = "---Form Statuses getCatalog---:\n";
+        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
+        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
+        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
+        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
+        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
+        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
+
+        file_put_contents($logFilePath, $logData, FILE_APPEND);
+    ?>
+<?php endif; ?>
+

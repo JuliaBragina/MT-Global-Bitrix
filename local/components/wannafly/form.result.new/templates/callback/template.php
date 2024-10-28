@@ -1,21 +1,26 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="popup popup_callBack" id="popup__callBack" style="display: none;">
-    <h1 class="popup__title title__second">Запланировать встречу</h1>
-    <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
+<?php if ($arResult["isFormNote"] != "Y"): ?>
+    <?php
+        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
 
-    <?php if ($arResult["isFormNote"] == "Y"): ?>
-        <p class="form-success-message">Спасибо! Ваша заявка отправлена.</p>
-        <script> alert("Спасибо! Ваша заявка отправлена."); </script>
-    <?php else: ?>
-        <?php if ($arResult["isFormErrors"] == "Y"): ?>
-            <div class="form-error-message">
-                <script> alert("Спасибо! Ваша заявка не отправлена."); </script>
-                <?= $arResult["FORM_ERRORS_TEXT"]; ?>
-            </div>
-        <?php endif; ?>
+        $logData = "---Form Statuses 1 callback---:\n";
+        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
+        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
+        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
+        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
+        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
+        $logData .= "_REQUEST: " . var_export($_REQUEST, true) . "\n";
+        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
 
-        <form class="popup__form" action="<?= POST_FORM_ACTION_URI ?>" method="POST" enctype="multipart/form-data" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
+        file_put_contents($logFilePath, $logData, FILE_APPEND);
+    ?>
+
+    <section class="popup popup_callBack" id="popup__callBack" style="display: none;">
+        <h1 class="popup__title title__second">Запланировать встречу</h1>
+        <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
+
+        <form class="popup__form" method="POST" action="<?=POST_FORM_ACTION_URI?>" enctype="multipart/form-data" id="form_callback">
             <?= bitrix_sessid_post(); ?>
             <?= $arResult["FORM_HEADER"] ?>
 
@@ -50,7 +55,7 @@
             </div>
 
             <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
-            
+            <input type="hidden" name="WEB_FORM_ID" value="<?= htmlspecialchars($arResult['arForm']['ID']); ?>">
 
             <div class="popup__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
@@ -60,5 +65,33 @@
             <?= $arResult["FORM_FOOTER"] ?>
 
         </form>
-    <?php endif; ?>
-</section>
+
+        <pre>
+            <?php print_r($_REQUEST); ?>
+            <?php print_r($arResult); ?>
+        </pre>
+    </section>
+<?php else: ?>
+    <script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>
+
+    <?php
+        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
+
+        $logData = "---Form Statuses callback---:\n";
+        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
+        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
+        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
+        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
+        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
+        $logData .= "_REQUEST: " . var_export($_REQUEST, true) . "\n";
+        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
+
+        file_put_contents($logFilePath, $logData, FILE_APPEND);
+    ?>
+<?php endif; ?>
+
+<?php
+    $logData2 = "---_REQUEST---:\n";
+    $logData2 .= var_export($_REQUEST, true) . "\n\n";
+    file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/form_log.txt', $logData2, FILE_APPEND);
+?>

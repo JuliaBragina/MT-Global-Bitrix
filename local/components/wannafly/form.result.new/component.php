@@ -106,7 +106,7 @@ if (CModule::IncludeModule("form"))
 				$bVarsFromCache = false;
 			}
 		}
-		$arResult['FORM_NOTE'] = '';
+		$arResult['FORM_NOTE'] = false;
 		$arResult['isFormNote'] = 'N';
 
 		$arParams['WEB_FORM_ID'] = $arResult['arForm']['ID'];
@@ -340,10 +340,23 @@ if (CModule::IncludeModule("form"))
 		}
 		*/
 
+		$logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
+
+		$logData = "---Form Statuses ADDOK---:\n";
+		$logData .= "_REQUEST - formresult: " . var_export($_REQUEST['formresult'], true) . "\n";
+		$logData .= "_REQUEST - WEB_FORM_ID: " . var_export($_REQUEST['WEB_FORM_ID'], true) . "\n";
+		$logData .= "WEB_FORM_ID arResult: " . var_export($arResult['arForm']['ID'], true) . "\n";
+		$logData .= "_REQUEST - formresult 2 : " .  mb_strtoupper($_REQUEST['formresult']) . "\n";
+		$logData .= "_REQUEST : " .  var_export($_REQUEST, true) . "\n";
+		$logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
+
+		file_put_contents($logFilePath, $logData, FILE_APPEND);
+
+		$formResult = mb_strtoupper($_REQUEST['formresult']);
+
 		//if (!empty($_REQUEST["strFormNote"])) $arResult["FORM_NOTE"] = $_REQUEST["strFormNote"];
-		if (!empty($_REQUEST["formresult"]) && $_REQUEST['WEB_FORM_ID'] == $arParams['WEB_FORM_ID'])
+		if (!empty($_REQUEST["formresult"]) && $_REQUEST['WEB_FORM_ID'] == $arResult['arForm']['ID'])
 		{
-			$formResult = mb_strtoupper($_REQUEST['formresult']);
 			switch ($formResult)
 			{
 				case 'ADDOK':
@@ -430,7 +443,7 @@ if (CModule::IncludeModule("form"))
 		$arResult = array_merge(
 			$arResult,
 			array(
-				"isFormNote"			=> $arResult["FORM_NOTE"] <> ''? "Y" : "N", // flag "is there a form note"
+				"isFormNote"			=> $arResult["FORM_NOTE"] ? "Y" : "N", // flag "is there a form note"
 				"isAccessFormParams"	=> $arResult["F_RIGHT"] >= 25 ? "Y" : "N", // flag "does current user have access to form params"
 				"isStatisticIncluded"	=> CModule::IncludeModule('statistic') ? "Y" : "N", // flag "is statistic module included"
 
