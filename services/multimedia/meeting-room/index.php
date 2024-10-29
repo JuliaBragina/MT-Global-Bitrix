@@ -509,6 +509,54 @@
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "База знаний MT GLOBAL"
 	)
-);?> </main><?php
+);?><br>
+ <br>
+ <?$APPLICATION->IncludeComponent(
+	"bitrix:form.result.new",
+	"getCatalog",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "",
+		"IGNORE_CUSTOM_TEMPLATE" => "N",
+		"LIST_URL" => "",
+		"SEF_MODE" => "N",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "Y",
+		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
+		"WEB_FORM_ID" => "5",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+	)
+);?><br>
+ <?$APPLICATION->IncludeComponent(
+	"bitrix:form.result.new",
+	"callback",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "",
+		"IGNORE_CUSTOM_TEMPLATE" => "N",
+		"LIST_URL" => "",
+		"SEF_MODE" => "N",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "Y",
+		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
+		"WEB_FORM_ID" => "4",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+	)
+);?><br>
+ </main><?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>

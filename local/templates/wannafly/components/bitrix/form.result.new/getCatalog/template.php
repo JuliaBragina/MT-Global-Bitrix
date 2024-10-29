@@ -51,10 +51,14 @@
         </form>
     </section>
 <?php else: ?>
-    <script> 
-        alert("Ваша заявка отправлена.");
-        const modal = document.getElementById('thanks');
-        modalOpen(modal);
+    <script>
+        Fancybox.show([{
+            src: "#thanks2",
+            type: "inline"
+        }]);
+        setTimeout(function() {
+            Fancybox.close();
+        }, 5000);
     </script>
 
     <?php
@@ -71,18 +75,3 @@
         file_put_contents($logFilePath, $logData, FILE_APPEND);
     ?>
 <?php endif; ?>
-
-<script>
-    BX.ready(function() {
-        BX.addCustomEvent('onAjaxSuccess', function() {
-            Fancybox.close();
-            Fancybox.show([{
-                src: "#thanks2",
-                type: "inline"
-            }]);
-            setTimeout(function() {
-                Fancybox.close();
-            }, 5000);
-        });
-    });
-</script>

@@ -164,56 +164,6 @@
     </div>
 </section>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new", 
-	"callback", 
-	array(
-		"CACHE_TIME" => "3600",
-		"CACHE_TYPE" => "A",
-		"CHAIN_ITEM_LINK" => "",
-		"CHAIN_ITEM_TEXT" => "",
-		"EDIT_URL" => "result_edit.php",
-		"IGNORE_CUSTOM_TEMPLATE" => "Y",
-		"LIST_URL" => "result_list.php",
-		"SEF_FOLDER" => "",
-		"SEF_MODE" => "Y",
-		"SUCCESS_URL" => "",
-		"USE_EXTENDED_ERRORS" => "Y",
-		"COMPONENT_TEMPLATE" => "callback",
-		"WEB_FORM_ID" => "4",
-        "AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N", 
-		"AJAX_OPTION_JUMP" => "Y",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N"
-	),
-	false
-);?>
-
-<?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new",
-	"getCatalog",
-	Array(
-		"CACHE_TIME" => "3600",
-		"CACHE_TYPE" => "A",
-		"CHAIN_ITEM_LINK" => "",
-		"CHAIN_ITEM_TEXT" => "",
-		"EDIT_URL" => "result_edit.php",
-		"IGNORE_CUSTOM_TEMPLATE" => "Y",
-		"LIST_URL" => "result_list.php",
-		"SEF_FOLDER" => "",
-		"SEF_MODE" => "Y",
-		"SUCCESS_URL" => "",
-		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => "5",
-        "AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N", 
-		"AJAX_OPTION_JUMP" => "Y",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N"
-	)
-);?>
-
 <div id="thanks" data-container-modal="">
     <div class="modal" data-content-modal="">
         <div class="modal__btn" data-close-modal="">
@@ -232,7 +182,7 @@
     </div>
 </div>
 
-<div id="thanks2"  class="popup" style="display: none;">
+<div id="thanks2" class="popup" style="display: none;">
     <section class="popup__form">
         <div class="modal2">
             <h1 class="popup__title title__second">Спасибо! Ваша заявка принята!</h1>

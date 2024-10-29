@@ -93,24 +93,14 @@
         </div>
     </section>
 <?php else: ?>
-    <script> 
-        alert("Ваша заявка отправлена.");
-        const modal = document.getElementById('thanks');
-        modalOpen(modal);
+    <script>
+        Fancybox.show([{
+            src: "#thanks2",
+            type: "inline"
+        }]);
+        setTimeout(function() {
+            Fancybox.close();
+        }, 5000);
     </script>
 <?php endif; ?>
-
-<script>
-    BX.ready(function() {
-        BX.addCustomEvent('onAjaxSuccess', function() {
-            Fancybox.show([{
-                src: "#thanks2",
-                type: "inline"
-            }]);
-            setTimeout(function() {
-                Fancybox.close();
-            }, 5000);
-        });
-    });
-</script>
 

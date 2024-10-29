@@ -1,21 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <?php if ($arResult["isFormNote"] != "Y"): ?>
-    <?php
-        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
-
-        $logData = "---Form Statuses 1 callback---:\n";
-        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
-        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
-        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
-        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
-        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
-        $logData .= "_REQUEST: " . var_export($_REQUEST, true) . "\n";
-        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
-
-        file_put_contents($logFilePath, $logData, FILE_APPEND);
-    ?>
-
     <section class="popup popup_callBack" id="popup__callBack" style="display: none;">
         <h1 class="popup__title title__second">Запланировать встречу</h1>
         <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
@@ -69,43 +54,20 @@
         </form>
     </section>
 <?php else: ?>
-    <script> 
-        alert("Ваша заявка отправлена.");
-        const modal = document.getElementById('thanks');
-        modalOpen(modal);
+    <? if ($arResult["isFormErrors"] === "Y"): ?>
+        <div class="errors">
+            <?=$arResult["FORM_ERRORS_TEXT"]?>
+        </div>
+    <? endif; ?>
+    <script>
+        Fancybox.close();
+        Fancybox.show([{
+            src: "#thanks2",
+            type: "inline"
+        }]);
+        setTimeout(function() {
+            Fancybox.close();
+        }, 5000);
     </script>
-
-    <?php
-        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
-
-        $logData = "---Form Statuses callback---:\n";
-        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
-        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
-        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
-        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
-        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
-        $logData .= "_REQUEST: " . var_export($_REQUEST, true) . "\n";
-        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
-
-        file_put_contents($logFilePath, $logData, FILE_APPEND);
-
-        $logData2 = "---_REQUEST---:\n";
-        $logData2 .= var_export($_REQUEST, true) . "\n\n";
-        file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/form_log.txt', $logData2, FILE_APPEND);
-    ?>
 <?php endif; ?>
 
-<script>
-    BX.ready(function() {
-        BX.addCustomEvent('onAjaxSuccess', function() {
-            Fancybox.close();
-            Fancybox.show([{
-                src: "#thanks2",
-                type: "inline"
-            }]);
-            setTimeout(function() {
-                Fancybox.close();
-            }, 5000);
-        });
-    });
-</script>
