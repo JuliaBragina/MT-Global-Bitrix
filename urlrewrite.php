@@ -64,4 +64,12 @@ $arUrlRewrite=array (
     'PATH' => '/index.php',
     'SORT' => 100,
   ),
+  34 => 
+  array (
+    'CONDITION' => '#^#',
+    'RULE' => '',
+    'ID' => 'bitrix:form.result.new',
+    'PATH' => '/local/templates/wannafly/footer.php',
+    'SORT' => 100,
+  ),
 );

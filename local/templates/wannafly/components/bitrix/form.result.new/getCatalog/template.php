@@ -51,7 +51,11 @@
         </form>
     </section>
 <?php else: ?>
-     <script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>
+    <script> 
+        alert("Ваша заявка отправлена.");
+        const modal = document.getElementById('thanks');
+        modalOpen(modal);
+    </script>
 
     <?php
         $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';

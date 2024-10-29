@@ -268,7 +268,12 @@ $APPLICATION->SetTitle("Главная");
 		"SEF_MODE" => "Y",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => 2
+		"WEB_FORM_ID" => 2,
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N", 
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N"
 	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
@@ -402,7 +407,12 @@ $APPLICATION->SetTitle("Главная");
 		"SEF_MODE" => "Y",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => 3
+		"WEB_FORM_ID" => 3,
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N", 
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N"
 	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",

@@ -23,6 +23,7 @@
         <form class="popup__form" method="POST" action="<?=POST_FORM_ACTION_URI?>" enctype="multipart/form-data" id="form_callback">
             <?= bitrix_sessid_post(); ?>
             <?= $arResult["FORM_HEADER"] ?>
+            <input type="hidden" name="web_form_submit" value="Y">
 
             <div class="popup__inputs">
                 <div class="popup__field">
@@ -66,14 +67,13 @@
             <?= $arResult["FORM_FOOTER"] ?>
 
         </form>
-
-        <pre>
-            <?php print_r($_REQUEST); ?>
-            <?php print_r($arResult); ?>
-        </pre>
     </section>
 <?php else: ?>
-    <script> alert("Ваша заявка отправлена. <?php $arResult['FORM_NOTE'] ?>"); </script>
+    <script> 
+        alert("Ваша заявка отправлена.");
+        const modal = document.getElementById('thanks');
+        modalOpen(modal);
+    </script>
 
     <?php
         $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
@@ -88,11 +88,9 @@
         $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
 
         file_put_contents($logFilePath, $logData, FILE_APPEND);
+
+        $logData2 = "---_REQUEST---:\n";
+        $logData2 .= var_export($_REQUEST, true) . "\n\n";
+        file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/form_log.txt', $logData2, FILE_APPEND);
     ?>
 <?php endif; ?>
-
-<?php
-    $logData2 = "---_REQUEST---:\n";
-    $logData2 .= var_export($_REQUEST, true) . "\n\n";
-    file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/form_log.txt', $logData2, FILE_APPEND);
-?>

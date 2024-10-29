@@ -1,23 +1,11 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="getPresentationSection">
-    <div class="getPresentationSection__container">
-        <?php if ($arResult["isFormNote"] == "Y"): ?>
-            <p class="form-success-message">Спасибо! Ваша заявка отправлена.</p>
-            <?php if (isset($arResult["FORM_STATUS"])): ?>
-                <p class="form-status-message">Статус заявки: <?= $arResult["FORM_STATUS"]; ?></p>
-            <?php endif; ?>
-        <?php else: ?>
-
-            <!-- Вывод ошибок формы -->
-            <?php if ($arResult["isFormErrors"] == "Y"): ?>
-                <div class="form-error-message">
-                    <?= $arResult["FORM_ERRORS_TEXT"]; ?>
-                </div>
-            <?php endif; ?>
+<?php if ($arResult["isFormNote"] == "Y"): ?>
+    <section class="getPresentationSection">
+        <div class="getPresentationSection__container">
 
             <form class="getPresentationForm" action="<?= POST_FORM_ACTION_URI ?>" method="POST"
-                  id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
+                    id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
                 <?= bitrix_sessid_post(); ?>
 
                 <?= $arResult["FORM_HEADER"] ?>
@@ -61,10 +49,14 @@
                 <?= $arResult["FORM_FOOTER"] ?>
             </form>
 
-        <?php endif; ?>
-
-        <!-- Изображение с презентацией -->
-        <img class="getPresentationSection__img" src="<?= SITE_TEMPLATE_PATH ?>/img/img-pdf.svg" alt="Презентация">
-    </div>
-</section>
-
+            <!-- Изображение с презентацией -->
+            <img class="getPresentationSection__img" src="<?= SITE_TEMPLATE_PATH ?>/img/img-pdf.svg" alt="Презентация">
+        </div>
+    </section>
+<?php else: ?>
+    <script> 
+        alert("Ваша заявка отправлена.");
+        const modal = document.getElementById('thanks');
+        modalOpen(modal);
+    </script>
+<?php endif; ?>

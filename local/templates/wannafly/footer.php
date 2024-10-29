@@ -165,22 +165,29 @@
 </section>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new",
-	"callback",
-	Array(
+	"bitrix:form.result.new", 
+	"callback", 
+	array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
 		"CHAIN_ITEM_TEXT" => "",
-		"EDIT_URL" => "",
+		"EDIT_URL" => "result_edit.php",
 		"IGNORE_CUSTOM_TEMPLATE" => "Y",
 		"LIST_URL" => "result_list.php",
 		"SEF_FOLDER" => "",
 		"SEF_MODE" => "Y",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => "4"
-	)
+		"COMPONENT_TEMPLATE" => "callback",
+		"WEB_FORM_ID" => "4",
+        "AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N", 
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N"
+	),
+	false
 );?>
 
 <?$APPLICATION->IncludeComponent(
@@ -198,9 +205,31 @@
 		"SEF_MODE" => "Y",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => "5"
+		"WEB_FORM_ID" => "5",
+        "AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N", 
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N"
 	)
 );?>
+
+<div id="thanks" data-container-modal="" >
+    <div class="modal" data-content-modal="">
+        <div class="modal__btn" data-close-modal="">
+            <div class="modal__img"><img src="" alt=""></div>
+        </div>
+        <div class="modal__body">
+            <div id="">
+                <div class="modal__thanks thanks">
+                    <img src="" alt="">
+                    <a href="/" onclick="BX.ajax.insertToNode('', ''); return false;" class="thanks__title-h2">Благодарим за заявку!</a>
+                    <a href="/" onclick="BX.ajax.insertToNode('', ''); return false;" class="thanks__btn btn btn--transparent">На главную</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="popup popup__showMoreInfo" style="display: none;" id="popup__showMoreInfo">
     <section class="popup__form">
@@ -230,6 +259,7 @@
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest/dist/addons/cleave-phone.ru.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/inputValidation.js" defer></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/modalPopupShower.js" defer></script>
 </body>
 </html>
 
