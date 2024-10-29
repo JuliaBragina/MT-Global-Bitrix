@@ -60,18 +60,4 @@
             Fancybox.close();
         }, 5000);
     </script>
-
-    <?php
-        $logFilePath = $_SERVER['DOCUMENT_ROOT'] . '/form_log.txt';
-
-        $logData = "---Form Statuses getCatalog---:\n";
-        $logData .= "isFormNote: " . var_export($arResult['isFormNote'], true) . "\n";
-        $logData .= "FORM_NOTE: " . var_export($arResult['FORM_NOTE'], true) . "\n";
-        $logData .= "isFormErrors: " . var_export($arResult['isFormErrors'], true) . "\n";
-        $logData .= "FORM_ERRORS_TEXT: " . var_export($arResult['FORM_ERRORS_TEXT'], true) . "\n";
-        $logData .= "Form ID: " . var_export($arResult['arForm']['ID'], true) . "\n";
-        $logData .= "Timestamp: " . date("Y-m-d H:i:s") . "\n\n";
-
-        file_put_contents($logFilePath, $logData, FILE_APPEND);
-    ?>
 <?php endif; ?>
