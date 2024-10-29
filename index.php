@@ -334,7 +334,7 @@ $APPLICATION->SetTitle("Главная");
 		"TAGS_STYLE" => "style1",
 		"TITLE" => "Реализованные проекты"
 	)
-);?><?$APPLICATION->IncludeComponent(
+);?></main><main><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"reviews",
 	Array(
@@ -396,6 +396,11 @@ $APPLICATION->SetTitle("Главная");
 	"bitrix:form.result.new",
 	"briefing",
 	Array(
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -473,12 +478,16 @@ $APPLICATION->SetTitle("Главная");
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "База знаний MT GLOBAL"
 	)
-);?>
- <br>
+);?> <br>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:form.result.new",
 	"callback",
 	Array(
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -490,14 +499,11 @@ $APPLICATION->SetTitle("Главная");
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "4",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
+		"WEB_FORM_ID" => "4"
 	)
 );?><br>
+ <br>
+ <br>
  </main><?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>
