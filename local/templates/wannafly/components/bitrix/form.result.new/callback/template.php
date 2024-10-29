@@ -60,7 +60,6 @@
         </div>
     <? endif; ?>
     <script>
-        Fancybox.close();
         Fancybox.show([{
             src: "#thanks2",
             type: "inline"

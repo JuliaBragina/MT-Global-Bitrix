@@ -54,8 +54,7 @@
         </div>
     </section>
 <?php else: ?>
-    <script> 
-        Fancybox.close();
+    <script>
         Fancybox.show([{
             src: "#thanks2",
             type: "inline"
