@@ -54,11 +54,6 @@
         </form>
     </section>
 <?php else: ?>
-    <? if ($arResult["isFormErrors"] === "Y"): ?>
-        <div class="errors">
-            <?=$arResult["FORM_ERRORS_TEXT"]?>
-        </div>
-    <? endif; ?>
     <script>
         Fancybox.show([{
             src: "#thanks2",
