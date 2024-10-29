@@ -254,9 +254,9 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Результаты, которых достигают наши клиенты"
 	)
 );?> <!--TODO: Доделать всплывающий попап при отправке--> <?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new",
-	"presentation",
-	Array(
+	"bitrix:form.result.new", 
+	"presentation", 
+	array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -268,13 +268,15 @@ $APPLICATION->SetTitle("Главная");
 		"SEF_MODE" => "Y",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => 2,
+		"WEB_FORM_ID" => "2",
 		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N", 
+		"AJAX_OPTION_SHADOW" => "N",
 		"AJAX_OPTION_JUMP" => "Y",
 		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N"
-	)
+		"AJAX_OPTION_HISTORY" => "N",
+		"COMPONENT_TEMPLATE" => "presentation"
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"cards-with-pictures",

@@ -100,3 +100,17 @@
     </script>
 <?php endif; ?>
 
+<script>
+    BX.ready(function() {
+        BX.addCustomEvent('onAjaxSuccess', function() {
+            Fancybox.show([{
+                src: "#thanks2",
+                type: "inline"
+            }]);
+            setTimeout(function() {
+                Fancybox.close();
+            }, 5000);
+        });
+    });
+</script>
+

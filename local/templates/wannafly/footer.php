@@ -214,15 +214,16 @@
 	)
 );?>
 
-<div id="thanks" data-container-modal="" >
+<div id="thanks" data-container-modal="">
     <div class="modal" data-content-modal="">
         <div class="modal__btn" data-close-modal="">
-            <div class="modal__img"><img src="" alt=""></div>
+            <div class="modal__img"><img src="/path/to/close-icon.svg" alt="Закрыть"></div>
         </div>
+        
         <div class="modal__body">
-            <div id="">
+            <div>
                 <div class="modal__thanks thanks">
-                    <img src="" alt="">
+                    <img src="/path/to/thank-you-icon.svg" alt="Спасибо" class="thanks__icon">
                     <a href="/" onclick="BX.ajax.insertToNode('', ''); return false;" class="thanks__title-h2">Благодарим за заявку!</a>
                     <a href="/" onclick="BX.ajax.insertToNode('', ''); return false;" class="thanks__btn btn btn--transparent">На главную</a>
                 </div>
@@ -230,6 +231,15 @@
         </div>
     </div>
 </div>
+
+<div id="thanks2"  class="popup" style="display: none;">
+    <section class="popup__form">
+        <div class="modal2">
+            <h1 class="popup__title title__second">Спасибо! Ваша заявка принята!</h1>
+        </div>
+    </section>
+</div>
+
 
 <section class="popup popup__showMoreInfo" style="display: none;" id="popup__showMoreInfo">
     <section class="popup__form">

@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<?php if ($arResult["isFormNote"] == "Y"): ?>
+<?php if ($arResult["isFormNote"] != "Y"): ?>
     <section class="getPresentationSection">
         <div class="getPresentationSection__container">
 
@@ -60,3 +60,17 @@
         modalOpen(modal);
     </script>
 <?php endif; ?>
+
+<script>
+    BX.ready(function() {
+        BX.addCustomEvent('onAjaxSuccess', function() {
+            Fancybox.show([{
+                src: "#thanks2",
+                type: "inline"
+            }]);
+            setTimeout(function() {
+                Fancybox.close();
+            }, 5000);
+        });
+    });
+</script>

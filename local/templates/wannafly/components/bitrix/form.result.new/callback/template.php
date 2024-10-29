@@ -94,3 +94,18 @@
         file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/form_log.txt', $logData2, FILE_APPEND);
     ?>
 <?php endif; ?>
+
+<script>
+    BX.ready(function() {
+        BX.addCustomEvent('onAjaxSuccess', function() {
+            Fancybox.close();
+            Fancybox.show([{
+                src: "#thanks2",
+                type: "inline"
+            }]);
+            setTimeout(function() {
+                Fancybox.close();
+            }, 5000);
+        });
+    });
+</script>
