@@ -51,6 +51,7 @@
     </section>
 <?php else: ?>
     <script>
+        alert("Форма отправлена");
         Fancybox.show([{
             src: "#thanks2",
             type: "inline"
