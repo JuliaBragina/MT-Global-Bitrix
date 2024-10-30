@@ -4,15 +4,15 @@
 	$APPLICATION->AddChainItem($APPLICATION->GetTitle());
 ?><main class="content">
 <?$APPLICATION->IncludeComponent(
-	"wannafly:main.img",
+	"wannafly:main.video",
 	".default",
 	Array(
 		"COMPONENT_TEMPLATE" => ".default",
-		"IMG_SRC" => "/upload/medialibrary/9f1/go99xgr9j3135rtu18jdxr6q2otkktu3.png",
-		"SLOGANS" => array(0=>"Разрабатываем оптимальные решения под любую задачу",1=>"",),
-		"TITLE" => "Мультимедийные решения для переговорных комнат"
+		"SLOGAN" => "Помогаем справиться с современными вызовами",
+		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/Переговорки.mp4"
 	)
-);?> <?$APPLICATION->IncludeComponent(
+);?><?$APPLICATION->IncludeComponent(
 	"wannafly:list-items",
 	".default",
 	Array(
@@ -144,7 +144,7 @@
 		"IBLOCK_ID" => "69"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:qiuz",
+	"wannafly:quiz",
 	".default",
 	Array(
 		"COMPONENT_TEMPLATE" => ".default",

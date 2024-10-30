@@ -27,22 +27,16 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
     <!--        </nav>-->
     <!--    </aside>-->
 
-<?php $APPLICATION->IncludeComponent(
-	"wannafly:main.img", 
-	".default", 
-	array(
-		"IMG_SRC" => "/upload/medialibrary/5cd/5169lkk93d83q6vdasb5h6a9rkmu8tcz.png",
-		"SLOGANS" => array(
-			0 => "Разрабатываем оптимальные решения под любую задачу",
-			1 => "Делаем аудиовизуальную коммуникацию эффективной",
-			2 => "Поставляем оборудование от ведущих производителей ProAV",
-			3 => "",
-		),
-		"TITLE" => "Мультимедийные решения «под ключ»",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-); ?>
+	<?$APPLICATION->IncludeComponent(
+	"wannafly:main.video",
+	".default",
+	Array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"SLOGAN" => "Помогаем справиться с современными вызовами",
+		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/мультимедийные решения.mp4"
+	)
+	);?>
 
 <?php $APPLICATION->IncludeComponent(
 	"wannafly:news.list", 
@@ -180,7 +174,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 ); ?>
 
 <?php $APPLICATION->IncludeComponent(
-	"wannafly:qiuz", 
+	"wannafly:quiz", 
 	".default", 
 	array(
 		"TITLE" => "Получить расчёт стоимости проекта",

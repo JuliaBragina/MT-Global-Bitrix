@@ -174,7 +174,7 @@
     );?>
 
     <?$APPLICATION->IncludeComponent(
-	"wannafly:qiuz", 
+	"wannafly:quiz", 
 	".default", 
 	array(
 		"TITLE" => "Получить расчёт стоимости проекта",
