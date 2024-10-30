@@ -2,10 +2,10 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 $arComponentDescription = array(
-    "NAME" => "Quiz",
-    "DESCRIPTION" => "Компонент для отображения текстового блока",
+    "NAME" => "Квиз",
+    "DESCRIPTION" => "Компонент для отображения квиза",
     "PATH" => array(
-        "ID" => "Quiz Block",
+        "ID" => "wannafly",
         "NAME" => "Wannafly Components",
     ),
     "CACHE_PATH" => "Y"

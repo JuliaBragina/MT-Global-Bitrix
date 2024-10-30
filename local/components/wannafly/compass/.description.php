@@ -6,8 +6,8 @@ $arComponentDescription = [
     "DESCRIPTION" => "Компонент для отображения списка преимуществ с визуальным компасом",
     "COMPLEX" => "Y",
     "PATH" => [
-        "ID" => "custom",
-        "NAME" => "Мои компоненты"
+        "ID" => "wannafly",
+        "NAME" => "Wannafly Components"
     ],
 ];
 ?>
