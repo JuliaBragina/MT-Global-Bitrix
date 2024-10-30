@@ -4,10 +4,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arResult */
 // ... другие переменные
 $this->setFrameMode(true);
+$containerClass = ($arParams["SLIDER_STYLE"] === "style1") ? "container" : "about__sliderContainer";
 ?>
 
 <section class="about swiper">
-    <div class="about__container navButton navButton_bottom-margin_long">
+    <div class="container navButton navButton_bottom-margin_long">
         <div class="about__navContainer navButton__container">
             <h2 class="about__title title__second"><?= $arParams['TITLE'] ?></h2>
             <nav class="navButton__containerButtons">
@@ -23,7 +24,7 @@ $this->setFrameMode(true);
         </div>
     </div>
 
-    <div class="about__sliderContainer slider swiper-container">
+    <div class="<?= $containerClass ?> slider swiper-container">
         <ul class="slider__items swiper-wrapper">
             <?php foreach ($arResult["ITEMS"] as $item): ?>
                 <li class="slider__item about__item border-radius-30 bg-white swiper-slide"
@@ -46,7 +47,7 @@ $this->setFrameMode(true);
         </ul>
     </div>
 
-    <div class="about__container">
+    <div class="container">
         <div class="slider__line swiper-scrollbar"></div>
     </div>
 </section>

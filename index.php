@@ -130,9 +130,9 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Нам доверяют"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:news.list",
-	"cards-with-pictures",
-	Array(
+	"wannafly:news.list", 
+	"slider-1", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -145,7 +145,7 @@ $APPLICATION->SetTitle("Главная");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "cards-with-pictures",
+		"COMPONENT_TEMPLATE" => "slider-1",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -153,7 +153,10 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "70",
@@ -172,7 +175,10 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"",1=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -186,8 +192,10 @@ $APPLICATION->SetTitle("Главная");
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"TAGS_STYLE" => "style1",
-		"TITLE" => "О компании"
-	)
+		"TITLE" => "О компании",
+		"SLIDER_STYLE" => "style2"
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:compass",
 	"",
