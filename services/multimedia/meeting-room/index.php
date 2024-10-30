@@ -144,7 +144,7 @@
 		"IBLOCK_ID" => "69"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:qiuz",
+	"wannafly:quiz",
 	".default",
 	Array(
 		"COMPONENT_TEMPLATE" => ".default",

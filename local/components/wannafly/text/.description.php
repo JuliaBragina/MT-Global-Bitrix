@@ -2,7 +2,7 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 $arComponentDescription = array(
-    "NAME" => "Текст",
+    "NAME" => "Текстовый компонент",
     "DESCRIPTION" => "Компонент для отображения текстового блока",
     "PATH" => array(
         "ID" => "wannafly",
