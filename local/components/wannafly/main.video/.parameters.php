@@ -20,10 +20,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 "DEFAULT" => "",
                 
             ],
-            "SLOGAN" => [
-                "NAME" => "Слоган",
+            "SLOGANS" => [
+                "NAME" => "Текст",
                 "TYPE" => "STRING",
+                "MULTIPLE" => "Y",
                 "DEFAULT" => "",
+                "PARENT" => "BASE",
             ],
         ],
     ];

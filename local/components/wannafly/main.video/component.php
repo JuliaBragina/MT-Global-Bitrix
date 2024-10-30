@@ -6,7 +6,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
     $arResult['VIDEO_SRC'] = $arParams["VIDEO_SRC"];
     $arResult['TITLE'] = $arParams["TITLE"];
-    $arResult['SLOGAN'] = $arParams["SLOGAN"];
+    $arResult['SLOGANS'] = $arParams['SLOGANS'];
 
     $this->IncludeComponentTemplate();
 
