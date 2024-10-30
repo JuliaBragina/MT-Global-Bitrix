@@ -1,5 +1,14 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
+
+<?php
+    if (isset($arResult['SLOGANS']) && is_array($arResult['SLOGANS'])) {
+        $arResult['SLOGANS'] = array_filter($arResult['SLOGANS']);
+    } else {
+        $arResult['SLOGANS'] = [];
+    }
+?>
+
 <section class="main">
     <div class="main__video-container first-video">
         <video class="main__video" autoplay muted loop>
@@ -34,7 +43,16 @@
     <div class="main__container container">
         <div class="main__description">
             <h1 class="main__title title__first title__bottom-margin"><?= htmlspecialchars($arResult['TITLE']) ?></h1>
-            <p class="main__slogan"><?= htmlspecialchars($arResult['SLOGAN']) ?></p>
+            <?php if (count($arResult['SLOGANS']) > 1): ?>
+                <ul class="main__actionList">
+                    <?php foreach ($arResult['SLOGANS'] as $slogan): ?>
+                        <li class="main__actionItem list-item"><?= htmlspecialchars($slogan) ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php elseif (count($arResult['SLOGANS']) == 1): ?>
+                <p class="main__slogan"><?= htmlspecialchars($arResult['SLOGANS'][0]) ?></p>
+            <?php endif; ?>
+
             <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox="popup__callback"
                 data-src="#popup__callBack">Запланировать встречу
             </button>

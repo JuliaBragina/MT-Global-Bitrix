@@ -28,15 +28,19 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
     <!--    </aside>-->
 
 	<?$APPLICATION->IncludeComponent(
-	"wannafly:main.video",
-	".default",
-	Array(
+	"wannafly:main.video", 
+	".default", 
+	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
 		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/мультимедийные решения.mp4"
-	)
-	);?>
+		"VIDEO_SRC" => "/local/templates/wannafly/img/мультимедийные решения.mp4",
+		"SLOGANS" => array(
+			0 => "46464",
+		)
+	),
+	false
+);?>
 
 <?php $APPLICATION->IncludeComponent(
 	"wannafly:news.list", 
