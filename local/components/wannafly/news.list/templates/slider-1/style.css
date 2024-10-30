@@ -8,8 +8,9 @@
 }
 
 .about__sliderContainer {
-    width: 82%;
+    width: 82.5%;
     margin-bottom: 86px;
+    margin-left: auto;
 }
 
 .about__navContainer {

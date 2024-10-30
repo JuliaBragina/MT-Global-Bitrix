@@ -4,7 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arResult */
 // ... другие переменные
 $this->setFrameMode(true);
-$containerClass = ($arParams["SLIDER_STYLE"] === "style1") ? "container" : "about__sliderContainer";
+$containerClass = ($arParams["SLIDER_STYLE"] === "style2") ? "container" : "about__sliderContainer";
 ?>
 
 <section class="about swiper">
@@ -24,27 +24,29 @@ $containerClass = ($arParams["SLIDER_STYLE"] === "style1") ? "container" : "abou
         </div>
     </div>
 
-    <div class="<?= $containerClass ?> slider swiper-container">
-        <ul class="slider__items swiper-wrapper">
-            <?php foreach ($arResult["ITEMS"] as $item): ?>
-                <li class="slider__item about__item border-radius-30 bg-white swiper-slide"
-                    id="<?= $this->GetEditAreaId($item['ID']); ?>">
-                    <p class="about__paragraph"><?= $item['NAME'] ?></p>
-                    <?php
-                    if (!empty($item["PREVIEW_PICTURE"])) {
+    <div class="<?= $containerClass ?>">
+        <div class="slider swiper-container">
+            <ul class="slider__items swiper-wrapper">
+                <?php foreach ($arResult["ITEMS"] as $item): ?>
+                    <li class="slider__item about__item border-radius-30 bg-white swiper-slide"
+                        id="<?= $this->GetEditAreaId($item['ID']); ?>">
+                        <p class="about__paragraph"><?= $item['NAME'] ?></p>
+                        <?php
+                        if (!empty($item["PREVIEW_PICTURE"])) {
 
-                        $resizedImage = CFile::ResizeImageGet(
-                            $item["PREVIEW_PICTURE"]['ID'],
-                            array("width" => 9999, "height" => 155)
-                        );
-                        ?>
-                        <img class="about__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
-                    <?php } ?>
+                            $resizedImage = CFile::ResizeImageGet(
+                                $item["PREVIEW_PICTURE"]['ID'],
+                                array("width" => 9999, "height" => 155)
+                            );
+                            ?>
+                            <img class="about__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
+                        <?php } ?>
 
-                    <p class="about__description"><?= $item['PREVIEW_TEXT'] ?></p>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+                        <p class="about__description"><?= $item['PREVIEW_TEXT'] ?></p>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     </div>
 
     <div class="container">

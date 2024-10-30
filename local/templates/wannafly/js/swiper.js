@@ -10,7 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll('.swiper').forEach(slider => {
         const uniqueClass = slider.classList[0];
+        let containerUniqueClass = null;
 
+        if (uniqueClass === 'about') {
+            console.log(slider)
+            containerUniqueClass = slider.querySelector('.about__sliderContainer');
+        }
+        
         const swiperWrapper = slider.querySelector('.swiper-container');
         if (!swiperWrapper) {
             console.error('Не удалось найти .swiper-container в слайдере', slider);
@@ -36,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: slidesPerView[uniqueClass] || 4,
             breakpoints: {
                 1300: {
-                    slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && 5) || 4,
+                    slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && containerUniqueClass && 5) || 4,
                 },
                 1024: {
-                    slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && 3) || 4,
+                    slidesPerView: uniqueClass === 'reviews' ? 1 : 4,
                 },
                 768: {
                     slidesPerView: uniqueClass === 'reviews' ? 1 : 3,
