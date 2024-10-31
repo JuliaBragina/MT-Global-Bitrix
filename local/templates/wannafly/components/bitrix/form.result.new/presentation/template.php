@@ -25,6 +25,7 @@
                     $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
                     echo $nameHTML;
                 ?>
+                <span class="popup__error"></span>
             </div>
 
             <!-- Поле "Почта" -->
@@ -40,10 +41,11 @@
                     $emailHTML = str_replace('>', 'required id="popup__email">', $emailHTML);
                     echo $emailHTML;
                 ?>
+                <span class="popup__error"></span>
             </div>
 
             <!-- Кнопка отправки формы -->
-            <input type="submit" class="btn btn-secondary-grey getPresentationForm__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
+            <input type="submit" class="btn btn-secondary-grey getPresentationForm__button popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
             <?= $arResult["FORM_FOOTER"] ?>
         </form>

@@ -152,6 +152,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    opacity: 1;
 }
 
 .popup__checkbox:checked::before, .popup__checkboxContainer input[type="checkbox"]:checked::before {
@@ -188,6 +189,23 @@
     font-weight: 500;
     line-height: 24px;
     position: relative;
+}
+
+.popup__error {
+    opacity: 0;
+    color: var(--color-accent-pink);
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    height: 10px
+}
+
+.popup__error_color_white {
+    color: var(--color-white)
+}
+
+.popup__error_visible {
+    opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {

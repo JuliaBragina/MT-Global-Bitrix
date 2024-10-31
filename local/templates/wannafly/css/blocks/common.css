@@ -197,7 +197,7 @@ section {
 }
 
 .input-error {
-    border-bottom: 2px solid red !important;
+    border-bottom: 1px solid red !important;
 }
 
 

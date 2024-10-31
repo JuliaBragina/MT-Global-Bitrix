@@ -40,47 +40,47 @@
 
             <!-- Поля формы -->
             <fieldset class="contactForm__inputFieldset">
-                <div class="contactForm__inputWrapper contactForm__nameWrapper">
+                <div class="contactForm__inputWrapper contactForm__nameWrapper popup__field">
+                    <label for="name" class="contactForm__label"><?= $arResult["QUESTIONS"]["name"]["CAPTION"] ?></label>
                     <?php
                         $nameHTML = $arResult["QUESTIONS"]["name"]["HTML_CODE"];
                         $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
                         echo $nameHTML;
                     ?>
-                    <label for="name"
-                        class="contactForm__label"><?= $arResult["QUESTIONS"]["name"]["CAPTION"] ?></label>
+                    <span class="popup__error"></span>
                 </div>
                 <div class="contactForm__inputWrapper popup__field_phone">
+                <label for="phone" class="contactForm__label"><?= $arResult["QUESTIONS"]["phone"]["CAPTION"] ?></label>
                     <?php
                         $phoneHTML = $arResult["QUESTIONS"]["phone"]["HTML_CODE"];
                         $phoneHTML = str_replace('>', 'required id="popup__phone">', $phoneHTML);
                         echo $phoneHTML;
                     ?>
-                    <label for="phone"
-                        class="contactForm__label"><?= $arResult["QUESTIONS"]["phone"]["CAPTION"] ?></label>
+                    <span class="popup__error"></span>
                 </div>
             </fieldset>
 
             <fieldset class="contactForm__inputFieldset">
-                <div class="contactForm__inputWrapper">
+                <div class="contactForm__inputWrapper popup__field">
+                    <label for="email" class="contactForm__label"><?= $arResult["QUESTIONS"]["email"]["CAPTION"] ?></label>
                     <?php
                         $emailHTML = $arResult["QUESTIONS"]["email"]["HTML_CODE"];
                         $emailHTML = str_replace('>', 'required id="popup__email">', $emailHTML);
                         echo $emailHTML;
                     ?>
-                    <label for="email"
-                        class="contactForm__label"><?= $arResult["QUESTIONS"]["email"]["CAPTION"] ?></label>
+                    <span class="popup__error"></span>
                 </div>
             </fieldset>
 
             <fieldset class="contactForm__inputFieldset">
-                <div class="contactForm__inputWrapper">
+                <div class="contactForm__inputWrapper popup__field ">
+                    <label for="projectDescription" class="contactForm__label"><?= $arResult["QUESTIONS"]["projectDescription"]["CAPTION"] ?></label>
                     <?= $arResult["QUESTIONS"]["projectDescription"]["HTML_CODE"] ?>
-                    <label for="projectDescription"
-                        class="contactForm__label"><?= $arResult["QUESTIONS"]["projectDescription"]["CAPTION"] ?></label>
+                    <span class="popup__error"></span>
                 </div>
             </fieldset>
 
-            <input type="submit" class="btn btn-primary contactForm__submit header__callback-button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
+            <input type="submit" class="btn btn-primary contactForm__submit popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
             <label class="contactForm__checkboxContainer">
                 <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>

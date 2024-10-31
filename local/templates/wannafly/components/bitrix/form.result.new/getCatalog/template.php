@@ -23,6 +23,7 @@
                         $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
                         echo $nameHTML;
                     ?>
+                    <span class="popup__error"></span>
                 </div>
 
                 <div class="popup__field popup__field_phone popup__field_getCatalog">
@@ -38,6 +39,7 @@
                         echo $phoneHTML;
                     ?>
                 </div>
+                <span class="popup__error"></span>
             </div>
 
             <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">

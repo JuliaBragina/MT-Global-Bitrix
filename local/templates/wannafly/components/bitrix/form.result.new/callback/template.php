@@ -22,6 +22,7 @@
                         $nameHTML = str_replace('>', 'id="popup__name" required>', $nameHTML);
                         echo $nameHTML;
                     ?>
+                    <span class="popup__error"></span>
                 </div>
 
                 <div class="popup__field popup__field_phone">
@@ -36,6 +37,7 @@
                         $phoneHTML = str_replace('>', 'required id="popup__phone">', $phoneHTML);
                         echo $phoneHTML;
                     ?>
+                    <span class="popup__error"></span>
                 </div>
             </div>
 
