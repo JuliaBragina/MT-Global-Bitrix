@@ -185,7 +185,7 @@
 <div id="thanks2" class="popup" style="display: none;">
     <section class="popup__form">
         <div class="modal2">
-            <h1 class="popup__title title__second">Спасибо! Ваша заявка принята!</h1>
+            <h1 class="popup__title title__second">Что-то пошло не так, попробуйте еще раз, пожалуйста!</h1>
         </div>
     </section>
 </div>

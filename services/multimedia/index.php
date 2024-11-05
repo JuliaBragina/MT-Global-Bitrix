@@ -319,7 +319,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
-		"TITLE" => "Уже убедились  в нашем професионализме"
+		"TITLE" => "Уже убедились в нашем професионализме"
 	),
 	false
 ); ?>
@@ -461,7 +461,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
-		"TITLE" => "Подбираем профессиональные мультимедийные решения  от ведущих мировых брендов"
+		"TITLE" => "Подбираем профессиональные мультимедийные решения от ведущих мировых брендов"
 	),
 	false
 ); ?>
@@ -617,11 +617,11 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"LIST_URL" => "",
 		"SEF_MODE" => "N",
-		"SUCCESS_URL" => "",
+		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
 		"WEB_FORM_ID" => "5",
-		"AJAX_MODE" => "Y",
+		"AJAX_MODE" => "N",
 		"AJAX_OPTION_SHADOW" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
@@ -641,11 +641,11 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 	   "IGNORE_CUSTOM_TEMPLATE" => "N",
 	   "LIST_URL" => "",
 	   "SEF_MODE" => "N",
-	   "SUCCESS_URL" => "",
+	   "SUCCESS_URL" => "/success.php?form_success=Y",
 	   "USE_EXTENDED_ERRORS" => "Y",
 	   "VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
 	   "WEB_FORM_ID" => "4",
-	   "AJAX_MODE" => "Y",
+	   "AJAX_MODE" => "N",
 		"AJAX_OPTION_SHADOW" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",

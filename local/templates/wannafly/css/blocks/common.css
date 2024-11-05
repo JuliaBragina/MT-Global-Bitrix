@@ -351,5 +351,19 @@ section {
   }
   
   .modal__form:not(:last-child) {
-    padding-bottom: 20px;
+      padding-bottom: 20px;
+  }
+
+  .success-message {
+      margin: 50px 0;
+  }
+
+  .success-message__text {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  .success-message__button {
+      margin: 30px 0;
+      text-decoration: none;
   }
