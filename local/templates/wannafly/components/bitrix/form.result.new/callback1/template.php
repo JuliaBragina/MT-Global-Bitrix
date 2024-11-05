@@ -3,9 +3,13 @@
 <script>
     //ajaxForm(document.getElementsByName('<?php //=$arResult['arForm']['SID']?>//')[0], '<?php //=$templateFolder?>///ajax.php')
 </script>
-
+<?
+echo '<pre>';
+print_r($arResult["isFormNote"]);
+echo '</pre>';
+?>
 <?php if ($arResult["isFormNote"] != "Y"): ?>
-    <section class="popup popup_callBack" id="popup__callBack" style="display: none;">
+    <section class="popup popup_callBack js-ajax-form" id="popup__callBack" style="display: block;">
         <h1 class="popup__title title__second">Запланировать встречу</h1>
         <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
 
@@ -42,7 +46,7 @@
                     ?>
                 </div>
             </div>
-
+			<input type="hidden" name="web_form_apply" value="Y">
             <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
             <div class="popup__checkboxContainer">
@@ -54,15 +58,7 @@
         </form>
     </section>
 <?php else: ?>
-    <script>
-        alert("Форма отправлена");
-        Fancybox.show([{
-            src: "#thanks2",
-            type: "inline"
-        }]);
-
-        setTimeout(function() {
-            Fancybox.close();
-        }, 5000);
-    </script>
+   <div class="js-form-result">
+	   Форма отправлена
+   </div>
 <?php endif; ?>

@@ -1,5 +1,9 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
-
+<?
+if (defined('IS_AJAX') && IS_AJAX) {
+	return;
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

@@ -7,7 +7,7 @@ include_once __DIR__ . "/functions.php";
     include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/wsrubi.smtp/classes/general/wsrubismtp.php");
 }*/
 
-
+define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest');
 if ($_SERVER['HTTP_HOST'] == 'axpro.expert') {
     //AddEventHandler('main', 'OnEpilog', Array('MyClass','orPagenMetaAxpro'));
 } else {
