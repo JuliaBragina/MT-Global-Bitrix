@@ -12,7 +12,10 @@ if ($_REQUEST["form_success"] === "Y" && !empty($_REQUEST["WEB_FORM_ID"]) && !em
         </div>
     </div>
     <?php
-} else { ?>
+} else { 
+    
+    LocalRedirect("/");
+    ?>
     <script>
         Fancybox.show([{
             src: "#thanks2",
