@@ -28,7 +28,7 @@ $this->setFrameMode(true);
                     <?= $item['DETAIL_TEXT']; ?>
                     
                     <button type="button" class="btn btn-primary btn-arrow-white doneProjects__button"
-                            data-fancybox="popup__needProject" data-src="#popup__needProject">Заказать решение</button>
+                            data-fancybox href="#popup__callBack">Заказать решение</button>
                 </article>
 
                 <figure class="typicalSolutions__illustration">

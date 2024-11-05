@@ -57,8 +57,7 @@
                             <button type="button" class="header__support-button">Тех.поддержка 24/7</button>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary header__callback-button" aria-label="Запросить обратный звонок" data-fancybox="popup__callback"
-                    data-src="#popup__callBack">Обратный звонок</button>
+                    <button type="button" class="btn btn-primary header__callback-button" aria-label="Запросить обратный звонок" data-fancybox href="#popup__callBack">Обратный звонок</button>
                 </div>
                 <div class="header__mobile-buttons-container">
                     <input type="checkbox" class="mobile-toggle" id="mobile-toggle">

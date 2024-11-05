@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="popup popup_callBack" id="popup__callBack" style="display: none;">
+<div class="popup popup_callBack" id="popup__callBack" style="display: none;">
     <h1 class="popup__title title__second">Запланировать встречу</h1>
     <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
 
@@ -49,5 +49,4 @@
 
         <?= $arResult["FORM_FOOTER"] ?>
     </form>
-</section>
-
+</div>

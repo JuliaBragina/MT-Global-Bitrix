@@ -53,8 +53,8 @@
                 <p class="main__slogan"><?= htmlspecialchars($arResult['SLOGANS'][0]) ?></p>
             <?php endif; ?>
 
-            <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox="popup__callback"
-                data-src="#popup__callBack">Запланировать встречу
+            <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox
+                href="#popup__callBack">Запланировать встречу
             </button>
         </div>
     </div>

@@ -38,6 +38,6 @@ $this->setFrameMode(true);
             <?php endforeach; ?>
         </div>
 
-        <button type="button" class="btn btn-primary btn-arrow-white popup__callBack ourApproach__button" data-fancybox="popup__callback" data-src="#popup__callBack">Подобрать решение</button>
+        <button type="button" class="btn btn-primary btn-arrow-white popup__callBack ourApproach__button" data-fancybox href="#popup__callBack">Подобрать решение</button>
     </div>
 </section>

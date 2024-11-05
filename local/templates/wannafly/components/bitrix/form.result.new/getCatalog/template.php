@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
+<div class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
     <h1 class="popup__title title__second">Получите каталог готовых решений
     <span class="popup__title_pink">для переговорных комнат</span> </h1>
 
@@ -49,4 +49,4 @@
 
         <?= $arResult["FORM_FOOTER"] ?>
     </form>
-</section>
+</div>

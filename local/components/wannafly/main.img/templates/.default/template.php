@@ -22,8 +22,8 @@
                 <p class="main__slogan">Слоганы не заданы</p>
             <?php endif; ?>
 
-            <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox="popup__callback"
-                data-src="#popup__callBack">Подобрать решение
+            <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox
+                href="#popup__callBack">Подобрать решение
             </button>
         </div>
 
