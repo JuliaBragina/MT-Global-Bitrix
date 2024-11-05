@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="getPresentationSection" style="<?= $arResult["isFormNote"] == "Y" ? 'opacity: 1; top: 0;' : '' ?>">
+<section class="getPresentationSection">
     <div class="getPresentationSection__container">
 
         <form class="getPresentationForm" action="<?= POST_FORM_ACTION_URI ?>" method="POST"
@@ -54,14 +54,3 @@
         <img class="getPresentationSection__img" src="<?= SITE_TEMPLATE_PATH ?>/img/img-pdf.svg" alt="Презентация">
     </div>
 </section>
-<?php if ($arResult["isFormNote"] == "Y"): ?>
-    <script>
-        Fancybox.show([{
-            src: "#thanks2",
-            type: "inline"
-        }]);
-        setTimeout(function() {
-            Fancybox.close();
-        }, 5000);
-    </script>
-<?php endif; ?>

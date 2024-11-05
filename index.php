@@ -130,9 +130,9 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Нам доверяют"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"slider-1", 
-	array(
+	"wannafly:news.list",
+	"slider-1",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -153,10 +153,7 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "70",
@@ -175,10 +172,7 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -186,16 +180,15 @@ $APPLICATION->SetTitle("Главная");
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
+		"SLIDER_STYLE" => "style2",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"TAGS_STYLE" => "style1",
-		"TITLE" => "О компании",
-		"SLIDER_STYLE" => "style2"
-	),
-	false
+		"TITLE" => "О компании"
+	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:compass",
 	"",
@@ -265,6 +258,11 @@ $APPLICATION->SetTitle("Главная");
 	"bitrix:form.result.new",
 	"presentation",
 	Array(
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -273,15 +271,10 @@ $APPLICATION->SetTitle("Главная");
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"LIST_URL" => "",
 		"SEF_MODE" => "N",
-		"SUCCESS_URL" => "",
+		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "2",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
+		"WEB_FORM_ID" => "2"
 	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
@@ -404,7 +397,7 @@ $APPLICATION->SetTitle("Главная");
 	"bitrix:form.result.new",
 	"briefing",
 	Array(
-		"AJAX_MODE" => "Y",
+		"AJAX_MODE" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_SHADOW" => "N",
@@ -417,15 +410,10 @@ $APPLICATION->SetTitle("Главная");
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"LIST_URL" => "",
 		"SEF_MODE" => "N",
-		"SUCCESS_URL" => "",
+		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "3",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
+		"WEB_FORM_ID" => "3"
 	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
@@ -491,11 +479,11 @@ $APPLICATION->SetTitle("Главная");
 	"bitrix:form.result.new",
 	"callback",
 	Array(
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_MODE" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -504,7 +492,7 @@ $APPLICATION->SetTitle("Главная");
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"LIST_URL" => "",
 		"SEF_MODE" => "N",
-		"SUCCESS_URL" => "",
+		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
 		"WEB_FORM_ID" => "4"
