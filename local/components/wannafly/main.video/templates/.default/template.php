@@ -54,7 +54,7 @@
             <?php endif; ?>
 
             <button type="button" class="btn btn-arrow btn-secondary main__button" data-fancybox
-                href="#popup__callBack">Запланировать встречу
+                href="#popup__callBack"  data-options='{"touch" : false, "momentum" : false}'>Запланировать встречу
             </button>
         </div>
     </div>

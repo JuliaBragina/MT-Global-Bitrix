@@ -62,7 +62,7 @@ $this->setFrameMode(true);
                                 </div>
                                 <button type="button"
                                     class="btn btn-arrow-white btn-primary doneProjects__button openGetSolutionsPopup"
-                                    data-fancybox href="#popup__getCatalog">Подробнее о проекте
+                                    data-fancybox href="#popup__getCatalog"  data-options='{"touch" : false, "momentum" : false}'>Подробнее о проекте
                                 </button>
                             </div>
                         </li>
