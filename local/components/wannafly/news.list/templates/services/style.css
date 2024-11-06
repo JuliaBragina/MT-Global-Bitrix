@@ -206,7 +206,7 @@
         height: 1px;
         position: absolute;
         left: 0;
-        top: 40%;
+        top: 44%;
         transform: translateY(-50%);
     }
 
@@ -249,5 +249,11 @@
     .services__links {
         order: 0;
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .services::after {
+        top: 40%;
     }
 }

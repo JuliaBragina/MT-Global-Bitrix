@@ -84,11 +84,21 @@
     width: auto;
 }
 
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 @media screen and (max-width: 1750px) {
     .header__phone-container {
         width: 36px;
         height: 36px;
+    }
+
+    .header__iconPhone {
+        left: 45%;
+        top: 45%;
     }
 
     .header__logo {

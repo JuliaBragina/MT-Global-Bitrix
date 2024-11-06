@@ -11,6 +11,7 @@
 
 .grid-cards-running-line__containerTitle{
     margin: 0 auto;
+    width: 64%;
 }
 
 .grid-cards-running-line__title {
@@ -63,7 +64,7 @@
 }
 
 @media (max-width: 1700px) {
-    .grid-cards-running-line__containerTitle {
+    .grid-cards-running-line__containerTitle{
         width: 84%;
     }
 
