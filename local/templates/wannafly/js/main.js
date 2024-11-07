@@ -29,10 +29,11 @@ window.onscroll = function() {
 
     if (currentScrollY > lastScrollY) {
         menu.style.transform = "translateY(-1000%)";
+        header.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
     } else {
         menu.style.transform = "translateY(0)";
         menu.style.position = "fixed";
-        menu.style.top = "85px";
+        menu.style.top = "80.2px";
         menu.style.left = "50%";
         menu.style.transform = "translateX(-50%)";
         menu.style.zIndex = "1000";
@@ -57,7 +58,6 @@ window.onscroll = function() {
         header.style.transform = "translateX(-50%)";
         header.style.zIndex = "1000";
         header.style.padding = "5px 0";
-        header.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
         header.style.maxWidth = "1920px";
     } else {
         header.style.position = "relative";
