@@ -32,11 +32,11 @@ Asset::getInstance()->addJs($templateFolder . '/assets/js/scripts.js');
                 <h4 class="services__currentTitle"><?= htmlspecialchars($arResult["ITEMS"][0]["NAME"]) ?></h4>
                 <div class="navButton">
                     <nav class="navButton__containerButtons">
-                        <button class="navButton__prev navButton__prev_services">
-                            <img class="navButton__nextImg" src="<?=SITE_TEMPLATE_PATH?>/img/prev-button-arrow.svg" alt="">
+                        <button class="navButton__prev_services">
+                            <span class="navButton__img-span navButton__img-span_left"></span>
                         </button>
-                        <button class="navButton__next navButton__next_services">
-                            <img class="navButton__nextImg" src="<?=SITE_TEMPLATE_PATH?>/img/next-button-arrow.svg" alt="">
+                        <button class="navButton__next_services">
+                            <span class="navButton__img-span navButton__img-span_right"></span>
                         </button>
                     </nav>
                 </div>
