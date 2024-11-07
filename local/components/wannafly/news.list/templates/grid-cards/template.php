@@ -16,7 +16,7 @@ $this->setFrameMode(true);
                     // Меняем размер изображения с фиксированной высотой 30px
                     $resizedImage = CFile::ResizeImageGet(
                         $item["DETAIL_PICTURE"],
-                        array("width" => 110, "height" => 9999), // Ширина 9999, чтобы сохранить пропорции
+                        array("width" => 150, "height" => 9999), // Ширина 9999, чтобы сохранить пропорции
                         BX_RESIZE_IMAGE_PROPORTIONAL, // Пропорциональное изменение
                         false // Получаем путь к файлу и размеры
                     );
