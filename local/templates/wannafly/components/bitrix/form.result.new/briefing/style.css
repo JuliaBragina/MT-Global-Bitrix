@@ -12,7 +12,14 @@
 }
 
 .contactForm__instructions {
-    padding: 39px 40px 50px;
+    padding: 30px 40px;
+}
+
+.contactForm__instructions-container:first-of-type::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid var(--color-accent-blue);
+    transition: border-color 0.3s ease
 }
 
 .contactForm__title {
@@ -34,8 +41,7 @@
     list-style: none;
     counter-reset: step;
     margin: 0;
-    padding: 32px 0;
-
+    padding: 32px 0 0;
 }
 
 .contactForm__step {
@@ -67,6 +73,15 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
+    margin: 0;
+}
+
+.contactForm__note {
+    padding-bottom: 20px;
+}
+
+.contactForm__note, .contactForm__contactsTitle {
+    margin-bottom: 20px;
 }
 
 .contactForm__phone {
