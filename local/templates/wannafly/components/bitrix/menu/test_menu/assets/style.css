@@ -121,7 +121,7 @@
     display: none;
     grid-column-gap: 30px;
     /*padding: 0 calc((100vw - 1228px) / 2) 35px;*/
-    padding: 0 0 35px 0;
+    padding: 0 0 35px 35px;
 }
 
 /*.header__item_level_2.has-submenu:hover > .header__sublist ul {
@@ -183,7 +183,7 @@
 
 /* Меню 3-го уровня */
 .header__item_level_3 a {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     padding: 0;
     color: var(--color-accent-blue);
