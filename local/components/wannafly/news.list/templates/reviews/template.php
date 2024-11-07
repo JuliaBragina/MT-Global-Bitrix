@@ -43,9 +43,9 @@ $this->setFrameMode(true);
                     );
                     ?>
                     <li class="slider__item reviews__item swiper-slide" id="<?= $this->GetEditAreaId($item['ID']); ?>">
-                        <img class="reviews__diploma" src="<?= $resizedDetailImage['src']?>" alt="Отзыв">
-                        <div class="reviews__reviewContainer">
-                            <div class="reviews__scrollContainer">
+                        <img class="reviews__diploma <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__diploma_single-row' : '' ?>" src="<?= $resizedDetailImage['src']?>" alt="Отзыв">
+                        <div class="reviews__reviewContainer <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__reviewContainer_height' : '' ?>">
+                            <div class="reviews__scrollContainer <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__scrollContainer_height' : '' ?>">
                                 <div class="reviews__headerContainer">
                                     <h3 class="reviews__title title__third"><?= $item['NAME'] ?></h3>
                                     <img class="reviews__logo" src="<?= $resizedPreviewImage['src']?>"
@@ -56,7 +56,7 @@ $this->setFrameMode(true);
                                 </p>
                             </div>
                         </div>
-                        <div class="reviews__profile">
+                        <div class="reviews__profile <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__profile_hidden' : '' ?>">
                                 <img class="reviews__avatar" src="<?= $resizedReviewerImage['src'] ?>" alt="<?= $item['NAME'] ?>">
                             <div class="reviews__profileContainer">
                                 <p class="reviews__name"><?= $item['PROPERTIES']['REVIEWER_NAME']['VALUE'] ?></p>

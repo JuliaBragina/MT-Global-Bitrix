@@ -13,10 +13,12 @@
 .reviews__items {
     margin: 0 auto;
     width: 100%;
+    height: 617px;
 }
 
 .reviews__item {
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     justify-content: space-between;
@@ -35,12 +37,21 @@
     grid-row: 1 / 3;
 }
 
+.reviews__diploma_single-row {
+    grid-row: 1 / 1;
+}
+
 .reviews__reviewContainer {
     box-sizing: border-box;
     border-radius: 30px;
     background-color: var(--color-white);
     padding: 36px 23px 53px 23px;
     position: relative;
+    height: 483px;
+}
+
+.reviews__reviewContainer_height {
+    height: 617px;
 }
 
 .reviews__reviewContainer:after {
@@ -68,6 +79,10 @@
     overflow-y: scroll;
     box-sizing: border-box;
     background-color: var(--color-white);
+}
+
+.reviews__scrollContainer_height {
+    max-height: 540px;
 }
 
 .reviews__scrollContainer::-webkit-scrollbar {
@@ -101,6 +116,10 @@
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+.reviews__profile_hidden {
+    display: none;
 }
 
 .reviews__avatar {
