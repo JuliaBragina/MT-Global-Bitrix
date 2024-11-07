@@ -94,6 +94,12 @@
     height: 516px;
 }
 
+@media screen and (max-width: 1900px) {
+    .main__description {
+        max-width: 500px;
+    }
+}
+
 @media screen and (max-width: 1750px) {
     .main__slogan {
         font-size: 24px;
@@ -101,11 +107,7 @@
     }
 }
 
-@media screen and (max-width: 1300px) {
-    .main__description {
-        min-width: auto;
-    }
-
+@media screen and (max-width: 1400px) {
     .main__mask {
         display: none;
     }
