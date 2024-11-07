@@ -23,8 +23,10 @@ $this->setFrameMode(true);
                 <article class="ourApproach__step" id="<?=$this->GetEditAreaId($item['ID']);?>">
                     <div class="ourApproach__headerContainer">
                         <?php if ($item['PREVIEW_PICTURE']): ?>
-                            <img src="<?= ($item['PREVIEW_PICTURE']['SRC']) ?>" class="ourApproach__img" alt="<?= htmlspecialchars($item['NAME']) ?>">
-                        <?php endif; ?>
+                            <div class="ourApproach__img-container">
+                                <img src="<?= ($item['PREVIEW_PICTURE']['SRC']) ?>" class="ourApproach__img" alt="<?= htmlspecialchars($item['NAME']) ?>">
+                            </div>
+                            <?php endif; ?>
                         <div class="ourApproach__subTitleContainer">
                             <p class="ourApproach__number title__third"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?> <span class="ourApproach__divider">/</span></p>
                             <h3 class="ourApproach__subTitle title__third"><?= htmlspecialchars($item['NAME']) ?></h3>
