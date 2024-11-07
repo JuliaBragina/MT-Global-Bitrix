@@ -29,14 +29,13 @@
 .grid-cards__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
     gap: 20px;
     justify-content: center;
 }
 
 .grid-cards__item {
     width: 100%;
-    max-width: 292px;
     height: 150px;
     background-color: var(--color-white);
     border-radius: 30px;
@@ -56,10 +55,6 @@
     filter: grayscale(1);
     cursor: pointer;
     transition: filter .3s ease;
-}
-
-.grid-cards__item {
-    flex-shrink: 0;
 }
 
 @media (max-width: 1700px) {
@@ -84,7 +79,6 @@
     .grid-cards__container_runningLine {
         width: 100%;
     }
-
 }
 
 @media (max-width: 1024px) {
