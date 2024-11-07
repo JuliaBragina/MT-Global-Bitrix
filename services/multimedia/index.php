@@ -34,11 +34,12 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
 		"TITLE" => "Мультимедийные решения «под ключ»",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/мультимедийные решения.mp4",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
 		"SLOGANS" => array(
 			0 => "Разрабатываем оптимальные решения под любую задачу ",
 			1 => "Поставляем оборудование от ведущих производителей ProAV ",
 			2 => "Делаем аудиовизуальную коммуникацию эффективной",
+			3 => "",
 		)
 	),
 	false

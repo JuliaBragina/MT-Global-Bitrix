@@ -107,6 +107,19 @@
     }
 }
 
+@media screen and (max-width: 1500px) {
+    .main__description {
+        max-width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 14560px) {
+    .main__description {
+        max-width: 350px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .main__mask {
         display: none;
@@ -140,6 +153,7 @@
     }
 
     .main__description {
+        max-width: 100%;
         margin: 30px 0;
     }
 

@@ -109,9 +109,21 @@ section.main {
     }
 }
 
+@media screen and (max-width: 1500px) {
+    .main__description {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .main__description {
+        max-width: 350px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .main__description {
-        min-width: auto;
+        min-width: 100%;
     }
 
     .main__mask {
