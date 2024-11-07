@@ -42,7 +42,6 @@
     counter-increment: list-item;
     gap: 15px;
 
-    cursor: pointer;
     transition: color 0.3s ease;
 }
 
@@ -56,13 +55,13 @@
     transition: color 0.3s ease;
 }
 
-.modernTecnologies__item:hover {
+/*.modernTecnologies__item:hover {
     color: var(--color-accent-blue);
 }
 
 .modernTecnologies__item:hover::before {
     color: var(--color-accent-blue);
-}
+}*/
 
 @media screen and (max-width: 1750px) {
     .modernTecnologies__container {

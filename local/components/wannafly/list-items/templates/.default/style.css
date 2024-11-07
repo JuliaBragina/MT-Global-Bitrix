@@ -3,6 +3,7 @@
 }
 
 .modernTecnologies__container {
+    width: 64%;
     padding: 109px 0 112px;
     margin: 0 auto;
     display: flex;
@@ -14,6 +15,7 @@
 }
 
 .modernTecnologies__title {
+    margin-bottom: 65px;
     color: black;
 }
 
@@ -39,19 +41,37 @@
     align-items: center;
     counter-increment: list-item;
     gap: 15px;
+
+    transition: color 0.3s ease;
 }
 
 .modernTecnologies__item::before {
-    content: "0" counter(list-item);
+    content: "0"counter(list-item);
     color: var(--color-white);
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
     margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+/*.modernTecnologies__item:hover {
+    color: var(--color-accent-blue);
+}
+
+.modernTecnologies__item:hover::before {
+    color: var(--color-accent-blue);
+}*/
+
+@media screen and (max-width: 1750px) {
+    .modernTecnologies__container {
+        width: 84%;
+    }
 }
 
 @media screen and (max-width: 1300px) {
     .modernTecnologies__container {
+        width: 94%;
         padding: 49px 0;
         flex-direction: column;
         gap: 0;
@@ -68,6 +88,10 @@
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 20px;
+    }
+
+    .modernTecnologies__title {
+        margin-bottom: 26px;
     }
 
     .modernTecnologies__img {
