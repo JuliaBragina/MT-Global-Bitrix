@@ -42,8 +42,12 @@
     position: relative;
 }
 
-.grid-cards__item:hover .grid-cards__img {
-    filter: grayscale(0);
+.grid-cards__grid .grid-cards__item:nth-last-child(2) {
+    grid-column: 2;
+}
+
+.grid-cards__grid .grid-cards__item:nth-last-child(1) {
+    grid-column: 3;
 }
 
 .grid-cards__img {
@@ -120,6 +124,14 @@
 
     .grid-cards__item {
         height: 80px;
+    }
+
+    .grid-cards__grid .grid-cards__item:nth-last-child(2) {
+        grid-column: 1;
+    }
+    
+    .grid-cards__grid .grid-cards__item:nth-last-child(1) {
+        grid-column: 2;
     }
 }
 
