@@ -21,6 +21,10 @@
     filter: grayscale(0);
 }
 
+.equipment__itemList:hover .equipment__caption {
+    color: var(--color-accent-blue);
+}
+
 .equipment__item {
     gap: 20px;
 }

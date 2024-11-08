@@ -24,8 +24,8 @@
 }
 
 .header__logo {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
 }
 
 .header__phone-container {
@@ -102,8 +102,8 @@
     }
 
     .header__logo {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
     .header__contact-block {
@@ -170,5 +170,10 @@
         border: none;
         cursor: pointer;
         padding: 0;
+    }
+
+    .header__logo {
+        width: 50px;
+        height: 50px;
     }
 }

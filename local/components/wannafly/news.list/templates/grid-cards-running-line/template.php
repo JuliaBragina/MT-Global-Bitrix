@@ -2,7 +2,7 @@
 
 <section class="grid-cards-running-line">
     <div class="grid-cards-running-line__container grid-cards-running-line__container_runningLine">
-        <div class="grid-cards-running-line__containerTitle">
+        <div class="grid-cards-running-line__containerTitle container">
             <h2 class="grid-cards-running-line__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         </div>
 
@@ -10,7 +10,15 @@
             <?php foreach ($arResult['ITEMS'] as $item): ?>
                 <?php if (!empty($item['DETAIL_PICTURE'])): ?>
                     <div class="grid-cards-running-line__item running-line-container__item">
-                        <img class="grid-cards-running-line__img" src="<?= $item['DETAIL_PICTURE']['SRC'] ?>" alt="<?= htmlspecialchars($item['NAME']) ?>" id="<?=$this->GetEditAreaId($item['ID']);?>">
+                    <?php
+                        $resizedImage = CFile::ResizeImageGet(
+                            $item["DETAIL_PICTURE"],
+                            array("width" => 150, "height" => 9999), // Ширина 9999, чтобы сохранить пропорции
+                            BX_RESIZE_IMAGE_PROPORTIONAL, // Пропорциональное изменение
+                            false // Получаем путь к файлу и размеры
+                        );
+                        ?>
+                        <img class="grid-cards-running-line__img" src="<?= htmlspecialchars($resizedImage['src']) ?>" alt="<?= htmlspecialchars($item['NAME']) ?>" id="<?=$this->GetEditAreaId($item['ID']);?>">
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
@@ -20,7 +28,15 @@
             <?php foreach ($arResult['ITEMS'] as $item): ?>
                 <?php if (!empty($item['DETAIL_PICTURE'])): ?>
                     <div class="grid-cards-running-line__item running-line-container__item">
-                        <img class="grid-cards-running-line__img" src="<?= $item['DETAIL_PICTURE']['SRC'] ?>" alt="<?= htmlspecialchars($item['NAME']) ?>" id="<?=$this->GetEditAreaId($item['ID']);?>">
+                    <?php
+                        $resizedImage = CFile::ResizeImageGet(
+                            $item["DETAIL_PICTURE"],
+                            array("width" => 150, "height" => 9999), // Ширина 9999, чтобы сохранить пропорции
+                            BX_RESIZE_IMAGE_PROPORTIONAL, // Пропорциональное изменение
+                            false // Получаем путь к файлу и размеры
+                        );
+                        ?>
+                        <img class="grid-cards-running-line__img" src="<?= htmlspecialchars($resizedImage['src']) ?>" alt="<?= htmlspecialchars($item['NAME']) ?>" id="<?=$this->GetEditAreaId($item['ID']);?>">
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>

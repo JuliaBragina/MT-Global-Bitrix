@@ -28,12 +28,9 @@
 }
 
 .ourApproach__description li {
-    font-family: 'Montserrat';
-    font-size: 14px;
-    font-weight: 500;
     line-height: 21px;
     list-style-type: none;
-    margin: 14px 0;
+    margin: 16px 0;
     padding-left: 35px;
     position: relative;
 }
@@ -59,16 +56,28 @@
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.33341L5.16667 7.50008L11 1.66675' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
 }
 
+.ourApproach__headerContainer {
+    height: 180px;
+}
+
+.ourApproach__img-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    border: 2px solid var(--color-accent-blue);
+    margin-bottom: 38px;
+
+    position: relative;
+}
 
 .ourApproach__img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 
-    border-radius: 32px;
-    border: 1px solid var(--color-accent-blue);
-    padding: 10px;
-
-    margin-bottom: 38px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .ourApproach__img_color_lightBlue{

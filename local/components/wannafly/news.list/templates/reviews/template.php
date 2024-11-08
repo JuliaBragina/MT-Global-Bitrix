@@ -13,13 +13,11 @@ $this->setFrameMode(true);
             <div class="navButton__container">
                 <h2 class="title__second"><?= $arParams['TITLE'] ?></h2>
                 <nav class="navButton__containerButtons">
-                    <button type="button" class="navButton__prev navButton__prev_color_pink swiper-button-prev">
-                        <img class="navButton__prevImg"
-                            src="<?= SITE_TEMPLATE_PATH ?>/img/prev-button-arrow-white.svg" alt="">
+                    <button type="button" class="navButton__button swiper-button-prev">
+                        <span class="navButton__img-span navButton__img-span_left"></span>
                     </button>
-                    <button type="button" class="navButton__next navButton__prev_color_pink swiper-button-next">
-                        <img class="navButton__nextImg"
-                            src="<?= SITE_TEMPLATE_PATH ?>/img/next-button-arrow-white.svg" alt="">
+                    <button type="button" class="navButton__button swiper-button-next">
+                        <span class="navButton__img-span navButton__img-span_right"></span>
                     </button>
                 </nav>
             </div>
@@ -45,9 +43,9 @@ $this->setFrameMode(true);
                     );
                     ?>
                     <li class="slider__item reviews__item swiper-slide" id="<?= $this->GetEditAreaId($item['ID']); ?>">
-                        <img class="reviews__diploma" src="<?= $resizedDetailImage['src']?>" alt="Отзыв">
-                        <div class="reviews__reviewContainer">
-                            <div class="reviews__scrollContainer">
+                        <img class="reviews__diploma <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__diploma_single-row' : '' ?>" src="<?= $resizedDetailImage['src']?>" alt="Отзыв">
+                        <div class="reviews__reviewContainer <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__reviewContainer_height' : '' ?>">
+                            <div class="reviews__scrollContainer <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__scrollContainer_height' : '' ?>">
                                 <div class="reviews__headerContainer">
                                     <h3 class="reviews__title title__third"><?= $item['NAME'] ?></h3>
                                     <img class="reviews__logo" src="<?= $resizedPreviewImage['src']?>"
@@ -58,7 +56,7 @@ $this->setFrameMode(true);
                                 </p>
                             </div>
                         </div>
-                        <div class="reviews__profile">
+                        <div class="reviews__profile <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__profile_hidden' : '' ?>">
                                 <img class="reviews__avatar" src="<?= $resizedReviewerImage['src'] ?>" alt="<?= $item['NAME'] ?>">
                             <div class="reviews__profileContainer">
                                 <p class="reviews__name"><?= $item['PROPERTIES']['REVIEWER_NAME']['VALUE'] ?></p>

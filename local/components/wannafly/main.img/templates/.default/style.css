@@ -94,6 +94,12 @@
     height: 516px;
 }
 
+@media screen and (max-width: 1900px) {
+    .main__description {
+        max-width: 500px;
+    }
+}
+
 @media screen and (max-width: 1750px) {
     .main__slogan {
         font-size: 24px;
@@ -101,11 +107,20 @@
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
     .main__description {
-        min-width: auto;
+        max-width: 400px;
     }
+}
 
+
+@media screen and (max-width: 14560px) {
+    .main__description {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
     .main__mask {
         display: none;
     }
@@ -138,6 +153,7 @@
     }
 
     .main__description {
+        max-width: 100%;
         margin: 30px 0;
     }
 

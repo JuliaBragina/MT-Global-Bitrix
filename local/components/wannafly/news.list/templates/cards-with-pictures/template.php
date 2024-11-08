@@ -11,13 +11,11 @@ $this->setFrameMode(true);
             <div class="navButton__container">
                 <h2 class="readyProjects__title title__second"><?= $arParams['TITLE'] ?></h2>
                 <nav class="navButton__containerButtons">
-                    <button type="button" class="navButton__prev navButton__prev_color_pink swiper-button-prev">
-                        <img class="navButton__prevImg"
-                            src="<?= SITE_TEMPLATE_PATH ?>/img/prev-button-arrow-white.svg" alt="">
+                    <button type="button" class="navButton__button swiper-button-prev">
+                        <span class="navButton__img-span navButton__img-span_left"></span>
                     </button>
-                    <button type="button" class="navButton__next navButton__prev_color_pink swiper-button-next">
-                        <img class="navButton__nextImg"
-                            src="<?= SITE_TEMPLATE_PATH ?>/img/next-button-arrow-white.svg" alt="">
+                    <button type="button" class="navButton__button swiper-button-next">
+                        <span class="navButton__img-span navButton__img-span_right"></span>
                     </button>
                 </nav>
             </div>

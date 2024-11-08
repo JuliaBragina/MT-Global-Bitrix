@@ -96,6 +96,12 @@ section.main {
     height: 516px;
 }
 
+@media screen and (max-width: 1900px) {
+    .main__description {
+        max-width: 500px;
+    }
+}
+
 @media screen and (max-width: 1750px) {
     .main__slogan {
         font-size: 24px;
@@ -103,9 +109,21 @@ section.main {
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
     .main__description {
-        min-width: auto;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .main__description {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .main__description {
+        min-width: 100%;
     }
 
     .main__mask {

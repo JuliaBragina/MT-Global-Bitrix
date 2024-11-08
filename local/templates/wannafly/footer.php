@@ -191,25 +191,20 @@
 </div>
 
 
-<section class="popup popup__showMoreInfo" style="display: none;" id="popup__showMoreInfo">
-    <section class="popup__form">
-        <div class="popup__imgContainer">
-            <img src="../img/img-equipment.png" class="popup__img">
+<div class="popup popup_showMoreInfo" style="display: none;" id="popup__showMoreInfo">
+    <section class="popup__form popup__form_showMoreInfo">
+        <div class="popup__containerImg">
+            <img src="" class="popup__img">
         </div>
         <div class="popup__containerDescription">
             <h1 class="popup__title title__second">Системы бронирования</h1>
             <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
             <ul class="popup__list">
-                <li class="popup__item list-item">Бронирование переговорной с самой панели; </li>
-                <li class="popup__item list-item">Интеграция с основными календарями Exchange, Google, Yandex, Bitrix; </li>
-                <li class="popup__item list-item">Сбор статистики использования переговорных для оптимизации затрат; </li>
-                <li class="popup__item list-item">Интеграция панелей бронирования в мультимедийный комплекс и автоматическое включение/выключения оборудования в зависимости от статуса; </li>
-                <li class="popup__item list-item">Авторизация при помощи NFC карт;</li>
-                <li class="popup__item list-item">Автоматическая отмена бронирования в случае отсутствия участников.</li>
+                
             </ul>
         </div>
     </section>
-</section>
+</div>
 
 <script type="module" src="<?= SITE_TEMPLATE_PATH ?>/js/swiper.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/cookies.js" defer></script>
@@ -221,6 +216,7 @@
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest/dist/addons/cleave-phone.ru.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/inputValidation.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/modalPopupShower.js" defer></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/popup.js" defer></script>
 </body>
 </html>
 

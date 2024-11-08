@@ -37,6 +37,10 @@
     margin: 0;
 }
 
+.services__item {
+    margin-bottom: 10px;
+}
+
 .services__link {
     display: block;
     padding: 30px 0;
@@ -78,6 +82,7 @@
     transform: translateX(-40px);
     background-color: var(--color-accent-pink);
     z-index: -1;
+    opacity: .5;
 }
 
 .services__link.active::after {

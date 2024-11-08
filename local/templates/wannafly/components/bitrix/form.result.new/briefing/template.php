@@ -2,32 +2,41 @@
 
 <section class="contactForm">
     <div class="contactForm__container">
-        <div class="contactForm__instructions">
-            <h2 class="contactForm__title title__second title__second_hight">Расскажите нам о вашей задаче</h2>
-            <ol class="contactForm__steps">
-                <li class="contactForm__step">Отправьте нам заполненную форму и прикрепите файлы для
-                    ознакомления, если возможно. Это поможет нам быстрее подобрать оптимальное решение.
-                </li>
-                <li class="contactForm__step">После отправки заявки наш специалист ознакомится с информацией и
-                    свяжется с вами.
-                </li>
-            </ol>
-            <p class="contactForm__note">Позвоните или напишите нам на электронный адрес. Так мы сможем
-                оперативно подобрать решение, которое подойдет вам лучше всего.</p>
-            <div class="contactForm__contacts">
-                <p class="contactForm__contactsTitle">Контакты</p>
-                <div class="wrapper d-flex">
-                    <?php $APPLICATION->IncludeFile(
-                        SITE_DIR . 'includes/phone_getSupport.php',
-                        array(),
-                        array("MODE" => 'html')
-                    ); ?>
-                    <?php $APPLICATION->IncludeFile(
-                        SITE_DIR . 'includes/email.php',
-                        array(),
-                        array("MODE" => 'html')
-                    ); ?>
+        <div>
+            <div class="contactForm__instructions-container">
+                <div class="contactForm__instructions">
+                    <h2 class="contactForm__title title__second title__second_hight">Расскажите нам о вашей задаче</h2>
+                    <ol class="contactForm__steps">
+                        <li class="contactForm__step">Отправьте нам заполненную форму и прикрепите файлы для
+                            ознакомления, если возможно. Это поможет нам быстрее подобрать оптимальное решение.
+                        </li>
+                        <li class="contactForm__step">После отправки заявки наш специалист ознакомится с информацией и
+                            свяжется с вами.
+                        </li>
+                    </ol>
                 </div>
+            </div>
+
+            <div class="contactForm__instructions-container">
+                <div class="contactForm__instructions">
+                    <p class="contactForm__note">Позвоните или напишите нам на электронный адрес. Так мы сможем
+                        оперативно подобрать решение, которое подойдет вам лучше всего.</p>
+                    <div class="contactForm__contacts">
+                        <p class="contactForm__contactsTitle">Контакты</p>
+                        <div class="wrapper d-flex">
+                            <?php $APPLICATION->IncludeFile(
+                                SITE_DIR . 'includes/phone_getSupport.php',
+                                array(),
+                                array("MODE" => 'html')
+                            ); ?>
+                            <?php $APPLICATION->IncludeFile(
+                                SITE_DIR . 'includes/email.php',
+                                array(),
+                                array("MODE" => 'html')
+                            ); ?>
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
 

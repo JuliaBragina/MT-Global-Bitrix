@@ -41,7 +41,7 @@
     color: var(--color-main);
 }
 
-.slider__item_hover:hover {
+/*.slider__item_hover:hover {
     transition: background-color 0.3s ease;
     background-color: var(--color-accent-pink);
 }
@@ -54,7 +54,7 @@
 .slider__item_hover:hover .slider__descriptioin {
     transition: color 0.3s ease;
     color: var(--color-white);
-}
+}*/
 
 @media screen and (max-width: 1300px) {
     .slider__items {

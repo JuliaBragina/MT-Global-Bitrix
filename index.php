@@ -476,9 +476,9 @@ $APPLICATION->SetTitle("Главная");
 	)
 );?> <br>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new",
-	"callback",
-	Array(
+	"bitrix:form.result.new", 
+	"callback", 
+	array(
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
@@ -494,9 +494,14 @@ $APPLICATION->SetTitle("Главная");
 		"SEF_MODE" => "N",
 		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "4"
-	)
+		"WEB_FORM_ID" => "4",
+		"COMPONENT_TEMPLATE" => "callback",
+		"VARIABLE_ALIASES" => array(
+			"WEB_FORM_ID" => "WEB_FORM_ID",
+			"RESULT_ID" => "RESULT_ID",
+		)
+	),
+	false
 );?><br>
  <br>
  <br>
