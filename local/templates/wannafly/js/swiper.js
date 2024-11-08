@@ -6,14 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         about: 5,
     };
 
-    const dragSize = 400;
-
     document.querySelectorAll('.swiper').forEach(slider => {
         const uniqueClass = slider.classList[0];
         let containerUniqueClass = null;
 
         if (uniqueClass === 'about') {
-            console.log(slider)
             containerUniqueClass = slider.querySelector('.about__sliderContainer');
         }
         
@@ -23,15 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        const totalSlides = slider.querySelectorAll('.swiper-slide').length;
+        const initialSlidesPerView = slidesPerView[uniqueClass] || 4;
+
         let swiperOptions = {
             loop: true,
             spaceBetween: 20,
-            slidesPerView: 1,
+            slidesPerView: initialSlidesPerView,
         };
 
         const nextButton = slider.querySelector('.swiper-button-next');
         const prevButton = slider.querySelector('.swiper-button-prev');
         const scrollbarEl = slider.querySelector('.swiper-scrollbar');
+
         swiperOptions = {
             loop: true,
             navigation: {
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 prevEl: prevButton,
             },
             spaceBetween: 20,
-            slidesPerView: slidesPerView[uniqueClass] || 4,
+            slidesPerView: initialSlidesPerView,
             breakpoints: {
                 1300: {
                     slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && containerUniqueClass && 5) || 4,
@@ -63,14 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollbar: {
                 el: scrollbarEl,
                 draggable: true,
-                dragSize: dragSize
+                dragSize: Math.max((swiperWrapper.clientWidth / totalSlides) * initialSlidesPerView * 1.24, 50), // Динамический расчет
             }
         };
-        
 
         const swiper = new Swiper(swiperWrapper, swiperOptions);
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const sliderContainers = document.querySelectorAll('.running-line-container');

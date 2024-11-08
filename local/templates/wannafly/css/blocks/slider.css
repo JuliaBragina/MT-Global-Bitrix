@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
     align-items: center;
     transition: transform 0.3s ease;
 }
@@ -34,7 +33,6 @@
     background-color: var(--color-accent-pink-opacity);
     cursor: pointer;
 }
-
 
 .slider__link {
     text-decoration: none;
