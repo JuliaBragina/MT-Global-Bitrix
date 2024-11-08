@@ -46,6 +46,10 @@
     grid-column: 2 / span 1;
 }
 
+.grid-cards__item:hover .grid-cards__img {
+    filter: grayscale(0);
+}
+
 .grid-cards__img {
     position: absolute;
     top: 50%;
