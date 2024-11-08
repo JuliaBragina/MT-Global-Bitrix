@@ -19,6 +19,7 @@
                 <?php foreach ($arResult["ITEMS"] as $item): ?>
                     <?php
                         $link = !empty($item["PROPERTIES"]["LINK"]["VALUE"]) ? $item["PROPERTIES"]["LINK"]["VALUE"] : null; // Предположим, что ссылка хранится в свойствах "LINK"
+                        $tagsText = !empty($item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]) ? $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"] : ''; // Используем пустую строку по умолчанию
                     ?>
 
                     <?php if ($link):?>
@@ -37,9 +38,9 @@
                                     <img class="slider__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
                                 <?php } ?>
                                 <div class="readyProjects__text">
-                                    <?php if ($arParams['TAGS_STYLE'] == 'style2' && !empty($item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"])): ?>
+                                    <?php if ($arParams['TAGS_STYLE'] == 'style2'): ?>
                                         <p class="slider__descriptioin readyProjects__description readyProjects__description_color_pink">
-                                            <?= $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]; ?>
+                                            <?= $tagsText; ?>
                                         </p>
                                     <?php endif; ?>
                                     
@@ -47,9 +48,9 @@
                                         <?= $item["NAME"]; ?>
                                     </h3>
                                     
-                                    <?php if ($arParams['TAGS_STYLE'] == 'style1' && !empty($item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"])): ?>
+                                    <?php if ($arParams['TAGS_STYLE'] == 'style1'): ?>
                                         <p class="slider__descriptioin readyProjects__description">
-                                            <?= $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]; ?>
+                                            <?= $tagsText; ?>
                                         </p>
                                     <?php endif; ?>
                                 </div>
