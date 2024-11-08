@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const sliderContainers = document.querySelectorAll('.running-line-container');
 
     sliderContainers.forEach(item => {
