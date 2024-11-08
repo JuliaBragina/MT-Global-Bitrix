@@ -42,12 +42,8 @@
     position: relative;
 }
 
-.grid-cards__grid .grid-cards__item:nth-last-child(2) {
-    grid-column: 2;
-}
-
-.grid-cards__grid .grid-cards__item:nth-last-child(1) {
-    grid-column: 3;
+.grid-cards__grid > .grid-cards__item:nth-last-child(-n+2):nth-child(4n+1) {
+    grid-column: 2 / span 1;
 }
 
 .grid-cards__img {
