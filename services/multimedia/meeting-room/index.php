@@ -24,7 +24,7 @@
 	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
-		"IMG_SRC" => "/upload/medialibrary/4fb/t17huw9odmh5yt2prp1ekcjpexp2gh99.png",
+		"IMG_SRC" => "/local/templates/wannafly/img/img-main.png",
 		"LIST" => array(
 			0 => "Удобство управления и высокая эффективность планирования",
 			1 => "Сокращение времени принятия решений",
