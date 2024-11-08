@@ -1,10 +1,3 @@
-<?php
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-/** @var array $arParams */
-/** @var array $arResult */
-$this->setFrameMode(true);
-?>
-
 <section class="readyProjects swiper">
     <div class="readyProjects__container container">
         <div class="navButton navButton_bottom-margin_long">
@@ -26,6 +19,7 @@ $this->setFrameMode(true);
                 <?php foreach ($arResult["ITEMS"] as $item): ?>
                     <?php
                         $link = !empty($item["PROPERTIES"]["LINK"]["VALUE"]) ? $item["PROPERTIES"]["LINK"]["VALUE"] : null; // Предположим, что ссылка хранится в свойствах "LINK"
+                        $tagsText = !empty($item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]) ? $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"] : ''; // Используем пустую строку по умолчанию
                     ?>
 
                     <?php if ($link):?>
@@ -45,20 +39,26 @@ $this->setFrameMode(true);
                                 <?php } ?>
                                 <div class="readyProjects__text">
                                     <?php if ($arParams['TAGS_STYLE'] == 'style2'): ?>
-                                        <p class="slider__descriptioin readyProjects__description readyProjects__description_color_pink"><?php echo $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]; ?></p>
+                                        <p class="slider__descriptioin readyProjects__description readyProjects__description_color_pink">
+                                            <?= $tagsText; ?>
+                                        </p>
                                     <?php endif; ?>
+                                    
                                     <h3 class="slider__title readyProjects__title title__third">
-                                        <?php echo $item["NAME"]; ?>
+                                        <?= $item["NAME"]; ?>
                                     </h3>
+                                    
                                     <?php if ($arParams['TAGS_STYLE'] == 'style1'): ?>
-                                        <p class="slider__descriptioin readyProjects__description"><?php echo $item["PROPERTIES"]["TAGS"]["VALUE"]["TEXT"]; ?></p>
+                                        <p class="slider__descriptioin readyProjects__description">
+                                            <?= $tagsText; ?>
+                                        </p>
                                     <?php endif; ?>
                                 </div>
                             </li>
                     <?php if ($link): ?>
                         </a>
                     <?php else: ?>
-                    </div>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
