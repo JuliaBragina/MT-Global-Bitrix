@@ -1,55 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const popupOverlay = document.querySelector('.popup-overlay');
-    const popupOverlayCatalog = document.querySelector('.popup-overlay-getCatalog');
-    const popupOverlayNeedProject = document.querySelector('.popup-overlay-needProject');
+$(document).on('click', '.equipment__itemList', function () {
+    const image = $(this).data('image');
+    const description = $(this).data('description');
 
-    const openCallBackPopup = document.querySelectorAll('.openCallBackPopup');
-    const openGetSolutionsPopup = document.querySelectorAll('.openGetSolutionsPopup');
-    const openOrderSolutionPopup = document.querySelectorAll('.openOrderSolutionPopup');
+    $('#popup__showMoreInfo .popup__img').attr('src', image);
 
-    const closePopupButton = document.querySelectorAll('.popup__close-button');
-    
-    openCallBackPopup.forEach(item => {
-        item.addEventListener('click', function() {
-            popupOverlay.style.display = 'flex';
-        });
-    })
+    const listContainer = $('#popup__showMoreInfo .popup__list');
+    listContainer.empty();
 
-    openOrderSolutionPopup.forEach(item => {
-        item.addEventListener('click', function() {
-            popupOverlayNeedProject.style.display = 'flex';
-        })
+    const tempContainer = $(`<div>${description}</div>`);
+    const listItems = tempContainer.find('li');
+
+    listItems.each(function() {
+        $(this).addClass('popup__item list-item');
+        listContainer.append($(this).prop('outerHTML'));
     });
 
-    openGetSolutionsPopup.forEach(item => {
-        item.addEventListener('click', function() {
-            popupOverlayCatalog.style.display = 'flex';
-        })
-    });
-
-    closePopupButton.forEach(item => {
-        item.addEventListener('click', function() {
-            popupOverlay.style.display = 'none';
-            popupOverlayCatalog.style.display = 'none';
-            popupOverlayNeedProject.style.display = 'none';
-        });
-    });
-
-    popupOverlay.addEventListener('click', function(e) {
-        if (e.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
-        }
-    });
-
-    popupOverlayCatalog.addEventListener('click', function(e) {
-        if (e.target === popupOverlayCatalog) {
-            popupOverlayCatalog.style.display = 'none';
-        }
-    });
-
-    popupOverlayNeedProject.addEventListener('click', function(e) {
-        if (e.target === popupOverlayNeedProject) {
-            popupOverlayNeedProject.style.display = 'none';
-        }
-    });
+    $('#popup__showMoreInfo').show();
 });

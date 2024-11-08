@@ -11,15 +11,21 @@ $this->setFrameMode(true);
             <?php if (!empty($arResult['ITEMS'])): ?>
                 <?php foreach ($arResult['ITEMS'] as $item): ?>
                     <?php
-                    // Получение измененного изображения
                     $resizedImage = CFile::ResizeImageGet(
                         $item["PREVIEW_PICTURE"]['ID'],
-                        array("width" => 9999, "height" => 200), // Ширина 9999, чтобы сохранить пропорции
-                        BX_RESIZE_IMAGE_PROPORTIONAL, // Пропорциональное изменение
-                        false // Получаем путь к файлу и размеры
+                        array("width" => 9999, "height" => 200),
+                        BX_RESIZE_IMAGE_PROPORTIONAL,
+                        false 
                     );
                     ?>
-                    <div class="equipment__itemList" id="<?= $this->GetEditAreaId($item['ID']); ?>" data-fancybox href="#popup__showMoreInfo"  data-options='{"touch" : false, "momentum" : false}'>
+                    <div class="equipment__itemList" 
+                        id="<?= $this->GetEditAreaId($item['ID']); ?>"
+                        data-image="<?= $resizedImage['src'] ?>"
+                        data-description="<?= htmlspecialchars($item['PREVIEW_TEXT']) ?>"
+                        data-fancybox href="#popup__showMoreInfo"  
+                        data-options='{"touch" : false, "momentum" : false}'
+                    >
+
                         <img src="<?= $resizedImage['src'] ?>" class="equipment__img img-fluid" alt="<?= $item['NAME'] ?>">
                         <p class="equipment__caption"><?= $item['NAME'] ?></p>
                     </div>
