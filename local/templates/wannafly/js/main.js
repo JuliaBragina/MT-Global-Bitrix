@@ -38,7 +38,6 @@ window.onscroll = function() {
         menu.style.left = "50%";
         menu.style.transform = "translateX(-50%)";
         menu.style.zIndex = "1000";
-        menu.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
         menu.style.maxWidth = "1920px";
         menu.style.width = "100%";
         menu.style.opacity = 1;
