@@ -24,7 +24,7 @@
 	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
-		"IMG_SRC" => "/upload/medialibrary/1a0/6jbdcmr5ybpnnz1gqteak35a92mlzk6m.png",
+		"IMG_SRC" => "/upload/medialibrary/8eb/xbtsfzxysxbteveyo5zgzmi0n6ib88k8.png",
 		"LIST" => array(
 			0 => "Удобство управления и высокая эффективность планирования",
 			1 => "Сокращение времени принятия решений",
