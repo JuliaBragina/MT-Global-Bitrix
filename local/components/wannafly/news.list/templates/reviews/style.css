@@ -161,6 +161,11 @@
         margin-bottom: 0;
     }
 
+    .reviews__items {
+        height: auto;
+    }
+    
+
     .reviews__item {
         display: grid;
         grid-template-columns: 1fr;
@@ -171,13 +176,17 @@
     .reviews__diploma {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        height: auto;
+        height: 617px;
     }
 
     .reviews__reviewContainer {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         height: 557px;
+    }
+
+    .reviews__reviewContainer_height {
+        height: 680px;
     }
 
     .reviews__profile {
