@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const errorSpan = input.nextElementSibling;
             const form = input.closest('form');
 
+            if (!errorSpan) {
+                console.error('Ошибка: элемент для отображения ошибки не найден.');
+                return;
+            }
+
             if (input.value.length === 2) {
                 input.classList.remove('input-error');
                 errorSpan.textContent = '';
@@ -136,6 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
         function validateName(nameInput) {
             const errorSpan = nameInput.nextElementSibling;
             const form = nameInput.closest('form');
+
+            if (!errorSpan) {
+                console.error('Ошибка: элемент для отображения ошибки не найден.');
+                return;
+            }
 
             if (!nameInput.value) {
                 nameInput.classList.remove('input-error');
