@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollbar: {
                 el: scrollbarEl,
                 draggable: true,
-                dragSize: ((swiperWrapper.clientWidth / initialSlidesPerView) + 20) + ((swiperWrapper.clientWidth / initialSlidesPerView) * (totalSlides - initialSlidesPerView + 1)),
+                dragSize: (swiperWrapper.clientWidth / totalSlides + 20) * initialSlidesPerView,
             }
         };
         
