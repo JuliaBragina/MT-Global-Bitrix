@@ -10,7 +10,7 @@
             <div class="grid-cards-running-line__grid running-line-container grid-cards-running-line__marquee">
                 <?php foreach ($arResult['ITEMS'] as $item): ?>
                     <?php if (!empty($item['DETAIL_PICTURE'])): ?>
-                        <div class="grid-cards-running-line__item running-line-container__item">
+                        <div class="grid-cards-running-line__item">
                         <?php
                             $resizedImage = CFile::ResizeImageGet(
                                 $item["DETAIL_PICTURE"],
@@ -28,7 +28,7 @@
             <div aria-hidden="true" class="grid-cards-running-line__grid running-line-container grid-cards-running-line__marquee">
                 <?php foreach ($arResult['ITEMS'] as $item): ?>
                     <?php if (!empty($item['DETAIL_PICTURE'])): ?>
-                        <div class="grid-cards-running-line__item running-line-container__item">
+                        <div class="grid-cards-running-line__item">
                         <?php
                             $resizedImage = CFile::ResizeImageGet(
                                 $item["DETAIL_PICTURE"],
