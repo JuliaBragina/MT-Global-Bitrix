@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const observer = new MutationObserver(() => {
+    const intervalId = setInterval(() => {
         const forms = document.querySelectorAll('form');
+        if (forms.length) {
+            clearInterval(intervalId);
+            initFormValidation(forms);
+        }
+    }, 500); // Проверка каждые 500 мс
 
+    function initFormValidation(forms) {
         forms.forEach(form => {
             const nameInputs = form.querySelectorAll('input[type="text"].inputtext#popup__name');
             const phoneInputs = form.querySelectorAll('input[type="text"].inputtext#popup__phone');
             const emailInputs = form.querySelectorAll('input[type="text"].inputtext#popup__email');
             const checkboxInputs = form.querySelectorAll('input[type="checkbox"]');
             const submitButtons = form.querySelectorAll('input[type="submit"].btn.btn-primary.popup__button');
-
-            if (!nameInputs.length || !phoneInputs.length || !emailInputs.length || !submitButtons.length) {
-                console.warn('Некоторые элементы формы отсутствуют');
-                return;
-            }
 
             phoneInputs.forEach(input => {
                 new Cleave(input, {
@@ -234,9 +235,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
             toggleSubmitButtons();
         });
-
-        if (forms.length > 0) observer.disconnect();
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
+    }
 });
