@@ -170,6 +170,13 @@
     
 }
 
+.typicalSolutions__buttonCallBack {
+    display: flex;
+    justify-content: space-between;
+    width: 267px;
+    align-items: baseline;
+}
+
 @media screen and (max-width: 1300px) {
     .typicalSolutions__container {
         margin: 44px auto;
