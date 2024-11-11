@@ -48,8 +48,10 @@ $this->setFrameMode(true);
                             <div class="reviews__scrollContainer <?= empty($item["PROPERTIES"]["REVIEWER_PHOTO"]['VALUE']) ? 'reviews__scrollContainer_height' : '' ?>">
                                 <div class="reviews__headerContainer">
                                     <h3 class="reviews__title title__third"><?= $item['NAME'] ?></h3>
-                                    <img class="reviews__logo" src="<?= $resizedPreviewImage['src']?>"
-                                        alt="Фото клиента">
+                                    <?php if (!empty($item["PREVIEW_PICTURE"]['ID'])): ?>
+                                        <img class="reviews__logo" src="<?= $resizedPreviewImage['src'] ?>" alt="Фото клиента">
+                                    <?php endif; ?>
+
                                 </div>
                                 <p class="reviews__paragraph">
                                     <?= $item["PREVIEW_TEXT"] ?>

@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         const swiperWrapper = slider.querySelector('.swiper-container');
+        console.log(swiperWrapper.clientWidth);
         if (!swiperWrapper) {
             console.error('Не удалось найти .swiper-container в слайдере', slider);
             return;
@@ -64,16 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollbar: {
                 el: scrollbarEl,
                 draggable: true,
-                dragSize: Math.max((swiperWrapper.clientWidth / totalSlides) * initialSlidesPerView * 1.24, 50), // Динамический расчет
+                dragSize: (swiperWrapper.clientWidth / totalSlides + 20) * initialSlidesPerView,
             }
         };
-
+        
         const swiper = new Swiper(swiperWrapper, swiperOptions);
     });
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const sliderContainers = document.querySelectorAll('.running-line-container');
 
     sliderContainers.forEach(item => {

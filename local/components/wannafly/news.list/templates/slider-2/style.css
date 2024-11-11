@@ -114,13 +114,14 @@
     gap: 20px;
     position: relative;
     padding: 0 0 7px 30px;
+    line-height: 24px;
 }
 
 .typicalSolutions__article ul:last-of-type li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 14px;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
@@ -167,6 +168,13 @@
     font-weight: 400;
     line-height: 15.04px;
     
+}
+
+.typicalSolutions__buttonCallBack {
+    display: flex;
+    justify-content: space-between;
+    width: 267px;
+    align-items: baseline;
 }
 
 @media screen and (max-width: 1300px) {

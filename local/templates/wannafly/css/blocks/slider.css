@@ -30,9 +30,23 @@
 }
 
 .slider__line {
-    background-color: var(--color-accent-pink-opacity);
+    padding: 7px 0;
     cursor: pointer;
+    position: relative; 
 }
+
+.slider__line:before {
+    display: block;
+    content: "";
+    background-color: var(--color-accent-pink-opacity);
+    height: 3px;
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
 
 .slider__link {
     text-decoration: none;

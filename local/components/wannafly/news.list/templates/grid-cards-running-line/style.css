@@ -1,3 +1,11 @@
+.grid-cards-running-line__marquee {
+    animation: scroll 40s linear infinite;
+}
+
+.reverce {
+    animation-direction: reverse;
+}
+
 .grid-cards-running-line {
     padding: 103px 0;
 }
@@ -7,6 +15,7 @@
     overflow: hidden;
     width: 100%;
     text-align: center;
+    max-width: 1920px;
 }
 
 .grid-cards-running-line__containerTitle{
@@ -25,26 +34,40 @@
     width: 700px;
 }
 
+.grid-cards-running-line__wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 20px;
+}
+
 .grid-cards-running-line__grid {
+    margin-bottom: 30px;
+
+    flex-shrink: 0;
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;
-    will-change: transform;
+    counter-reset: item;
+    justify-content: space-around;
+    min-width: 100%;
+}
 
-    margin-bottom: 30px;
+.grid-cards-running-line__wrap:hover .grid-cards-running-line__marquee {
+    animation-play-state: paused;
 }
 
 .grid-cards-running-line__item {
-    width: 100%;
-    max-width: 292px;
+    flex: 0 0 auto;
+    width: 292px;
     height: 150px;
-    background-color: var(--color-white);
     border-radius: 30px;
-    flex-shrink: 0;
-
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    background-color: var(--color-white);
     cursor: pointer;
-    transition: transform 0.2s ease-out;
 }
 
 .grid-cards-running-line__item:hover .grid-cards-running-line__img {
@@ -52,11 +75,6 @@
 }
 
 .grid-cards-running-line__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110px;
     max-width: 150px;
     object-fit: contain;
     filter: grayscale(1);
@@ -102,15 +120,25 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
+
+        margin: 0;
+        min-width: unset;
+    }
+
+    .grid-cards-running-line__wrap {
+        display: block;
+    }
+
+    .grid-cards-running-line__wrap:last-child {
+        display: none;
     }
 
     .grid-cards-running-line__grid:last-of-type {
         display: none;
     }
 
-    .grid-cards-running-line__img{
-        width: 91px;
-        height: 25px;
+    .grid-cards-running-line__marquee {
+        animation: none
     }
 }
 
@@ -136,3 +164,13 @@
         height: 70px;
     }
 }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+  

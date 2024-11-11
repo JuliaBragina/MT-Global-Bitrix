@@ -27,7 +27,7 @@ $this->setFrameMode(true);
                     <h3 class="typicalSolutions__subTitle title__third"><?= $item['NAME']; ?></h3>
                     <?= $item['DETAIL_TEXT']; ?>
                     
-                    <button type="button" class="btn btn-primary btn-arrow-white doneProjects__button"
+                    <button type="button" class="btn btn-primary btn-arrow-white typicalSolutions__buttonCallBack"
                             data-fancybox href="#popup__callBack"  data-options='{"touch" : false, "momentum" : false}'>Заказать решение</button>
                 </article>
 

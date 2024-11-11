@@ -62,10 +62,6 @@
     background-color: var(--color-accent-pink-opacity); /* Цвет трека */
 }
 
-.doneProjects__title{
-    width: 100px;
-}
-
 .doneProjects__paragraph{
     font-family: 'Montserrat';
     font-size: 16px;

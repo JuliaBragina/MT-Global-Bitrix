@@ -31,11 +31,11 @@
                                 <?php if (!empty($item["PREVIEW_PICTURE"])) {
                                     $resizedImage = CFile::ResizeImageGet(
                                         $item["PREVIEW_PICTURE"]['ID'],
-                                        array("width" => 600, "height" => 600),
+                                        array("width" => 600, "height" => 9999),
                                         BX_RESIZE_IMAGE_EXACT
                                     );
                                 ?>
-                                    <img class="slider__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
+                                    <img class="slider__img readyProjects__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
                                 <?php } ?>
                                 <div class="readyProjects__text">
                                     <?php if ($arParams['TAGS_STYLE'] == 'style2'): ?>
