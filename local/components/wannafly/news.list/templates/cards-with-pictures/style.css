@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+.readyProjects__img {
+    min-height: 349px;
+}
+
 .readyProjects__text{
     padding: 32px 23px;
 }
@@ -31,7 +35,6 @@
 .readyProjects__description_color_pink {
     color: var(--color-accent-pink);
 }
-
 
 @media screen and (max-width: 1300px) {
     .readyProjects {
