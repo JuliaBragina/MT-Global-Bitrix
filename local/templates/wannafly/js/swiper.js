@@ -4,75 +4,84 @@ document.addEventListener("DOMContentLoaded", () => {
     const slidesPerView = {
         reviews: 1,
         about: 5,
+        certificates: 4,
     };
 
     document.querySelectorAll('.swiper').forEach(slider => {
         const uniqueClass = slider.classList[0];
         let containerUniqueClass = null;
-
-        if (uniqueClass === 'about') {
-            containerUniqueClass = slider.querySelector('.about__sliderContainer');
-        }
         
-        const swiperWrapper = slider.querySelector('.swiper-container');
-        console.log(swiperWrapper.clientWidth);
-        if (!swiperWrapper) {
-            console.error('Не удалось найти .swiper-container в слайдере', slider);
-            return;
-        }
-
-        const totalSlides = slider.querySelectorAll('.swiper-slide').length;
-        const initialSlidesPerView = slidesPerView[uniqueClass] || 4;
-
         let swiperOptions = {
             loop: true,
             spaceBetween: 20,
-            slidesPerView: initialSlidesPerView,
-        };
-
-        const nextButton = slider.querySelector('.swiper-button-next');
-        const prevButton = slider.querySelector('.swiper-button-prev');
-        const scrollbarEl = slider.querySelector('.swiper-scrollbar');
-
-        swiperOptions = {
-            loop: true,
+            slidesPerView: slidesPerView[uniqueClass] || 4,
             navigation: {
-                nextEl: nextButton,
-                prevEl: prevButton,
+                nextEl: slider.querySelector('.swiper-button-next'),
+                prevEl: slider.querySelector('.swiper-button-prev'),
             },
-            spaceBetween: 20,
-            slidesPerView: initialSlidesPerView,
+            scrollbar: {
+                el: slider.querySelector('.swiper-scrollbar'),
+                draggable: true,
+            },
             breakpoints: {
                 1300: {
-                    slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && containerUniqueClass && 5) || 4,
+                    slidesPerView: uniqueClass === 'reviews' ? 1 : (uniqueClass === 'about' && 5) || 4,
                 },
                 1024: {
                     slidesPerView: uniqueClass === 'reviews' ? 1 : 4,
                 },
                 768: {
                     slidesPerView: uniqueClass === 'reviews' ? 1 : 3,
+                    autoplay: false,
+                    loop: false,
+                    freeMode: false,
+                    speed: 0,
                 },
                 425: {
                     slidesPerView: 1,
+                    autoplay: false,
+                    loop: false,
+                    freeMode: false,
                 },
                 360: {
                     slidesPerView: 1,
+                    autoplay: false,
+                    loop: false,
+                    freeMode: false,
                 },
                 320: {
                     slidesPerView: 1,
+                    autoplay: false,
+                    loop: false,
+                    freeMode: false, 
                 },
             },
-            scrollbar: {
-                el: scrollbarEl,
-                draggable: true,
-                dragSize: (swiperWrapper.clientWidth / totalSlides + 20) * initialSlidesPerView,
-            }
         };
-        
+
+        if (uniqueClass === 'certificates') {
+            swiperOptions = {
+                ...swiperOptions,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                speed: 3000,
+                freeMode: true,
+                loopAdditionalSlides: 1,
+                centeredSlides: false,
+            };
+        }
+
+        const swiperWrapper = slider.querySelector('.swiper-container');
+        if (!swiperWrapper) {
+            console.error('Не удалось найти .swiper-container в слайдере', slider);
+            return;
+        }
+
+        const totalSlides = slider.querySelectorAll('.swiper-slide').length;
         const swiper = new Swiper(swiperWrapper, swiperOptions);
     });
 });
-
 
 /*document.addEventListener('DOMContentLoaded', function () {
     const sliderContainers = document.querySelectorAll('.running-line-container');
