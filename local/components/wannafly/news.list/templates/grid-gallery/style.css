@@ -47,7 +47,6 @@
 .certificates__flex {
     flex-shrink: 0;
     display: flex;
-    gap: 15px;
     counter-reset: item;
     justify-content: space-around;
 }
@@ -55,6 +54,7 @@
 .certificates__img {
     width: auto;
     height: 208px;
+    object-fit: contain;
     transition: all 0.1s ease-in-out;
     filter: grayscale(1);
 }
