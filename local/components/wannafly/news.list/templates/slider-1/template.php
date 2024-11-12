@@ -34,7 +34,7 @@ $containerClass = ($arParams["SLIDER_STYLE"] === "style2") ? "container" : "abou
 
                             $resizedImage = CFile::ResizeImageGet(
                                 $item["PREVIEW_PICTURE"]['ID'],
-                                array("width" => 9999, "height" => 155)
+                                array("width" => 9999, "height" => 0)
                             );
                             ?>
                             <img class="about__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
