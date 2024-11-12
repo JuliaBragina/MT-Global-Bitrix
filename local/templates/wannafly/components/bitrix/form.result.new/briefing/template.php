@@ -13,7 +13,9 @@
                         свяжется с вами.
                     </li>
                 </ol>
+                <div class="contactForm__line"></div> 
             </div>
+
             
             <div class="contactForm__instructions">
                 <p class="contactForm__note">Позвоните или напишите нам на электронный адрес. Так мы сможем
