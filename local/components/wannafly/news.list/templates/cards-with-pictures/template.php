@@ -31,7 +31,7 @@
                                 <?php if (!empty($item["PREVIEW_PICTURE"])) {
                                     $resizedImage = CFile::ResizeImageGet(
                                         $item["PREVIEW_PICTURE"]['ID'],
-                                        array("width" => 600, "height" => 9999),
+                                        array("width" => 0, "height" => 9999),
                                         BX_RESIZE_IMAGE_EXACT
                                     );
                                 ?>
