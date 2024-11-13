@@ -77,18 +77,17 @@
     transform: translateX(0);
 }
 
-.services__link:hover::after {
-    width: calc(100% + 40px);
-    transform: translateX(-40px);
-    background-color: var(--color-accent-pink);
-    z-index: -1;
-    opacity: .5;
-}
-
 .services__link.active::after {
     width: calc(100% + 40px);
     background-color: var(--color-accent-pink);
     transform: translateX(-40px);
+    z-index: -1;
+}
+
+.services__link:hover::after {
+    width: calc(100% + 40px);
+    transform: translateX(-40px);
+    background-color: var(--color-accent-pink-opacity-5);
     z-index: -1;
 }
 
