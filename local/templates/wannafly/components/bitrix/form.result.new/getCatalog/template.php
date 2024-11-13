@@ -42,9 +42,13 @@
 
         <input type="submit" class="btn btn-primary popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
-        <div class="popup__checkboxContainer">
-            <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
-            <label class="popup__checkboxLabel"><?= $arResult["QUESTIONS"]["agreement"]["CAPTION"] ?></label>
+        <div class="popup__field popup__field_width_long">
+            <div class="popup__checkboxContainer">
+                <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
+                <label class="popup__checkboxLabel"><?= $arResult["QUESTIONS"]["agreement"]["CAPTION"] ?></label>
+                <span class="popup__error"></span>
+            </div>
+            <span class="popup__error"></span>
         </div>
 
         <?= $arResult["FORM_FOOTER"] ?>

@@ -36,7 +36,7 @@
     min-width: 50%;
     background-color: var(--color-accent-blue);
     border-radius: 30px;
-    padding: 30px 30px 55px;
+    padding: 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

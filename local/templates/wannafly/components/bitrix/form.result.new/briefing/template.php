@@ -90,10 +90,13 @@
 
             <input type="submit" class="btn btn-primary contactForm__submit popup__button" id="popup__btn-submit" name="web_form_submit" value="<?= htmlspecialcharsbx($arResult['arForm']['BUTTON']) ?>">
 
-            <label class="contactForm__checkboxContainer">
-                <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
-                <p class="contactForm__textCheckbox"><?= $arResult["QUESTIONS"]["agreement"]["CAPTION"] ?></p>
-            </label>
+            <div class="popup__field popup__field_width_long">
+                <label class="contactForm__checkboxContainer">
+                    <?= $arResult["QUESTIONS"]["agreement"]["HTML_CODE"] ?>
+                    <p class="contactForm__textCheckbox"><?= $arResult["QUESTIONS"]["agreement"]["CAPTION"] ?></p>
+                </label>
+                <span class="popup__error"></span>
+            </div>
 
             <?= $arResult["FORM_FOOTER"] ?>
         </form>
