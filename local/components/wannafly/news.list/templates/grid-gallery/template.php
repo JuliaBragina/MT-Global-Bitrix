@@ -10,7 +10,7 @@
                                 <?php
                                 $certificateImage = CFile::ResizeImageGet($certificateId, [
                                     'width' => 0,
-                                    'height' => 200,
+                                    'height' => 9999,
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>
@@ -32,7 +32,7 @@
                                 <?php
                                 $certificateImage = CFile::ResizeImageGet($certificateId, [
                                     'width' => 0,
-                                    'height' => 200,
+                                    'height' => 9999,
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>
@@ -49,17 +49,3 @@
         </div>
     </div>
 </section>
-
-<script>
-    $(document).ready(function() {
-        $('[data-fancybox="gallery"]').fancybox({
-            loop: true,
-            protect: true,
-            buttons: [
-                'zoom',
-                'close'
-            ],
-        });
-    });
-
-</script>

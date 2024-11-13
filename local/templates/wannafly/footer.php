@@ -206,10 +206,12 @@
     </section>
 </div>
 
+<script src="<?= SITE_TEMPLATE_PATH ?>/assets/jquery/dist/jquery.min.js" defer></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/assets/@fancyapps/fancybox/dist/jquery.fancybox.js" defer></script>
+
+
 <script type="module" src="<?= SITE_TEMPLATE_PATH ?>/js/swiper.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/cookies.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest/dist/addons/cleave-phone.ru.js" defer></script>
