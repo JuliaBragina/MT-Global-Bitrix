@@ -161,10 +161,13 @@
         margin-bottom: 0;
     }
 
+    .reviews__paragraph {
+        padding: 20px 10px;
+    }
+
     .reviews__items {
         height: auto;
     }
-    
 
     .reviews__item {
         display: grid;
@@ -182,11 +185,11 @@
     .reviews__reviewContainer {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        height: 557px;
+        height: auto;
     }
 
     .reviews__reviewContainer_height {
-        height: 680px;
+        height: 610px;
     }
 
     .reviews__profile {
