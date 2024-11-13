@@ -35,8 +35,6 @@
 }
 
 .results__description {
-    font-family: 'Montserrat';
-    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     margin: 0;
@@ -99,11 +97,6 @@
     .results__number{
         font-size: 32px;
         line-height: 39.01px;
-    }
-
-    .results__description{
-        font-size: 16px;
-        line-height: 24px;
     }
 
     .results__item{

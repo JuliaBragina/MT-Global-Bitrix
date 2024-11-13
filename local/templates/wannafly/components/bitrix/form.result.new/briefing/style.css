@@ -271,4 +271,8 @@ input[type=checkbox] {
         min-height: 602px;
         padding: 30px 15px;
     }
+
+    .contactForm__line {
+        top: 51%;
+    }
 }
