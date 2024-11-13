@@ -56,7 +56,6 @@ $this->setFrameMode(true);
                                     <p class="doneProjects__paragraph">
                                         <?= $item['PREVIEW_TEXT'] ?>
                                     </p>
-                                    <div class="doneProjects__gradient"></div>
                                 </div>
                                 <button type="button"
                                     class="btn btn-arrow-white btn-primary doneProjects__button openGetSolutionsPopup"

@@ -44,8 +44,8 @@
 }
 
 .doneProjects__scrollContainer{
-    max-height: 360px;
-    overflow-y: scroll;
+    max-height: 420px;
+    overflow-y: auto;
     box-sizing: border-box;
     background-color: var(--color-white);
 }
@@ -63,25 +63,10 @@
 }
 
 .doneProjects__paragraph{
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
     margin: 0;
-    padding: 5px;
+    padding: 10px 0;
     box-sizing: border-box;
-}
-
-.doneProjects__reviewContainer:after {
-    content: "";
-    position: absolute;
-    bottom: 150px;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
-    pointer-events: none;
-    border-radius: 30px;
 }
 
 @media screen and (max-width: 1300px) {
