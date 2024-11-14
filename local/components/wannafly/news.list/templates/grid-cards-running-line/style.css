@@ -59,7 +59,6 @@
 
 .grid-cards-running-line__item {
     flex: 0 0 auto;
-    width: 292px;
     height: 150px;
     border-radius: 30px;
     display: flex;
@@ -149,19 +148,14 @@
     }
 
     .grid-cards-running-line__item {
-        height: 80px;
+        height: 150px;
     }
 }
 
 @media (max-width: 360px) {
     .grid-cards-running-line__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 3px;
-    }
-
-    .grid-cards-running-line__item {
-        width: 167px;
-        height: 70px;
     }
 }
   
