@@ -1,3 +1,7 @@
+.bx-context-toolbar-empty-area {
+  display: none !important;
+}
+
 .btn {
     font-size: 16px;
     font-weight: 700;
