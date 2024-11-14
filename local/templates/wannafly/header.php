@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <?php $APPLICATION->ShowHead();
-          $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/index.css");
+    <?php 
+        use Bitrix\Main\Page\Asset;
+        $APPLICATION->ShowHead();
+        $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/index.css");
     ?>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/assets/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php $APPLICATION->ShowTitle(); ?></title>
 </head>

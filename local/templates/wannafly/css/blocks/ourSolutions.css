@@ -31,10 +31,6 @@
 }
 
 .ourSolutions__paragraph {
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
     margin: 0;
     width: 90%;
 }
@@ -69,7 +65,6 @@
     }
 
     .ourSolutions__paragraph {
-        font-family: 'Montserrat';
         font-size: 14px;
         font-weight: 500;
         line-height: 21px;

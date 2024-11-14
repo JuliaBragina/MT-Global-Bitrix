@@ -63,7 +63,7 @@
 
 .whyWe__advantage{
     margin: 0;
-    font-family: 'Montserrat';
+
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
@@ -73,7 +73,6 @@
 .whyWe__description{
     margin: 0;
 
-    font-family: 'Montserrat';
     font-size: 15px;
     font-weight: 500;
     line-height: 22.5px;
