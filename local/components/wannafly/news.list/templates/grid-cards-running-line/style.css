@@ -60,6 +60,7 @@
 .grid-cards-running-line__item {
     flex: 0 0 auto;
     height: 150px;
+    width: 292px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -138,6 +139,10 @@
 
     .grid-cards-running-line__marquee {
         animation: none
+    }
+
+    .grid-cards-running-line__item {
+        width: auto;
     }
 }
 
