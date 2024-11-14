@@ -3,6 +3,18 @@
     $APPLICATION->SetTitle("Мультимедийные решения для переговорных комнат");
 	$APPLICATION->AddChainItem($APPLICATION->GetTitle());
 ?><main class="content">
+
+<?php $APPLICATION->IncludeComponent("wannafly:breadcrumb",
+    "",
+    array(
+        "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+        "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+        "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
+        "COMPONENT_TEMPLATE" => ".default"
+    ),
+    false
+); ?>
+
 <?$APPLICATION->IncludeComponent(
 	"wannafly:main.video", 
 	".default", 
