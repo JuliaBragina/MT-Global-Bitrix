@@ -148,6 +148,24 @@
     align-items: flex-end;
 }
 
+@media screen and (min-width: 1680px) and (max-width: 1740px) { /*чтобы заголовок не наезжал на пункты*/
+    .ourApproach__headerContainer {
+        height: 185px;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1312px) { /*чтобы заголовок не наезжал на пункты*/
+    .ourApproach__headerContainer {
+        height: 185px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1033px) { /*чтобы заголовок не наезжал на пункты*/
+    .ourApproach__headerContainer {
+        height: 185px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .ourApproach__container {
         margin: 47px auto;
