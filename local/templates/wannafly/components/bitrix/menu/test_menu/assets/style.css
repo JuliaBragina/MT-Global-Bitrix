@@ -1,3 +1,7 @@
+.mobile-menu-open {
+    overflow: hidden;
+}
+
 .header__nav {
     padding: 24px 0;
     border-top: 1px solid var(--color-black-opacity);
