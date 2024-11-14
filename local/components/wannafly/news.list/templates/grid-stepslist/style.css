@@ -28,6 +28,7 @@
 }
 
 .ourApproach__description li {
+    font-size: 15px;
     line-height: 21px;
     list-style-type: none;
     margin: 16px 0;
