@@ -27,20 +27,21 @@ window.onscroll = function() {
     const menu = document.querySelector(".header__nav");
     let currentScrollY = window.pageYOffset;
 
+    if (window.innerWidth < 1024) {
+        menu.style.top = "60.2px";
+    } else {
+        menu.style.top = "80.2px";
+    }
+
     if (currentScrollY > lastScrollY) {
-        menu.style.transform = "translateY(-1000%)";
-        header.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
-        menu.style.opacity = 0;
     } else {
         menu.style.transform = "translateY(0)";
         menu.style.position = "fixed";
-        menu.style.top = "80.2px";
         menu.style.left = "50%";
         menu.style.transform = "translateX(-50%)";
         menu.style.zIndex = "1000";
         menu.style.maxWidth = "1920px";
         menu.style.width = "100%";
-        menu.style.opacity = 1;
     }
 
     if (currentScrollY === 0) {
@@ -62,6 +63,7 @@ window.onscroll = function() {
         header.style.padding = "5px 0";
         header.style.maxWidth = "1920px";
     } else {
+        header.style.boxShadow = '0px 4px 10px rgba(34, 60, 80, 0.25)';
         header.style.position = "relative";
         header.style.transform = "translateX(0)";
         header.style.left = "0";

@@ -44,7 +44,7 @@
 }
 
 .header_flex {
-    display: flex !important;
+    display: block !important;
 }
 
 /* Меню 1-го уровня */
@@ -253,6 +253,10 @@
 }
 
 @media screen and (max-width: 1300px) {
+    .header_flex {
+        display: flex !important;
+    }
+    
     .header__link_level_1 {
         width: 94%;
         margin: auto;
