@@ -95,6 +95,7 @@
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 20px;
+        width: 100%;
     }
 
     .modernTecnologies__title {
