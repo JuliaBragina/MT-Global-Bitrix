@@ -253,7 +253,11 @@ input[type=checkbox] {
     }
 
     .contactForm__instructions {
-        padding: 39px 15px 30px 15px;
+        padding: 39px 15px 10px 15px;
+    }
+
+    .contactForm__instructions:last-of-type {
+        padding: 10px 15px 30px 15px;
     }
 
     .contactForm__note {
@@ -273,6 +277,6 @@ input[type=checkbox] {
     }
 
     .contactForm__line {
-        top: 51%;
+        display: none;
     }
 }
