@@ -10,7 +10,7 @@
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
 		"TITLE" => "Мультимедийные решения для переговорных комнат",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/2024-11-12 11.03.09.mov",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
 		"SLOGANS" => array(
 			0 => "Разрабатываем оптимальные аудиовизуальные решения для эффективной деловой коммуникации",
 			1 => "",
