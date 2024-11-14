@@ -5,6 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.getElementById('overlay');
     const isMobile = window.screen.width <= 900;
 
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 1300) {
+        submenuTogglesLvl2.forEach(toggle => {
+            let clickCount = 0; 
+    
+            toggle.addEventListener('click', function(event) {
+                const submenu =  this.nextElementSibling.children[0];
+                const isActive = submenu.classList.contains('submenu_active');
+                
+                clickCount++;
+    
+                if (clickCount === 1 && !isActive) {
+                    event.preventDefault();
+                    submenu.parentElement.previousElementSibling.parentElement.classList.add('header__item_level_2_active');
+                    submenu.parentElement.previousElementSibling.classList.add('header__link_level_2_active');
+                    submenu.children[0].children[0].classList.add('header__link_level_3_active');
+                    submenu.classList.add('submenu_active');
+                }
+                else if (clickCount === 2) {
+                    clickCount = 0;
+                    return true;
+                }
+            });
+        });
+    }
+    
+
     submenuTogglesLvl1.forEach(function (toggle) {
         toggle.addEventListener('click', function (event) {
             event.preventDefault();
@@ -81,4 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 
