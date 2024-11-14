@@ -50,7 +50,7 @@
     width: 100%;
     box-sizing: border-box;
 
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 29.26px;
     text-align: left;
@@ -78,7 +78,7 @@
 }
 
 .services__link.active::after {
-    width: calc(100% + 80px);
+    width: calc(100% + 70px);
     background-color: var(--color-accent-pink);
     transform: translateX(-40px);
     z-index: -1;
@@ -210,7 +210,7 @@
         height: 1px;
         position: absolute;
         left: 0;
-        top: 44%;
+        top: 48%;
         transform: translateY(-50%);
     }
 
