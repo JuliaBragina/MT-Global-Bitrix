@@ -73,9 +73,10 @@
     }
 
     .certificates__img {
-        max-height: 300px;
+        max-height: 500px;
         min-width: 300px;
-        width: 64% !important;
+        object-fit: contain;
+        margin: auto;
     }
 }
 
