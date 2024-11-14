@@ -43,6 +43,10 @@
     display: none;
 }
 
+.header_flex {
+    display: flex !important;
+}
+
 /* Меню 1-го уровня */
 .header__item_level_1.has-submenu {
     display: flex;
