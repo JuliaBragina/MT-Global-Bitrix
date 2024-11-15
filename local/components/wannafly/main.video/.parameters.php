@@ -10,7 +10,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 "TYPE" => "FILE",
                 "MULTIPLE" => "N",
                 "DEFAULT" => "",
-                "FILE_TYPE" => "mp4, avi, mov",
+                "FILE_TYPE" => "mp4, avi, mov, jpeg, svg, png, jpg",
                 "PARENT" => "BASE",
                 "FD_USE_MEDIALIB" => true,
             ],

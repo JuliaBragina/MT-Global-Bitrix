@@ -5,7 +5,7 @@
     $arResult['SLOGANS'] = array_filter($arResult['SLOGANS']);
 ?>
 
-<section class="main">
+<section class="main section-container">
     <div class="main__container main__container_spacebetween container">
         <div class="main__description">
             <h1 class="main__title title__first title__bottom-margin"><?= htmlspecialchars($arResult["TITLE"]) ?></h1>

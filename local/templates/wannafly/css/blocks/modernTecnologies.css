@@ -1,11 +1,11 @@
 .modernTecnologies {
     background-image: url(../../../../components/wannafly/main.video/templates/.default/assets/img/img-main.png);
+    margin-bottom: 100px;
 }
 
 .modernTecnologies__container {
     width: 64%;
-    gap:30px;
-    padding: 109px 0 112px;
+    gap: 30px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

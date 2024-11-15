@@ -2,7 +2,6 @@ section.main {
     position: relative;
     overflow: hidden;
     background-image: url('assets/img/img-main.png');
-    margin-bottom: 0;
 }
 
 .main__container {
@@ -107,6 +106,7 @@ section.main {
         line-height: 36px;
     }
 }
+
 
 @media screen and (max-width: 1400px) {
     .main__description {

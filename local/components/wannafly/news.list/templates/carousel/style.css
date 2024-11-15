@@ -4,7 +4,6 @@
 
 .doneProjects__container {
     margin: 0 auto;
-    padding: 110px 0 0px;
 }
 
 .doneProjects__slider{
@@ -114,9 +113,5 @@
 
     .doneProjects__img {
         border-radius: 10px;
-    }
-
-    .doneProjects__container {
-        padding: 46px 0 45px;
     }
 }

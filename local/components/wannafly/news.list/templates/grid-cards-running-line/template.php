@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="grid-cards-running-line">
+<section class="grid-cards-running-line section-container">
     <div class="grid-cards-running-line__container grid-cards-running-line__container_runningLine">
         <div class="grid-cards-running-line__containerTitle container">
             <h2 class="grid-cards-running-line__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>

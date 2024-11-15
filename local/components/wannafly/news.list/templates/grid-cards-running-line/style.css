@@ -6,10 +6,6 @@
     animation-direction: reverse;
 }
 
-.grid-cards-running-line {
-    padding: 103px 0;
-}
-
 .grid-cards-running-line__container {
     margin: 0 auto;
     overflow: hidden;
@@ -98,10 +94,6 @@
 }
 
 @media (max-width: 1024px) {
-    .grid-cards-running-line {
-        padding: 50px 0;
-    }
-
     .grid-cards-running-line__container {
         width: 94%;
     }

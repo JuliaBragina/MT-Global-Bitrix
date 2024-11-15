@@ -1,5 +1,5 @@
 .ourSolutions__container {
-    margin: 115px auto;
+    margin: 0 auto;
 }
 
 .ourSolutions__title {
@@ -31,12 +31,6 @@
 .ourSolutions__paragraph {
     margin: 0;
     width: 90%;
-}
-
-@media screen and (max-width: 1300px) {
-    .ourSolutions__container {
-        margin: 50px auto 25px;
-    }
 }
 
 @media screen and (max-width: 1024px) {

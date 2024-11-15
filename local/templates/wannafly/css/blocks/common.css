@@ -76,19 +76,6 @@ section {
     -webkit-transition: top 0.5s, opacity 0.5s;
     -o-transition: top 0.5s, opacity 0.5s;
     transition: top 0.5s, opacity 0.5s;
-    margin-bottom: calc(60px + 40 * ((100vw - 768px) / 556));
-}
-
-@media (max-width: 768px) {
-    section {
-        margin-bottom: 60px;
-    }
-}
-
-@media (min-width: 1324px) {
-    section {
-        margin-bottom: 100px;
-    }
 }
 
 .container {
@@ -96,6 +83,10 @@ section {
     width: 64%;
     margin: 0 auto;
     /*padding: calc(0px + 0 * ((100vw - 768px) / 556)) calc(12px + 18 * ((100vw - 768px) / 556));*/
+}
+
+.section-container {
+    margin-bottom: 100px;
 }
 
 @media (max-width: 1700px) {

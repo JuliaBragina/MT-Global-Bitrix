@@ -1,6 +1,9 @@
+.textBlock {
+    margin-bottom: 100px;
+}
+
 .textBlock__container {
-    width: 64%;
-    margin: 98px auto;
+    margin: 0 auto;
 }
 
 .textBlock__title {

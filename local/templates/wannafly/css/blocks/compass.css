@@ -82,6 +82,7 @@
 
 .whyWe {
     background-color: var(--color-accent-blue);
+    margin-bottom: 100px;
 }
 .whyWe .wrapper {
     display: flex;

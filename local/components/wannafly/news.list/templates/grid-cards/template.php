@@ -5,7 +5,7 @@
 $this->setFrameMode(true);
 ?>
 
-<section class="grid-cards">
+<section class="grid-cards section-container">
     <div class="grid-cards__container container">
         <h2 class="grid-cards__title title__second title__bottom-margin"><?php echo $arParams["TITLE"]?></h2>
         <div class="grid-cards__grid">
