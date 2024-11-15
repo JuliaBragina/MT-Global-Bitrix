@@ -164,7 +164,7 @@
     }
 
     .reviews__paragraph {
-        padding: 20px 6px;
+        padding: 20px;
     }
     
     .reviews__logo {
@@ -197,5 +197,17 @@
     .reviews__profile {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+    }
+
+    @media screen and (max-width: 777px) {
+        .reviews__paragraph {
+            padding: 20px 10px;
+        }
+    }
+
+    @media screen and (max-width: 490px) {
+        .reviews__paragraph {
+            padding: 20px 6px;
+        }
     }
 }
