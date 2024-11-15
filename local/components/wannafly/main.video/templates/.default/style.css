@@ -2,7 +2,6 @@ section.main {
     position: relative;
     overflow: hidden;
     background-image: url('assets/img/img-main.png');
-    margin-bottom: 0;
 }
 
 .main__container {
@@ -38,10 +37,10 @@ section.main {
 
 .main__video-container {
     position: absolute;
-    top: -76px;
-    right: 0px;
-    width: 850px;
-    height: 876px;
+    top: -40px;
+    right: 60px;
+    width: 830px;
+    height: 843px;
 }
 
 .main__video-container_second {
@@ -49,10 +48,10 @@ section.main {
 }
 
 .main__video-container:last-child {
-    top: -76px;
-    right: 0px;
-    width: 850px;
-    height: 876px;
+    top: -40px;
+    right: 60px;
+    width: 830px;
+    height: 843px;
 }
 
 .main__video {
@@ -108,17 +107,6 @@ section.main {
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .main__description {
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 1460px) {
-    .main__description {
-        max-width: 350px;
-    }
-}
 
 @media screen and (max-width: 1400px) {
     .main__description {

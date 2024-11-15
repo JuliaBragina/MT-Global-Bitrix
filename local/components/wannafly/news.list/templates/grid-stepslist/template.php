@@ -2,7 +2,7 @@
 $this->setFrameMode(true);
 ?>
 
-<section id="ourApproach" class="ourApproach section">
+<section id="ourApproach" class="ourApproach section section-container">
     <aside class="asideMenu">
         <nav class="asideMenu__nav">
             <ul class="asideMenu__list">

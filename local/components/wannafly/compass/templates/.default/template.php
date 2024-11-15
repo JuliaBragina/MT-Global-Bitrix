@@ -7,7 +7,7 @@ Asset::getInstance()->addCss($templateFolder . '/assets/css/style.css');
 Asset::getInstance()->addJs($templateFolder . '/assets/js/compass.js');
 ?>
 
-<section class="whyWe">
+<section class="whyWe section-container">
     <div class="about__container container">
         <h2 class="title__second">Почему MT global?</h2>
         <div class="wrapper">

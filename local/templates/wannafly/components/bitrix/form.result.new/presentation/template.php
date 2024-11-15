@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="getPresentationSection">
+<section class="getPresentationSection section-container">
     <div class="getPresentationSection__container">
 
         <form class="getPresentationForm" action="<?= POST_FORM_ACTION_URI ?>" method="POST"

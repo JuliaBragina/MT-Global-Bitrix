@@ -7,7 +7,7 @@ $this->setFrameMode(true);
 $containerClass = ($arParams["SLIDER_STYLE"] === "style2") ? "container" : "about__sliderContainer";
 ?>
 
-<section class="about swiper">
+<section class="about swiper section-container">
     <div class="container navButton navButton_bottom-margin_long">
         <div class="about__navContainer navButton__container">
             <h2 class="about__title title__second"><?= $arParams['TITLE'] ?></h2>

@@ -1,6 +1,10 @@
+.typicalSolutions {
+    margin-bottom: 100px;
+}
+
 .typicalSolutions__container {
     width: 64%;
-    margin: 93px auto;
+    margin: 0 auto;
 }
 
 .typicalSolutions__navigation {

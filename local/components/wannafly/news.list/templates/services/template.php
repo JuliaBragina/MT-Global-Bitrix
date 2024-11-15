@@ -10,7 +10,7 @@ $this->setFrameMode(true);
 Asset::getInstance()->addJs($templateFolder . '/assets/js/scripts.js');
 ?>
 
-<section class="services">
+<section class="services section-container">
     <div class="services__container container">
         <nav class="services__nav">
             <h2 class="services__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>

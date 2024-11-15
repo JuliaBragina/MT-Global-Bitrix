@@ -5,7 +5,7 @@ $this->setFrameMode(true);
 
 ?>
 
-<section id="doneProjects" class="reviews doneProjects swiper">
+<section id="doneProjects" class="reviews doneProjects swiper section-container">
     <aside class="asideMenu">
         <nav class="asideMenu__nav asideMenu__nav_padding">
             <ul class="asideMenu__list">
@@ -73,8 +73,6 @@ $this->setFrameMode(true);
                 <?php endif; ?>
             </ul>
         </div>
-    </div>
-    <div class="doneProjects__container container mobile-hidden">
         <div class="slider__line swiper-scrollbar"></div>
     </div>
 </section>

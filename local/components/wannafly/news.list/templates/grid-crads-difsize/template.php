@@ -5,7 +5,7 @@
 $this->setFrameMode(true);
 ?>
 
-<section id="solutions" class="solutions section">
+<section id="solutions" class="solutions section section-container">
 
     <div class="solutions__container container">
         <h2 class="solutions_title title__second title__second_color_white title__bottom-margin"><?= $arParams['TITLE'] ?></h2>

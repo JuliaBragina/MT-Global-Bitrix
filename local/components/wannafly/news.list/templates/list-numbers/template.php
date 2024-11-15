@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="results">
+<section class="results section-container">
     <div class="results__container container">
         <h2 class="results__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <ul class="results__list">

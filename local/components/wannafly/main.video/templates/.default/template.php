@@ -11,11 +11,16 @@
 
 <section class="main">
     <div class="main__video-container first-video">
-        <video class="main__video" autoplay muted loop>
-            <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <svg class="main__mask" width="829" height="876" xmlns="http://www.w3.org/2000/svg">
+        <?php if (!empty($arResult['VIDEO_SRC'])): ?>
+            <video class="main__video" autoplay muted loop>
+                <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        <?php else: ?>
+            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
+        <?php endif; ?>
+        
+        <svg class="main__mask" width="760" height="806" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <mask id="video-mask" maskUnits="userSpaceOnUse">
                     <rect width="100%" height="100%" fill="black" />
@@ -26,11 +31,17 @@
     </div>
 
     <div class="main__video-container main__video-container_second second-video">
-        <video class="main__video" autoplay muted loop>
-            <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <svg class="main__mask" width="829" height="876" xmlns="http://www.w3.org/2000/svg">
+        <?php if (!empty($arResult['VIDEO_SRC'])): ?>
+            <video class="main__video" autoplay muted loop>
+                <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        <?php else: ?>
+            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
+        <?php endif; ?>
+
+
+        <svg class="main__mask" width="760" height="806" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <mask id="video-mask-2" maskUnits="userSpaceOnUse">
                     <rect width="100%" height="100%" fill="black" />
@@ -42,7 +53,10 @@
 
     <div class="main__container container">
         <div class="main__description">
-            <h1 class="main__title title__first title__bottom-margin"><?= htmlspecialchars($arResult['TITLE']) ?></h1>
+                <h1 class="main__title title__first title__bottom-margin">
+                    <?= htmlspecialchars_decode($arResult['TITLE'], ENT_QUOTES) ?>
+                </h1>
+
             <?php if (count($arResult['SLOGANS']) > 1): ?>
                 <ul class="main__actionList">
                     <?php foreach ($arResult['SLOGANS'] as $slogan): ?>

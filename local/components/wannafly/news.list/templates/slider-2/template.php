@@ -6,7 +6,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
 
-<section class="typicalSolutions">
+<section class="typicalSolutions section-container">
     <div class="typicalSolutions__container container">
         <h2 class="typicalSolutions__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <nav class="typicalSolutions__navigation">

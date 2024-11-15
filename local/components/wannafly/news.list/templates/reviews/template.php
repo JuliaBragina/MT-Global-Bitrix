@@ -7,7 +7,7 @@ $this->setFrameMode(true);
 
 ?>
 
-<section class="reviews swiper">
+<section class="reviews swiper section-container">
     <div class="reviews__container container">
         <div class="navButton navButton_bottom-margin_long">
             <div class="navButton__container">

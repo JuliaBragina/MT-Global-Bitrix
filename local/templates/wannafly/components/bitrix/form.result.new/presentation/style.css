@@ -4,7 +4,7 @@
 
 .getPresentationSection__container {
     width: 64%;
-    margin: 0 auto 139px;
+    margin: 0 auto;
     background: url('images/bg-picture.jpg') no-repeat;
     background-size: cover;
     padding: 52px 72px;

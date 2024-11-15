@@ -1,6 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-<section class="contactForm">
+<section class="contactForm section-container">
     <div class="contactForm__container">
         <div class="contactForm__instructions-container">
             <div class="contactForm__instructions">

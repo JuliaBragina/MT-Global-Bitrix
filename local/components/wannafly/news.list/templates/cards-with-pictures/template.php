@@ -1,4 +1,4 @@
-<section class="readyProjects swiper">
+<section class="readyProjects swiper section-container">
     <div class="readyProjects__container container">
         <div class="navButton navButton_bottom-margin_long">
             <div class="navButton__container">

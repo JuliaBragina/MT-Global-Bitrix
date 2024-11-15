@@ -4,8 +4,7 @@
 
 .modernTecnologies__container {
     width: 64%;
-    gap:30px;
-    padding: 109px 0 112px;
+    gap: 30px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

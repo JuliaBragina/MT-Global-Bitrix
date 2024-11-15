@@ -1,4 +1,4 @@
-<section id="certificates" class="certificates">
+<section id="certificates" class="certificates section-container">
     <div class="certificates__container container">
         <h2 class="certificates__title title__second title__bottom-margin"><?= $arParams['TITLE'] ?></h2>
         <div class="certificates__wrap">
