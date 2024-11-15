@@ -22,8 +22,13 @@
 
 .main__description {
     max-width: 688px;
-    margin: 90px 0 192px;
     z-index: 1;
+    display: flex;
+    height: 800px;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .main__slogan {
@@ -96,7 +101,7 @@
 
 @media screen and (max-width: 1900px) {
     .main__description {
-        max-width: 500px;
+        height: auto;
     }
 }
 
@@ -125,7 +130,6 @@
     .main__video {
         mask: none;
         -webkit-mask: none;
-        background-color: aliceblue;
     }
 
     .main__img {
@@ -137,11 +141,6 @@
 @media screen and (max-width: 1024px) {
     .main {
         margin-bottom: 48px;
-    }
-
-    .main__description {
-        max-width: 100%;
-        margin: 30px 0;
     }
 
     .main__container_spacebetween {
@@ -165,11 +164,6 @@
 
     .main__video {
         display: none;
-    }
-
-    .main__video-container {
-        background: url("../../img/main-bg-mobile.jpg") no-repeat;
-        background-size: cover;
     }
 
     .main__actionItem::before {

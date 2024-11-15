@@ -9,16 +9,30 @@
     }
 ?>
 
-<section class="main">
+<section class="main section-container_margin_mobile">
     <div class="main__video-container first-video">
         <?php if (!empty($arResult['VIDEO_SRC'])): ?>
             <video class="main__video" autoplay muted loop>
                 <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
                 Ваш браузер не поддерживает видео.
             </video>
-        <?php else: ?>
-            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
-        <?php endif; ?>
+            <?php else: ?>
+                <?php 
+                    $sourceFile = $_SERVER['DOCUMENT_ROOT'] . $arResult['IMG_SRC'];
+                    $destinationFile = $_SERVER['DOCUMENT_ROOT'] . '/upload/resized_image_main.png';
+                    
+                    $arSize = array("width" => 830, "height" => 843);
+                    $resized = CFile::ResizeImageFile($sourceFile, $destinationFile, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL);
+                    
+                    if ($resized) {
+                        $resizedImagePath = '/upload/resized_image.png';
+                    } else {
+                        $resizedImagePath = $arResult['IMG_SRC'];
+                    }
+                    ?>
+                    <img class="main__img" src="<?= htmlspecialchars($resizedImagePath) ?>" alt="">
+            <?php endif; ?>
+
         
         <svg class="main__mask" width="760" height="806" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -37,7 +51,15 @@
                 Ваш браузер не поддерживает видео.
             </video>
         <?php else: ?>
-            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
+            <?php
+                if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/upload/resized_image_main.png')) {
+                    $resizedImagePath = '/upload/resized_image_main.png';
+                } else {
+                    $resizedImagePath = $arResult['IMG_SRC'];
+                }
+            ?>
+
+            <img class="main__img" src="<?= htmlspecialchars($resizedImagePath) ?>" alt="">
         <?php endif; ?>
 
 

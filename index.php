@@ -10,9 +10,10 @@ $APPLICATION->SetTitle("Главная");
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
-		"TITLE" => "Управление <br> технологичной <br> ИТ-инфраструктурой <br>и мультимедийные <br>инновации <br> для Бизнеса",
-		"VIDEO_SRC" => "",
+		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
 		"SLOGANS" => array(
+			0 => "Помогаем справиться  с современными вызовами",
 		),
 		"IMG_SRC" => "/local/templates/wannafly/img/img-doneProjects.png"
 	),
