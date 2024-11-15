@@ -31,7 +31,6 @@ window.onscroll = function() {
         menu.style.top = "60.2px";
     } else {
         menu.style.top = "80.2px";
-        menu.style.transform = "translateY(-150%)";
         menu.style.opacity = 0;
         menu.style.transition = "opacity .5s ease";
     }
