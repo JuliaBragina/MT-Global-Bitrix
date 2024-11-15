@@ -31,9 +31,11 @@ window.onscroll = function() {
         menu.style.top = "60.2px";
     } else {
         menu.style.top = "80.2px";
+        menu.style.transform = "translateX(-150%)";
     }
 
     if (currentScrollY > lastScrollY) {
+        
     } else {
         menu.style.transform = "translateY(0)";
         menu.style.position = "fixed";
