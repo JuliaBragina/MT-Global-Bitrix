@@ -148,6 +148,10 @@
         font-size: 14px;
         line-height: 21px;
     }
+
+    .reviews__items {
+        align-items: flex-start !important;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -160,7 +164,7 @@
     }
 
     .reviews__paragraph {
-        padding: 20px 22px;
+        padding: 20px;
     }
     
     .reviews__logo {
@@ -190,12 +194,20 @@
         height: auto;
     }
 
-    .reviews__reviewContainer_height {
-        height: 610px;
-    }
-
     .reviews__profile {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+    }
+
+    @media screen and (max-width: 777px) {
+        .reviews__paragraph {
+            padding: 20px 10px;
+        }
+    }
+
+    @media screen and (max-width: 490px) {
+        .reviews__paragraph {
+            padding: 20px 6px;
+        }
     }
 }
