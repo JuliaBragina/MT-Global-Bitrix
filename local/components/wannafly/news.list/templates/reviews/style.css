@@ -160,7 +160,11 @@
     }
 
     .reviews__paragraph {
-        padding: 20px 10px;
+        padding: 20px 22px;
+    }
+    
+    .reviews__logo {
+        max-height: 40px;
     }
 
     .reviews__items {

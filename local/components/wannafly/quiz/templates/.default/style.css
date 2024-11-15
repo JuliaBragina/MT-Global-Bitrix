@@ -10,6 +10,9 @@ section.quiz .text-wrapper {
 }
 
 @media (max-width: 1024px) {
-
+    section.quiz .quiz-wrapper {
+        height: auto;
+        background-color: transparent;
+    }
 }
 

@@ -31,10 +31,11 @@
                                 <?php if (!empty($item["PREVIEW_PICTURE"])) {
                                     $resizedImage = CFile::ResizeImageGet(
                                         $item["PREVIEW_PICTURE"]['ID'],
-                                        array("width" => 0, "height" => 9999),
-                                        BX_RESIZE_IMAGE_EXACT
+                                        array("width" => 150, "height" => 9999),
+                                        BX_RESIZE_IMAGE_PROPORTIONAL,
+                                        false
                                     );
-                                ?>
+                                    ?>
                                     <img class="slider__img readyProjects__img" src="<?= $resizedImage['src'] ?>" alt="<?= $item['NAME'] ?>">
                                 <?php } ?>
                                 <div class="readyProjects__text">

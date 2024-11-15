@@ -1,5 +1,9 @@
 .bx-context-toolbar-empty-area {
-  display: none !important;
+    display: none !important;
+}
+
+p, li {
+    line-height: 140%;
 }
 
 .btn {

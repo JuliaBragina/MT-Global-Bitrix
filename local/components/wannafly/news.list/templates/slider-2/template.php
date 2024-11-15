@@ -32,7 +32,15 @@ $this->setFrameMode(true);
                 </article>
 
                 <figure class="typicalSolutions__illustration">
-                    <img class="typicalSolutions__img" src="<?= $item['DETAIL_PICTURE']['SRC']; ?>" alt="<?= $item['NAME']; ?>">
+                    <?php  
+                        $resizedImage = CFile::ResizeImageGet(
+                            $item["DETAIL_PICTURE"]['ID'],
+                            array("width" => 450, "height" => 9999),
+                            BX_RESIZE_IMAGE_PROPORTIONAL,
+                            false
+                        );
+                    ?>
+                    <img class="typicalSolutions__img" src="<?= $resizedImage['src']; ?>" alt="<?= $item['NAME']; ?>">
                 </figure>
             </div>
         <?php endforeach; ?>

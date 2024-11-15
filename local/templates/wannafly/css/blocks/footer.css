@@ -54,10 +54,6 @@
     width: 232px;
 }
 
-.footer__contact-block:first-child {
-    padding-right: 123px;
-}
-
 .footer__phone-container {
     width: 32px;
     height: 32px;
@@ -184,10 +180,6 @@
 
         max-width: 100%;
         width: 100%;
-    }
-
-    .footer__contact-block:first-child {
-        padding: 0;
     }
 
     .footer__link {

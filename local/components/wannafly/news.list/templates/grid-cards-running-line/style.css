@@ -59,8 +59,8 @@
 
 .grid-cards-running-line__item {
     flex: 0 0 auto;
-    width: 292px;
     height: 150px;
+    width: 292px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -140,6 +140,10 @@
     .grid-cards-running-line__marquee {
         animation: none
     }
+
+    .grid-cards-running-line__item {
+        width: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -149,19 +153,14 @@
     }
 
     .grid-cards-running-line__item {
-        height: 80px;
+        height: 150px;
     }
 }
 
 @media (max-width: 360px) {
     .grid-cards-running-line__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 3px;
-    }
-
-    .grid-cards-running-line__item {
-        width: 167px;
-        height: 70px;
     }
 }
   

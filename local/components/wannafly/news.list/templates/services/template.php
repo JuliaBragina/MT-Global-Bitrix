@@ -43,7 +43,17 @@ Asset::getInstance()->addJs($templateFolder . '/assets/js/scripts.js');
             </div>
 
             <div class="services__imgContainer">
-                <img class="services__img" src="<?= $arResult["ITEMS"][0]["PREVIEW_PICTURE"]['SRC'] ?>" alt="">
+                <?php
+                    if (!empty($arResult["ITEMS"][0]["PREVIEW_PICTURE"]["ID"])) {
+                        $resizedImage = CFile::ResizeImageGet(
+                            $arResult["ITEMS"][0]["PREVIEW_PICTURE"]["ID"],
+                            ['width' => 147, 'height' => 9999],
+                            BX_RESIZE_IMAGE_PROPORTIONAL,
+                            false
+                        );
+                    }
+                ?>
+                <img class="services__img" src="<?= $resizedImage['src'] ?>" alt="">
             </div>
             <p class="services__paragraph"><?= htmlspecialchars($arResult["ITEMS"][0]["PROPERTIES"]["DESCRIPTION"]["VALUE"]["TEXT"]) ?></p>
 

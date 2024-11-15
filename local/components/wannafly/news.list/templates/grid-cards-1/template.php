@@ -13,7 +13,7 @@ $this->setFrameMode(true);
                     <?php
                     $resizedImage = CFile::ResizeImageGet(
                         $item["PREVIEW_PICTURE"]['ID'],
-                        array("width" => 9999, "height" => 200),
+                        array("width" => 200, "height" => 9999),
                         BX_RESIZE_IMAGE_PROPORTIONAL,
                         false 
                     );
@@ -25,6 +25,7 @@ $this->setFrameMode(true);
                         data-fancybox href="#popup__showMoreInfo"  
                         data-options='{"touch" : false, "momentum" : false}'
                     >
+
 
                         <img src="<?= $resizedImage['src'] ?>" class="equipment__img img-fluid" alt="<?= $item['NAME'] ?>">
                         <p class="equipment__caption"><?= $item['NAME'] ?></p>
