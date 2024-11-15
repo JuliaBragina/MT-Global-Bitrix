@@ -262,7 +262,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 	"wannafly:news.list", 
 	"grid-cards-running-line", 
 	array(
-		"IBLOCK_ID" => "79",
+		"IBLOCK_ID" => "9",
 		"COMPONENT_TEMPLATE" => "grid-cards-running-line",
 		"IBLOCK_TYPE" => "main",
 		"NEWS_COUNT" => "20",
