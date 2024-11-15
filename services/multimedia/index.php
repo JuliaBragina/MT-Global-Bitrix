@@ -320,7 +320,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
-		"TITLE" => "Уже убедились в нашем професионализме"
+		"TITLE" => "Уже убедились в нашем професcионализме"
 	),
 	false
 ); ?>
