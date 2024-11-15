@@ -323,3 +323,10 @@
         padding: 10px 10px 10px 0;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .header__nav {
+        position: fixed !important;
+        width: 100%;
+    }
+}
