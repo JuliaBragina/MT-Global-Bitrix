@@ -5,6 +5,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 
     $arResult['VIDEO_SRC'] = $arParams["VIDEO_SRC"];
+    $arResult['IMG_SRC'] = $arParams["IMG_SRC"];
     $arResult['TITLE'] = $arParams["TITLE"];
     $arResult['SLOGANS'] = $arParams['SLOGANS'];
 

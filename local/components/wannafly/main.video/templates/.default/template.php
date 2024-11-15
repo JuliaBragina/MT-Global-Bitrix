@@ -11,10 +11,15 @@
 
 <section class="main">
     <div class="main__video-container first-video">
-        <video class="main__video" autoplay muted loop>
-            <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
+        <?php if (!empty($arResult['VIDEO_SRC'])): ?>
+            <video class="main__video" autoplay muted loop>
+                <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        <?php else: ?>
+            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
+        <?php endif; ?>
+        
         <svg class="main__mask" width="760" height="806" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <mask id="video-mask" maskUnits="userSpaceOnUse">
@@ -26,10 +31,16 @@
     </div>
 
     <div class="main__video-container main__video-container_second second-video">
-        <video class="main__video" autoplay muted loop>
-            <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
+        <?php if (!empty($arResult['VIDEO_SRC'])): ?>
+            <video class="main__video" autoplay muted loop>
+                <source src="<?= htmlspecialchars($arResult['VIDEO_SRC']) ?>" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        <?php else: ?>
+            <img class="main__video" src="<?= htmlspecialchars($arResult['IMG_SRC']) ?>" alt="">
+        <?php endif; ?>
+
+
         <svg class="main__mask" width="760" height="806" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <mask id="video-mask-2" maskUnits="userSpaceOnUse">
