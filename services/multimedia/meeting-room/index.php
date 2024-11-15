@@ -476,9 +476,9 @@
 		"TITLE" => "Текстовый блок"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:news.list",
-	"cards-with-pictures",
-	Array(
+	"wannafly:news.list", 
+	"cards-with-pictures", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -499,7 +499,10 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "71",
@@ -518,7 +521,10 @@
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"TAGS",1=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "TAGS",
+			1 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -532,8 +538,9 @@
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"TAGS_STYLE" => "style2",
-		"TITLE" => "База знаний MT GLOBAL"
-	)
+		"TITLE" => "Реализованные проекты"
+	),
+	false
 );?><br>
  <br>
  <?$APPLICATION->IncludeComponent(

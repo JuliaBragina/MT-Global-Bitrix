@@ -39,7 +39,7 @@ section.main {
 .main__video-container {
     position: absolute;
     top: -76px;
-    right: 60px;
+    right: 0px;
     width: 850px;
     height: 876px;
 }
