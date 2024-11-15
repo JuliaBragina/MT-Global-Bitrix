@@ -40,8 +40,8 @@
 
 .main__video-container {
     position: absolute;
-    top: -76px;
-    right: 40px;
+    top: -40px;
+    right: 60px;
     width: 830px;
     height: 843px;
 }
@@ -51,8 +51,8 @@
 }
 
 .main__video-container:last-child {
-    top: -76px;
-    right: 0px;
+    top: -40px;
+    right: 60px;
     width: 830px;
     height: 843px;
 }
