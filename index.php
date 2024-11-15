@@ -5,14 +5,17 @@ $APPLICATION->SetPageProperty("description", "Комплексные ИТ-реш
 $APPLICATION->SetTitle("Главная");
 ?><main class="content">
 <?$APPLICATION->IncludeComponent(
-	"wannafly:main.video",
-	".default",
-	Array(
+	"wannafly:main.video", 
+	".default", 
+	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
-		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4"
-	)
+		"TITLE" => "Управление <br> технологичной <br> ИТ-инфраструктурой <br>и мультимедийные <br>инновации <br> для Бизнеса",
+		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
+		"SLOGANS" => array(
+		)
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"services",

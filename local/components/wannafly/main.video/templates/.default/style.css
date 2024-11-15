@@ -39,9 +39,9 @@ section.main {
 .main__video-container {
     position: absolute;
     top: -76px;
-    right: 60px;
-    width: 850px;
-    height: 876px;
+    right: 40px;
+    width: 830px;
+    height: 843px;
 }
 
 .main__video-container_second {
@@ -51,8 +51,8 @@ section.main {
 .main__video-container:last-child {
     top: -76px;
     right: 0px;
-    width: 850px;
-    height: 876px;
+    width: 830px;
+    height: 843px;
 }
 
 .main__video {
@@ -105,18 +105,6 @@ section.main {
     .main__slogan {
         font-size: 24px;
         line-height: 36px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .main__description {
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 1460px) {
-    .main__description {
-        max-width: 350px;
     }
 }
 
