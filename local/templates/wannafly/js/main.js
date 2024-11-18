@@ -29,6 +29,7 @@ window.onscroll = function() {
 
     if (window.innerWidth < 1024) {
         menu.style.top = "60.2px";
+        
     } else {
         menu.style.top = "80.2px";
         menu.style.opacity = 0;
@@ -51,7 +52,12 @@ window.onscroll = function() {
     if (currentScrollY === 0) {
         menu.style.position = "relative";
         menu.style.transform = "translateY(0)";
-        menu.style.top = "0";
+        if (window.innerWidth < 1024) {
+            menu.style.top = "84px";
+            
+        } else {
+            menu.style.top = "0";
+        }
         menu.style.left = "0";
         menu.style.boxShadow = "none";
         menu.style.maxWidth = "1920px";

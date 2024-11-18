@@ -2,96 +2,83 @@
     position: relative;
 }
 
-.certificates__marquee {
+/*.certificates__marquee {
     animation: scroll 20s linear infinite;
 }
+}*/
 
 .certificates__container {
     margin: 0 auto 45px;
     overflow: hidden;
 }
 
-.certificates__wrap {
+/*.certificates__wrap {
     position: relative;
     display: flex;
     overflow: hidden;
-    user-select: none;
-    gap: 20px;
-}
-
-.certificates__wrap:hover .certificates__marquee {
-    animation-play-state: paused;
-}
-
-.certificates__img:hover {
-    filter: grayscale(0);
-}
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    filter: grayscale(1);
+}*/ 
 
 .certificates__flex {
     flex-shrink: 0;
     display: flex;
-    gap: 15px;
-    justify-content: space-around;
-    min-width: 100%;
+    counter-reset: item;
+    justify-content: space-between;
 }
 
 .certificates__img {
-    flex: 0 0 auto;
     width: auto;
     height: 208px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: all 0.1s ease-in-out;
     filter: grayscale(1);
-
-    cursor: pointer;
 }
 
-@media screen and (max-width: 1450px) {
-    .certificates__grid {
-        grid-template-columns: repeat(2, auto);
-        justify-content: space-between;
-        justify-items: center;
-    }
+.certificates__img:hover {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    justify-items: center;
+}
+
+/*.certificates__flex:last-child {
+    display: none;
+}
+    
+.certificates__marquee {
+    animation: none;
+}*/
+
+.certificates__img {
+    height: 210px;
+    width: auto;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 1024px) {
     .certificates__flex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin: 0;
-        justify-items: center;
-    }
-
-    .certificates__flex:last-child {
-        display: none;
-    }
-
-    .certificates__marquee {
-        animation: none;
-    }
-
-    .certificates__img {
-        max-height: 500px;
-        min-width: 300px;
-        object-fit: contain;
-        margin: auto;
     }
 }
 
 @media screen and (max-width: 768px) {
     .certificates__flex {
-        grid-template-columns: 1fr;
-        justify-items: stretch;
+        grid-template-columns: 100%;
+    }
+
+    .certificates__img {
+        width: 46%;
     }
 }
 
-@keyframes scroll {
+/*@keyframes scroll {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(calc(-100% - 20px));
     }
-}
+  }
+}*/

@@ -13,15 +13,25 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"START_FROM" => "0"
 	)
 );?> <!--    <aside class="asideMenu">--> <!--        <nav class="asideMenu__nav">--> <!--            <ul class="asideMenu__list">--> <!--                <li class="asideMenu__item"><a class="asideMenu__link" href="#solutions">Решения</a></li>--> <!--                <li class="asideMenu__item"><a class="asideMenu__link" href="#equipments">Оборудование</a></li>--> <!--                <li class="asideMenu__item"><a class="asideMenu__link" href="#doneProjects">Кейсы</a></li>--> <!--                <li class="asideMenu__item"><a class="asideMenu__link" href="#ourApproach">Наш подход</a></li>--> <!--                <li class="asideMenu__item"><a class="asideMenu__link" href="#sertificates">Сертификаты</a></li>--> <!--            </ul>--> <!--        </nav>--> <!--    </aside>--> <?$APPLICATION->IncludeComponent(
-	"wannafly:main.video",
-	".default",
-	Array(
+	"wannafly:main.video", 
+	".default", 
+	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
-		"SLOGANS" => array(0=>"Разрабатываем оптимальные решения под любую задачу ",1=>"Поставляем оборудование от ведущих производителей ProAV ",2=>"Делаем аудиовизуальную коммуникацию эффективной",3=>"",),
+		"SLOGANS" => array(
+			0 => "Разрабатываем оптимальные решения под любую задачу ",
+			1 => "Поставляем оборудование от ведущих производителей ProAV ",
+			2 => "Делаем аудиовизуальную коммуникацию эффективной",
+			3 => "",
+			4 => "",
+			5 => "",
+			6 => "",
+		),
 		"TITLE" => "Мультимедийные решения «под ключ»",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/2024-11-12 11.03.09.mov"
-	)
+		"VIDEO_SRC" => "/local/templates/wannafly/img/2024-11-12 11.03.09.mov",
+		"IMG_SRC" => ""
+	),
+	false
 );?> <?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"grid-crads-difsize",

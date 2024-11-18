@@ -221,5 +221,11 @@
         .reviews__profile {
             width: 70%;
         }
+
+        .reviews__headerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 }

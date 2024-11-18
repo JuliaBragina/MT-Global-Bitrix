@@ -17,9 +17,14 @@ section.main {
 }
 
 .main__description {
-    max-width: 688px;
-    margin: 90px 0 192px;
+    max-width: 600px;
     z-index: 1;
+    display: flex;
+    min-height: 800px;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .main__slogan {
@@ -54,7 +59,7 @@ section.main {
     height: 843px;
 }
 
-.main__video {
+.main__video, .main__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -62,7 +67,7 @@ section.main {
     -webkit-mask: url(#video-mask);
 }
 
-.second-video .main__video {
+.second-video .main__video, .second-video .main__img {
     mask: url(#video-mask-2);
     -webkit-mask: url(#video-mask-2);
     opacity: 0.2;
@@ -84,33 +89,22 @@ section.main {
     padding-left: 35px;
 }
 
-.main__img {
-    width: 560.92px;
-    height: 574px;
-}
-
-.main__img_screen {
-    width: 516px;
-    height: 516px;
-}
-
-@media screen and (max-width: 1900px) {
-    .main__description {
-        max-width: 500px;
-    }
-}
-
 @media screen and (max-width: 1750px) {
     .main__slogan {
         font-size: 24px;
         line-height: 36px;
     }
-}
 
+    .main__description {
+        max-width: 500px;
+    }
+}
 
 @media screen and (max-width: 1400px) {
     .main__description {
-        min-width: 100%;
+        margin: 50px 0;
+        max-width: 100%;
+        min-height: auto;
     }
 
     .main__mask {
@@ -120,22 +114,19 @@ section.main {
     .main__video-container {
         position: static;
         width: 100%;
-        height: 380px;
+        height: 480px;
     }
 
     .second-video {
         display: none;
     }
 
-    .main__video {
+    .main__video, .main__img {
+        width: 100%;
+        height: 100%;
+
         mask: none;
         -webkit-mask: none;
-        background-color: aliceblue;
-    }
-
-    .main__img {
-        width: 436.48px;
-        height: 442px;
     }
 }
 
@@ -144,18 +135,13 @@ section.main {
         margin-bottom: 48px;
     }
 
-    .main__description {
-        margin: 30px 0;
+    .main__video-container {
+        height: 380px;
     }
 
     .main__container_spacebetween {
         margin-top: 30px;
         flex-direction: column-reverse;
-    }
-
-    .main__img {
-        width: 236.48px;
-        height: 242px;
     }
 
     .main__slogan {
@@ -165,14 +151,5 @@ section.main {
 
     .main__button {
         width: 100%;
-    }
-
-    .main__video {
-        display: none;
-    }
-
-    .main__video-container {
-        background: url("assets/img/img-main-mobile.jpg") no-repeat;
-        background-size: cover;
     }
 }
