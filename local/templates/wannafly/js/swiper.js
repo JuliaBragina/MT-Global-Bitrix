@@ -60,15 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (uniqueClass === 'certificates') {
             swiperOptions = {
-                ...swiperOptions,
+                loop: true,
                 autoplay: {
-                    delay: 0,
+                    delay: 3000,
                     disableOnInteraction: false,
                 },
-                speed: 3000,
-                freeMode: true,
-                loopAdditionalSlides: 1,
-                centeredSlides: false,
+                breakpoints: {
+                    1300: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 2,
+                        autoplay: false,
+                        loop: false,
+                        freeMode: false,
+                        autoplay: false,
+                    },
+                },
+                spaceBetween: 10,
             };
         }
 
@@ -81,26 +90,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const totalSlides = slider.querySelectorAll('.swiper-slide').length;
         const swiper = new Swiper(swiperWrapper, swiperOptions);
 
-        swiper.on('slideChange', () => {
-            const nextButton = slider.querySelector('.swiper-button-next');
-            const prevButton = slider.querySelector('.swiper-button-prev');
-
-            if (swiper.isBeginning) {
-                prevButton.classList.add('swiper-button-disabled');
-                prevButton.setAttribute('aria-disabled', 'true');
-            } else {
-                prevButton.classList.remove('swiper-button-disabled');
-                prevButton.setAttribute('aria-disabled', 'false');
-            }
-
-            if (swiper.isEnd) {
-                nextButton.classList.add('swiper-button-disabled');
-                nextButton.setAttribute('aria-disabled', 'true');
-            } else {
-                nextButton.classList.remove('swiper-button-disabled');
-                nextButton.setAttribute('aria-disabled', 'false');
-            }
-        });
+        if (uniqueClass !== 'certificates') {
+            swiper.on('slideChange', () => {
+                const nextButton = slider.querySelector('.swiper-button-next');
+                const prevButton = slider.querySelector('.swiper-button-prev');
+    
+                if (swiper.isBeginning) {
+                    prevButton.classList.add('swiper-button-disabled');
+                    prevButton.setAttribute('aria-disabled', 'true');
+                } else {
+                    prevButton.classList.remove('swiper-button-disabled');
+                    prevButton.setAttribute('aria-disabled', 'false');
+                }
+    
+                if (swiper.isEnd) {
+                    nextButton.classList.add('swiper-button-disabled');
+                    nextButton.setAttribute('aria-disabled', 'true');
+                } else {
+                    nextButton.classList.remove('swiper-button-disabled');
+                    nextButton.setAttribute('aria-disabled', 'false');
+                }
+            });
+        }
     });
 });
 
