@@ -65,19 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
-                breakpoints: {
-                    1300: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 2,
-                        autoplay: false,
-                        loop: false,
-                        freeMode: false,
-                        autoplay: false,
-                    },
-                },
+                slidesPerView: 'auto',
+                autoHeight: true,
                 spaceBetween: 10,
+                watchOverflow: true,
             };
         }
 

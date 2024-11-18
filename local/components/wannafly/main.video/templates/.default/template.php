@@ -18,19 +18,22 @@
             </video>
             <?php else: ?>
                 <?php 
+                    $pageIdentifier = md5($_SERVER['REQUEST_URI']); 
                     $sourceFile = $_SERVER['DOCUMENT_ROOT'] . $arResult['IMG_SRC'];
-                    $destinationFile = $_SERVER['DOCUMENT_ROOT'] . '/upload/resized_image_main.png';
-                    
-                    $arSize = array("width" => 830, "height" => 843);
+                    $destinationFile = $_SERVER['DOCUMENT_ROOT'] . "/upload/resized_image_{$pageIdentifier}.png";
+                    $arSize = ["width" => 830, "height" => 843];
                     $resized = CFile::ResizeImageFile($sourceFile, $destinationFile, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL);
                     
-                    if ($resized) {
-                        $resizedImagePath = '/upload/resized_image.png';
-                    } else {
-                        $resizedImagePath = $arResult['IMG_SRC'];
+                    if (!file_exists($destinationFile)) {
+                        $resized = CFile::ResizeImageFile($sourceFile, $destinationFile, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL);
+                        if (!$resized) {
+                            $destinationFile = $arResult['IMG_SRC'];
+                        }
                     }
-                    ?>
-                    <img class="main__img" src="<?= htmlspecialchars($resizedImagePath) ?>" alt="">
+
+                    $resizedImagePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $destinationFile);
+                ?>
+                <img class="main__img" src="<?= htmlspecialchars($resizedImagePath) ?>" alt="">
             <?php endif; ?>
 
         
@@ -52,13 +55,17 @@
             </video>
         <?php else: ?>
             <?php
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/upload/resized_image_main.png')) {
-                    $resizedImagePath = '/upload/resized_image_main.png';
-                } else {
-                    $resizedImagePath = $arResult['IMG_SRC'];
+                $pageIdentifier = md5($_SERVER['REQUEST_URI']);
+                $destinationFile = $_SERVER['DOCUMENT_ROOT'] . "/upload/resized_image_{$pageIdentifier}.png";
+                if (!file_exists($destinationFile)) {
+                    $resized = CFile::ResizeImageFile($sourceFile, $destinationFile, $arSize, BX_RESIZE_IMAGE_PROPORTIONAL);
+                    if (!$resized) {
+                        $destinationFile = $arResult['IMG_SRC'];
+                    }
                 }
-            ?>
 
+                $resizedImagePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $destinationFile);
+            ?>
             <img class="main__img" src="<?= htmlspecialchars($resizedImagePath) ?>" alt="">
         <?php endif; ?>
 

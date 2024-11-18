@@ -13,9 +13,10 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
 		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
 		"SLOGANS" => array(
-			0 => "Помогаем справиться  с современными вызовами",
+			0 => "Помогаем справиться с современными вызовами",
+			1 => "",
 		),
-		"IMG_SRC" => "/local/templates/wannafly/img/img-doneProjects.png"
+		"IMG_SRC" => "/upload/medialibrary/5cd/5169lkk93d83q6vdasb5h6a9rkmu8tcz.png"
 	),
 	false
 );?><?$APPLICATION->IncludeComponent(
