@@ -26,7 +26,8 @@
 		"SLOGANS" => array(
 			0 => "Разрабатываем оптимальные аудиовизуальные решения для эффективной деловой коммуникации",
 			1 => "",
-		)
+		),
+		"IMG_SRC" => "/upload/medialibrary/9f1/go99xgr9j3135rtu18jdxr6q2otkktu3.png"
 	),
 	false
 );?><?$APPLICATION->IncludeComponent(
