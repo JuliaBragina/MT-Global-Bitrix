@@ -23,14 +23,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"О компании", 
-		"/#/", 
+		"https://mtglobal.ru/about/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		"/#/", 
+		"https://mtglobal.ru/contacts/", 
 		Array(), 
 		Array(), 
 		"" 

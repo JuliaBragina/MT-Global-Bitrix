@@ -21,4 +21,4 @@
 </script>
 <!-- Marquiz script end -->
 <div data-marquiz-id="672d92f0ef41d200262e264b"></div>
-<script>(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Inline', {id: '672d92f0ef41d200262e264b', buttonText: '«Старт»', bgColor: '#ed7180', textColor: '#ffffff', rounded: true, shadow: 'rgba(237, 113, 128, 0.5)', blicked: true, buttonOnMobile: true, height: '520'})</script>
+<script>(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Inline', {id: '672d92f0ef41d200262e264b', buttonText: '«Старт»', bgColor: '#ed7180', textColor: '#ffffff', rounded: true, shadow: 'rgba(237, 113, 128, 0.5)', blicked: true, buttonOnMobile: true, height: '800'})</script>
