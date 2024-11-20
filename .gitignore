@@ -80,7 +80,7 @@ bitrix/templates/learning/
 /html
 
 wf.php
+services/multimedia/index.php
+services/multimedia/business/index.php
+services/multimedia/meeting-room/index.php
 index.php
-/services/index.php
-/services/multimedia/meeting-room/index.php
-/services/multimedia/business/index.php
