@@ -1,7 +1,7 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
 
-<section class="modernTecnologies section-container">
+<section class="modernTecnologies section-container section-container_margin_top">
     <div class="modernTecnologies__container container">
         <div class="modernTecnologies__titleContainer">
             <h2 class="modernTecnologies__title title__first title__second_color_white title__bottom-margin">

@@ -20,7 +20,7 @@ section.main {
     max-width: 600px;
     z-index: 1;
     display: flex;
-    min-height: 800px;
+    min-height: 836px;
     z-index: 1;
     flex-direction: column;
     justify-content: center;
@@ -45,18 +45,19 @@ section.main {
     top: -40px;
     right: 60px;
     width: 830px;
-    height: 843px;
+    height: 876px;
 }
 
 .main__video-container_second {
     z-index: -1;
+    top: -100px;
 }
 
 .main__video-container:last-child {
     top: -40px;
     right: 60px;
     width: 830px;
-    height: 843px;
+    height: 876px;
 }
 
 .main__video, .main__img {
@@ -68,10 +69,10 @@ section.main {
 }
 
 .second-video .main__video, .second-video .main__img {
-    mask: url(#video-mask-2);
-    -webkit-mask: url(#video-mask-2);
+    mask: url(#video-mask);
+    -webkit-mask: url(#video-mask);
     opacity: 0.2;
-    transform: rotate(129deg);
+    transform: rotate(54deg);
 }
 
 .main__actionList {
