@@ -3,50 +3,35 @@
     $APPLICATION->SetTitle("Мультимедийные решения для переговорных комнат");
 	$APPLICATION->AddChainItem($APPLICATION->GetTitle());
 ?><main class="content">
-
-<?php $APPLICATION->IncludeComponent("wannafly:breadcrumb",
-    "",
-    array(
-        "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-        "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-        "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
-        "COMPONENT_TEMPLATE" => ".default"
-    ),
-    false
-); ?>
-
 <?$APPLICATION->IncludeComponent(
-	"wannafly:main.video", 
-	".default", 
-	array(
+	"wannafly:breadcrumb",
+	"",
+	Array(
 		"COMPONENT_TEMPLATE" => ".default",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"wannafly:main.video",
+	".default",
+	Array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"IMG_SRC" => "/upload/medialibrary/2ff/tw5rozk4gq6tymhe3b2sbc2wjkwuu0qn.jpg",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
+		"SLOGANS" => array(0=>"Разрабатываем оптимальные аудиовизуальные решения для эффективной деловой коммуникации",1=>"",),
 		"TITLE" => "Мультимедийные решения для переговорных комнат",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
-		"SLOGANS" => array(
-			0 => "Разрабатываем оптимальные аудиовизуальные решения для эффективной деловой коммуникации",
-			1 => "",
-		),
-		"IMG_SRC" => "/upload/medialibrary/9f1/go99xgr9j3135rtu18jdxr6q2otkktu3.png"
-	),
-	false
+		"VIDEO_SRC" => ""
+	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:list-items", 
-	".default", 
-	array(
+	"wannafly:list-items",
+	".default",
+	Array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IMG_SRC" => "/upload/medialibrary/8eb/xbtsfzxysxbteveyo5zgzmi0n6ib88k8.png",
-		"LIST" => array(
-			0 => "Удобство управления и высокая эффективность планирования",
-			1 => "Сокращение времени принятия решений",
-			2 => "Передовые цифровые технологии и имидж компании",
-			3 => "Быстрый обмен мнениями и данными",
-			4 => "Оптимизация издержек",
-			5 => "",
-		),
+		"LIST" => array(0=>"Удобство управления и высокая эффективность планирования",1=>"Сокращение времени принятия решений",2=>"Передовые цифровые технологии и имидж компании",3=>"Быстрый обмен мнениями и данными",4=>"Оптимизация издержек",5=>"",),
 		"TITLE" => "Что такое современная переговорная комната для бизнеса?"
-	),
-	false
+	)
 );?> <?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"grid-cards-big",
@@ -263,7 +248,7 @@
 		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "79",
+		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "main",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -292,7 +277,7 @@
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"TITLE" => "Уже убедились в нашем професионализме"
+		"TITLE" => "Уже убедились в нашем професcионализме"
 	)
 );?> <?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
@@ -353,9 +338,9 @@
 		"TITLE" => "Наш подход"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"grid-cards", 
-	array(
+	"wannafly:news.list",
+	"grid-cards",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -376,10 +361,7 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "78",
@@ -398,10 +380,7 @@
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -414,13 +393,13 @@
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"TITLE" => "Подбираем профессиональные мультимедийные решения  от ведущих мировых брендов"
-	),
-	false
+		"TITLE" => "Подбираем профессиональные мультимедийные решения 
+от ведущих мировых брендов"
+	)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"grid-gallery", 
-	array(
+	"wannafly:news.list",
+	"grid-gallery",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -441,10 +420,7 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "80",
@@ -463,10 +439,7 @@
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -480,8 +453,7 @@
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"TITLE" => "Сертификаты"
-	),
-	false
+	)
 );?> <?$APPLICATION->IncludeComponent(
 	"wannafly:text",
 	".default",
@@ -489,11 +461,15 @@
 		"COMPONENT_TEMPLATE" => ".default",
 		"TEXT" => "С&nbsp;другой стороны рамки и&nbsp;место обучения кадров требуют от&nbsp;нас&nbsp;анализа форм развития. Задача организации, в&nbsp;особенности&nbsp;же&nbsp;начало повседневной работы по&nbsp;формированию позиции влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Товарищи! новая модель организационной деятельности способствует подготовки и&nbsp;реализации модели развития. С&nbsp;другой стороны рамки и&nbsp;место обучения кадров требуют от&nbsp;нас&nbsp;анализа дальнейших направлений развития.",
 		"TITLE" => "Текстовый блок"
-	)
+	),
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'N'
+)
 );?> <?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"cards-with-pictures", 
-	array(
+	"wannafly:news.list",
+	"cards-with-pictures",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -514,10 +490,7 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "71",
@@ -536,10 +509,7 @@
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "TAGS",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"TAGS",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -554,14 +524,18 @@
 		"STRICT_SECTION_CHECK" => "N",
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "Реализованные проекты"
-	),
-	false
+	)
 );?><br>
  <br>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:form.result.new",
 	"getCatalog",
 	Array(
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -573,18 +547,18 @@
 		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "5",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
+		"WEB_FORM_ID" => "5"
 	)
 );?><br>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:form.result.new",
 	"callback",
 	Array(
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
@@ -596,12 +570,7 @@
 		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
 		"VARIABLE_ALIASES" => Array("RESULT_ID"=>"RESULT_ID","WEB_FORM_ID"=>"WEB_FORM_ID"),
-		"WEB_FORM_ID" => "4",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_SHADOW" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
+		"WEB_FORM_ID" => "4"
 	)
 );?><br>
  </main><?php

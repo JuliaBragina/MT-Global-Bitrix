@@ -452,13 +452,14 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle());
 		"STRICT_SECTION_CHECK" => "N",
 		"TITLE" => "Сертификаты"
 	)
-);?> <?$APPLICATION->IncludeComponent(
-	"wannafly:text",
-	".default",
-	Array(
-		"COMPONENT_TEMPLATE" => ".default",
+);?> <?$APPLICATION->IncludeComponent("wannafly:text", ".default", array(
+	"COMPONENT_TEMPLATE" => ".default",
 		"TEXT" => "С&nbsp;другой стороны рамки и&nbsp;место обучения кадров требуют от&nbsp;нас&nbsp;анализа форм развития. Задача организации, в&nbsp;особенности&nbsp;же&nbsp;начало повседневной работы по&nbsp;формированию позиции влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Товарищи! новая модель организационной деятельности способствует подготовки и&nbsp;реализации модели развития. С&nbsp;другой стороны рамки и&nbsp;место обучения кадров требуют от&nbsp;нас&nbsp;анализа дальнейших направлений развития.",
 		"TITLE" => "Текстовый блок"
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
 	)
 );?> <?$APPLICATION->IncludeComponent("wannafly:news.list", "cards-with-pictures", array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",

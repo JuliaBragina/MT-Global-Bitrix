@@ -5,20 +5,16 @@ $APPLICATION->SetPageProperty("description", "Комплексные ИТ-реш
 $APPLICATION->SetTitle("Главная");
 ?><main class="content">
 <?$APPLICATION->IncludeComponent(
-	"wannafly:main.video", 
-	".default", 
-	array(
+	"wannafly:main.video",
+	".default",
+	Array(
 		"COMPONENT_TEMPLATE" => ".default",
+		"IMG_SRC" => "/upload/medialibrary/5cd/5169lkk93d83q6vdasb5h6a9rkmu8tcz.png",
 		"SLOGAN" => "Помогаем справиться с современными вызовами",
+		"SLOGANS" => array(0=>"Помогаем справиться с современными вызовами",1=>"",),
 		"TITLE" => "Управление технологичной ИТ-инфраструктурой и мультимедийные инновации для Бизнеса",
-		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4",
-		"SLOGANS" => array(
-			0 => "Помогаем справиться с современными вызовами",
-			1 => "",
-		),
-		"IMG_SRC" => "/upload/medialibrary/5cd/5169lkk93d83q6vdasb5h6a9rkmu8tcz.png"
-	),
-	false
+		"VIDEO_SRC" => "/local/templates/wannafly/img/video4.mp4"
+	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"services",
@@ -78,9 +74,9 @@ $APPLICATION->SetTitle("Главная");
 		"TITLE" => "Услуги"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"grid-cards", 
-	array(
+	"wannafly:news.list",
+	"grid-cards",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -101,13 +97,10 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "79",
+		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "about",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -123,10 +116,7 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -140,8 +130,7 @@ $APPLICATION->SetTitle("Главная");
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"TITLE" => "Нам доверяют"
-	),
-	false
+	)
 );?><?$APPLICATION->IncludeComponent(
 	"wannafly:news.list",
 	"slider-1",
@@ -429,9 +418,9 @@ $APPLICATION->SetTitle("Главная");
 		"WEB_FORM_ID" => "3"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"wannafly:news.list", 
-	"cards-with-pictures", 
-	array(
+	"wannafly:news.list",
+	"cards-with-pictures",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -452,10 +441,7 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "73",
@@ -474,10 +460,7 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "TAGS",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"TAGS",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -493,12 +476,15 @@ $APPLICATION->SetTitle("Главная");
 		"TAGS_STYLE" => "style2",
 		"TITLE" => "База знаний MT GLOBAL"
 	),
-	false
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'N'
+)
 );?> <br>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new", 
-	"callback", 
-	array(
+	"bitrix:form.result.new",
+	"callback",
+	Array(
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
@@ -508,20 +494,16 @@ $APPLICATION->SetTitle("Главная");
 		"CACHE_TYPE" => "A",
 		"CHAIN_ITEM_LINK" => "",
 		"CHAIN_ITEM_TEXT" => "",
+		"COMPONENT_TEMPLATE" => "callback",
 		"EDIT_URL" => "",
 		"IGNORE_CUSTOM_TEMPLATE" => "N",
 		"LIST_URL" => "",
 		"SEF_MODE" => "N",
 		"SUCCESS_URL" => "/success.php?form_success=Y",
 		"USE_EXTENDED_ERRORS" => "Y",
-		"WEB_FORM_ID" => "4",
-		"COMPONENT_TEMPLATE" => "callback",
-		"VARIABLE_ALIASES" => array(
-			"WEB_FORM_ID" => "WEB_FORM_ID",
-			"RESULT_ID" => "RESULT_ID",
-		)
-	),
-	false
+		"VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
+		"WEB_FORM_ID" => "4"
+	)
 );?><br>
  <br>
  <br>
