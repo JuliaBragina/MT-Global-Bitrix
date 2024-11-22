@@ -208,16 +208,49 @@
 
 <script src="<?= SITE_TEMPLATE_PATH ?>/assets/jquery/dist/jquery.min.js" defer></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/assets/@fancyapps/fancybox/dist/jquery.fancybox.js" defer></script>
-
-
-<script type="module" src="<?= SITE_TEMPLATE_PATH ?>/js/swiper.js" defer></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/cookies.js" defer></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/cleave.js@latest/dist/addons/cleave-phone.ru.js" defer></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/inputValidation.js" defer></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/modalPopupShower.js" defer></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/popup.js" defer></script>
+
+<?php
+    use Bitrix\Main\Page\Asset;
+    $jsFiles = [
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/swiper.js",
+            'attributes' => 'type="module"',
+        ],
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/cookies.js",
+            'attributes' => '',
+        ],
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/main.js",
+            'attributes' => '',
+        ],
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/inputValidation.js",
+            'attributes' => '',
+        ],
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/modalPopupShower.js",
+            'attributes' => '',
+        ],
+        [
+            'path' => SITE_TEMPLATE_PATH . "/js/popup.js",
+            'attributes' => '',
+        ],
+    ];
+
+    foreach ($jsFiles as $fileData) {
+        $filePath = $_SERVER["DOCUMENT_ROOT"] . $fileData['path'];
+        if (file_exists($filePath)) {
+            $fileWithVersion = $fileData['path'] . '?' . filemtime($filePath);
+        } else {
+            $fileWithVersion = $fileData['path'];
+        }
+        echo '<script src="' . $fileWithVersion . '" ' . $fileData['attributes'] . ' defer></script>';
+    }
+    
+?>
 </body>
 </html>
 

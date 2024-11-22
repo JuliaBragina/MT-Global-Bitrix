@@ -1,9 +1,16 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-use Bitrix\Main\Page\Asset;
+    use Bitrix\Main\Page\Asset;
 
-Asset::getInstance()->addCss($templateFolder . '/assets/style.css');
-Asset::getInstance()->addJs($templateFolder . '/assets/menu.js');
+    $cssFile = $_SERVER["DOCUMENT_ROOT"] . $templateFolder . '/assets/style.css';
+    $cssVersion = file_exists($cssFile) ? '?' . filemtime($cssFile) : '';
+
+    $jsFile = $_SERVER["DOCUMENT_ROOT"] . $templateFolder . '/assets/menu.js';
+    $jsVersion = file_exists($jsFile) ? '?' . filemtime($jsFile) : '';
+
+    Asset::getInstance()->addCss($templateFolder . '/assets/style.css' . $cssVersion);
+
+    Asset::getInstance()->addJs($templateFolder . '/assets/menu.js' . $jsVersion);
 ?>
 
 <div class="overlay" id="overlay"></div>

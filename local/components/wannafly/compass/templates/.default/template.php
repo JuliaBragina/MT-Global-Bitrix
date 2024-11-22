@@ -1,10 +1,15 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-use Bitrix\Main\Page\Asset;
+    use Bitrix\Main\Page\Asset;
 
-// Подключаем CSS и JS для конкретного компонента
-Asset::getInstance()->addCss($templateFolder . '/assets/css/style.css');
-Asset::getInstance()->addJs($templateFolder . '/assets/js/compass.js');
+    $cssFilePath = $_SERVER["DOCUMENT_ROOT"] . $templateFolder . '/assets/css/style.css';
+    $cssVersion = file_exists($cssFilePath) ? '?' . filemtime($cssFilePath) : '';
+
+    $jsFilePath = $_SERVER["DOCUMENT_ROOT"] . $templateFolder . '/assets/js/compass.js';
+    $jsVersion = file_exists($jsFilePath) ? '?' . filemtime($jsFilePath) : '';
+
+    Asset::getInstance()->addCss($templateFolder . '/assets/css/style.css' . $cssVersion);
+    Asset::getInstance()->addJs($templateFolder . '/assets/js/compass.js' . $jsVersion);
 ?>
 
 <section class="whyWe section-container">

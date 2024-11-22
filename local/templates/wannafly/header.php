@@ -6,7 +6,14 @@
     <?php 
         use Bitrix\Main\Page\Asset;
         $APPLICATION->ShowHead();
-        $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/index.css");
+        
+        $cssFile = SITE_TEMPLATE_PATH . "/css/index.css";
+        if (file_exists($_SERVER["DOCUMENT_ROOT"] . $cssFile)) {
+            $cssFileWithVersion = $cssFile . '?' . filemtime($_SERVER["DOCUMENT_ROOT"] . $cssFile);
+        } else {
+            $cssFileWithVersion = $cssFile;
+        }
+        Asset::getInstance()->addCss($cssFileWithVersion);
     ?>
     <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/assets/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
