@@ -9,8 +9,8 @@
                             <?php foreach ($item['PROPERTIES']['SERTIFICATES']['VALUE'] as $certificateId): ?>
                                 <?php
                                 $certificateImage = CFile::ResizeImageGet($certificateId, [
-                                    'width' => 200,
-                                    'height' => 200,
+                                    'width' => 270,
+                                    'height' => 400,
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>
@@ -32,8 +32,8 @@
                             <?php foreach ($item['PROPERTIES']['SERTIFICATES']['VALUE'] as $certificateId): ?>
                                 <?php
                                 $certificateImage = CFile::ResizeImageGet($certificateId, [
-                                    'width' => 200,
-                                    'height' => 200,
+                                    'width' => 270,
+                                    'height' => 400,
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>
