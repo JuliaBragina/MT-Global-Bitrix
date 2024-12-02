@@ -27,6 +27,27 @@ $aMenuLinks = array(
         array(),
         array(),
         ""
+    ),
+    array(
+        "Учебные классы",
+        "/services/multimedia/classrooms/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Музеи и арт-пространства",
+        "/services/multimedia/museums-art-spaces/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Корпоративное телевидение",
+        "/services/multimedia/corporate-television/",
+        array(),
+        array(),
+        ""
     )
     // другие пункты третьего уровня
 );
