@@ -17,7 +17,7 @@
 }
 
 .typicalSolutions__item {
-    width: calc(100% / 3);
+    width: 100%;
 }
 
 .typicalSolutions__button {
