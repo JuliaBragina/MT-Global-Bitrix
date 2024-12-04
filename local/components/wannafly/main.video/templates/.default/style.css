@@ -17,7 +17,7 @@ section.main {
 }
 
 .main__description {
-    max-width: 600px;
+    max-width: 570px;
     z-index: 1;
     display: flex;
     min-height: 836px;
@@ -98,6 +98,12 @@ section.main {
 
     .main__description {
         max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .main__description {
+        max-width: 450px;
     }
 }
 
