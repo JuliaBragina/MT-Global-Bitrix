@@ -31,7 +31,8 @@
 }
 
 .ourSolutions__subTitle {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    height: 55px;
 }
 
 .ourSolutions__paragraph {
@@ -49,6 +50,10 @@
     .ourSolutions__container {
         width: 94%;
     }
+
+    .ourSolutions__subTitle {
+        height: 45px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -65,6 +70,11 @@
     .ourSolutions__title {
         width: 100%;
         margin-bottom: 28px;
+    }
+
+    .ourSolutions__subTitle {
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .ourSolutions__paragraph {
