@@ -66,6 +66,11 @@ section.main {
     object-fit: cover;
     mask: url(#video-mask);
     -webkit-mask: url(#video-mask);
+
+    -webkit-mask-image: url('./assets/img/mask.svg');
+    mask-image: url('./assets/img/mask.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
 }
 
 .second-video .main__video, .second-video .main__img {
@@ -73,6 +78,11 @@ section.main {
     -webkit-mask: url(#video-mask);
     opacity: 0.2;
     transform: rotate(54deg);
+
+    -webkit-mask-image: url('./assets/img/mask.svg');
+    mask-image: url('./assets/img/mask.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
 }
 
 .main__actionList {
