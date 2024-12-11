@@ -42,18 +42,10 @@
 }
 
 .cookies__paragraph {
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
     margin: 0;
 }
 
 .cookies__link {
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
     margin: 0;
     color: var(--color-accent-pink);
 }
@@ -64,12 +56,12 @@
     width: 154px;
     border-radius: 100px;
 
-    font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 700;
     line-height: 19.5px;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    border: 2px solid var(--color-black)
 }
 
 

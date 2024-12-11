@@ -5,7 +5,7 @@
 .getPresentationSection__container {
     width: 64%;
     margin: 0 auto;
-    background: url('images/bg-picture.jpg') no-repeat;
+    background-color: var(--color-accent-pink);
     background-size: cover;
     padding: 52px 72px;
     display: flex;
