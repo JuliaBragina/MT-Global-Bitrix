@@ -27,7 +27,7 @@
                     <?php else: ?>
                         <div class="slider__link swiper-slide">
                     <?php endif; ?>
-                            <li class="slider__item slider__item_hover" id="<?= $this->GetEditAreaId($item['ID']); ?>">
+                            <li class="slider__item readyProjects__item slider__item_hover" id="<?= $this->GetEditAreaId($item['ID']); ?>">
                                 <?php if (!empty($item["PREVIEW_PICTURE"])) {
                                     $resizedImage = CFile::ResizeImageGet(
                                         $item["PREVIEW_PICTURE"]['ID'],

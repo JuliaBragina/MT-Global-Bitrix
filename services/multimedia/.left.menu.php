@@ -1,54 +1,53 @@
-<?php
-$aMenuLinks = array(
-    array(
-        "Переговорная комната",
-        "/services/multimedia/meeting-room/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "Ситуационные центры",
-        "/services/multimedia/situation-centers/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "DIGITAL SIGNAGE",
-        "/services/multimedia/digital-signage/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "Конференц-залы",
-        "/services/multimedia/conference-halls/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "Учебные классы",
-        "/services/multimedia/classrooms/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "Музеи и арт-пространства",
-        "/services/multimedia/museums-art-spaces/",
-        array(),
-        array(),
-        ""
-    ),
-    array(
-        "Корпоративное телевидение",
-        "/services/multimedia/corporate-television/",
-        array(),
-        array(),
-        ""
-    )
-    // другие пункты третьего уровня
+<?
+$aMenuLinks = Array(
+	Array(
+		"Переговорная комната", 
+		"/services/multimedia/meeting-room/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Ситуационные центры", 
+		"/services/multimedia/situation-centers/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Digital Signage", 
+		"/services/multimedia/digital-signage/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Конференц-залы", 
+		"/services/multimedia/conference-halls/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Учебные классы", 
+		"/services/multimedia/classrooms/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Музеи и арт-пространства", 
+		"/services/multimedia/museums-art-spaces/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Корпоративное телевидение", 
+		"/services/multimedia/corporate-television/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
 );
 ?>

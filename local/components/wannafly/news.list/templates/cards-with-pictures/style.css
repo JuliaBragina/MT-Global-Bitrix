@@ -6,6 +6,10 @@
     padding-bottom: 56px;
 }
 
+.readyProjects__item {
+    height: 490px
+}
+
 .readyProjects__title {
     width: 100%;
 }

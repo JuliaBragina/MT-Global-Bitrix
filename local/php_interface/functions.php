@@ -50,8 +50,8 @@ class addFormLog{
             "NAME"           => $name,
             "ACTIVE"         => "Y",
         );
-        if($PRODUCT_ID = $el->Add($arLoadProductArray)) echo "added: ".$PRODUCT_ID;
-        else echo "Error: ".$el->LAST_ERROR;
+        //if($PRODUCT_ID = $el->Add($arLoadProductArray)) echo "added: ".$PRODUCT_ID;
+        //else echo "Error: ".$el->LAST_ERROR;
 
         //AddMessage2Log('$props = '.print_r($props, true),'');
         //echo '<pre>'; print_r($arFields); echo '</pre>'; die;
