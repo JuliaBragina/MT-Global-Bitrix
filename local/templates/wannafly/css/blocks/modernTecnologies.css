@@ -19,11 +19,9 @@
 }
 
 .modernTecnologies__list {
-    list-style-position: inside;
     padding: 0;
     margin: 0;
     padding-left: 0;
-    counter-reset: list-item;
 }
 
 .modernTecnologies__item {
@@ -38,14 +36,12 @@
     list-style: none;
     display: flex;
     align-items: center;
-    counter-increment: list-item;
     gap: 15px;
 
     transition: color 0.3s ease;
 }
 
-.modernTecnologies__item::before {
-    content: "0"counter(list-item);
+.modernTecnologies__counter {
     color: var(--color-white);
     font-size: 32px;
     font-weight: 700;

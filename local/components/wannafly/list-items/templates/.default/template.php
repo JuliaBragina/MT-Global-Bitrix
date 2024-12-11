@@ -14,14 +14,17 @@
         </div>
 
         <ol class="modernTecnologies__list">
-            <?php foreach ($arResult['LIST'] as $listItem) {
-                if (!empty($listItem)) {
-            ?>
-                <li class="modernTecnologies__item">
-                    <?= htmlspecialchars($listItem); ?>
-                </li>
             <?php 
-                }
+                $counter = 1;
+                foreach ($arResult['LIST'] as $listItem) {
+                    if (!empty($listItem)) {
+                ?>
+                    <li class="modernTecnologies__item">
+                        <span class="modernTecnologies__counter"><?= str_pad($counter, 2, '0', STR_PAD_LEFT); ?></span> <?= htmlspecialchars($listItem); ?>
+                    </li>
+                <?php 
+                        $counter++;
+                    }
             } ?>
         </ol>
 
