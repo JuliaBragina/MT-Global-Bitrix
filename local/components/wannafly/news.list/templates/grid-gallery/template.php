@@ -32,8 +32,8 @@
                             <?php foreach ($item['PROPERTIES']['SERTIFICATES']['VALUE'] as $certificateId): ?>
                                 <?php
                                 $certificateImage = CFile::ResizeImageGet($certificateId, [
-                                    'width' => 270,
-                                    'height' => 400,
+                                    'width' => 400,
+                                    'height' => 300,
                                 ], BX_RESIZE_IMAGE_PROPORTIONAL);
                                 ?>
                                 <?php if (!empty($certificateImage['src'])): ?>

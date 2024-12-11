@@ -33,7 +33,7 @@
 
 .certificates__img, .slider-swiper {
     width: auto;
-    height: 400px;
+    height: 300px;
     object-fit: contain;
     filter: grayscale(1);
 }
