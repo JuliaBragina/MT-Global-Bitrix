@@ -63,6 +63,55 @@
     width: calc(50% - 10px);
     padding: 30px;
     box-sizing: border-box;
+    height: 630px;
+    overflow-y: hidden;
+}
+
+.typicalSolutions__article_fulltext {
+    height: auto;
+    padding: 30px 30px 60px 30px;
+}
+
+.typicalSolutions__article {
+    position: relative;
+}
+
+.typicalSolutions__buttonOpenArticle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: var(--color-accent-blue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.typicalSolutions__buttonOpenArticle:hover {
+    background-color: var(--color-accent-pink);
+}
+
+.typicalSolutions__buttonOpenArticle::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px; 
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Cpath fill=%22%23FFF%22 d=%22M10 14l-6-6h12l-6 6z%22/%3E%3C/svg%3E'); /* Стрелка вниз в формате SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.typicalSolutions__buttonOpenArticle_fulltext::after {
+    transform: rotate(180deg);
 }
 
 .typicalSolutions__subTitle {

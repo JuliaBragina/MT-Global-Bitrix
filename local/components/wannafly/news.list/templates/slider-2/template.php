@@ -28,6 +28,7 @@ $this->setFrameMode(true);
                     
                     <button type="button" class="btn btn-primary btn-arrow-white typicalSolutions__buttonCallBack"
                             data-fancybox href="#popup__callBack"  data-options='{"touch" : false, "momentum" : false}'>Заказать решение</button>
+                    <button class="typicalSolutions__buttonOpenArticle" type="button"></button>
                 </article>
 
                 <figure class="typicalSolutions__illustration">

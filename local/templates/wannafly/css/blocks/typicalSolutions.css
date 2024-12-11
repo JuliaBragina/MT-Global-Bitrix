@@ -54,6 +54,8 @@
     width: calc(50% - 10px);
     padding: 30px;
     box-sizing: border-box;
+    height: 630px;
+    overflow-y: hidden;
 }
 
 .typicalSolutions__title {
