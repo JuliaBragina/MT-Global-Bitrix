@@ -24,7 +24,6 @@ $this->setFrameMode(true);
         <?php foreach ($arResult['ITEMS'] as $item): ?>
             <div class="typicalSolutions__description" data-solution="<?= $item['CODE']; ?>" style="display:none;" id="<?=$this->GetEditAreaId($item['ID']);?>">
                 <article class="typicalSolutions__article" >
-                    <h3 class="typicalSolutions__subTitle title__third"><?= $item['NAME']; ?></h3>
                     <?= $item['DETAIL_TEXT']; ?>
                     
                     <button type="button" class="btn btn-primary btn-arrow-white typicalSolutions__buttonCallBack"
