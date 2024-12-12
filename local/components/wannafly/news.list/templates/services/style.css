@@ -78,7 +78,7 @@
 }
 
 .services__link.active::after {
-    width: calc(100% + 70px);
+    width: calc(100% + 80px);
     background-color: var(--color-accent-pink);
     transform: translateX(-40px);
     z-index: -1;
