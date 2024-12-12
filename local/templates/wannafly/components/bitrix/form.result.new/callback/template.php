@@ -1,8 +1,8 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <div class="popup popup_callBack" id="popup__callBack" style="display: none;">
-    <h1 class="popup__title title__second">Запланировать встречу</h1>
-    <p class="popup__paragraph">Оставьте свои контактные данные для назначения онлайн или офлайн-встречи</p>
+    <h1 class="popup__title title__second">Перезвоним и поможем с выбором</h1>
+    <p class="popup__paragraph">Оставьте свои контактные данные, мы ответим на ваши вопросы</p>
 
     <form class="popup__form" method="POST" action="<?=POST_FORM_ACTION_URI?>" enctype="multipart/form-data" id="form_callback" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
         <?= bitrix_sessid_post(); ?>
