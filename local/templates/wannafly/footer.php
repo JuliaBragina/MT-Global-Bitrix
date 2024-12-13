@@ -126,10 +126,12 @@
                     <ul class="footer__subItem">
                         <li class="footer__subItem">
                             <div class="footer__phone-container">
-                                <img class="footer__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
-                                     alt="Иконка телефона">
-                                <img class="footer__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social-vk.svg"
-                                     alt="Иконка телефона">
+                                <a href="https://vk.com/mtglobal" target="_blank">
+                                    <img class="footer__icon" src="<?= SITE_TEMPLATE_PATH ?>/img/social-circle.svg"
+                                        alt="Иконка телефона">
+                                    <img class="footer__iconPhone" src="<?= SITE_TEMPLATE_PATH ?>/img/social-vk.svg"
+                                        alt="Иконка телефона">
+                                </a>
                             </div>
                         </li>
                         <li class="footer__subItem">
