@@ -1,8 +1,7 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <div class="popup popup_getCatalog" id="popup__getCatalog" style="display: none;">
-    <h1 class="popup__title title__second">Получите каталог готовых решений
-    <span class="popup__title_pink">для переговорных комнат</span> </h1>
+    <h1 class="popup__title title__second">Получите каталог готовых решений</h1>
 
     <form class="popup__form" action="<?= POST_FORM_ACTION_URI ?>" method="POST" enctype="multipart/form-data" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
         <?= bitrix_sessid_post(); ?>
